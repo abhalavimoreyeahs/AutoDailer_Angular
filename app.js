@@ -1,7 +1,17 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const cors = require('cors');
 const port = process.env.PORT || 3000;
+
+app.use(cors());
+app.options('*', cors());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 
 // Serve static files....
 app.use(express.static(__dirname + '/dist/Angularnav'));
