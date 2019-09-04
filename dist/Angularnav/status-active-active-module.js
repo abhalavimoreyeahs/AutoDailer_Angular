@@ -145,12 +145,19 @@ var ActiveComponent = /** @class */ (function () {
         this.minutes = 0;
         this.router.events.subscribe(function (ev) {
             if (ev instanceof _angular_router__WEBPACK_IMPORTED_MODULE_16__["NavigationEnd"]) { /* Your code goes here on every router change */
-                //alert('route change calling');
+                console.log(ev);
                 if (localStorage.getItem('endpointID') && localStorage.getItem('csio_auth_data')) {
                     _this.LogOut();
                     localStorage.removeItem('endpointID');
                     localStorage.removeItem('csio_auth_data');
-                    console.log('Plivo logout ...');
+                    console.log('Plivo logout ...', ev.url);
+                }
+                else if (localStorage.getItem('PlivoLogin')) {
+                    _this.LogOut();
+                    console.log('else part for logout');
+                }
+                else {
+                    console.log('2 nd else');
                 }
             }
         });
@@ -307,18 +314,19 @@ var ActiveComponent = /** @class */ (function () {
     ActiveComponent.prototype.onLogin = function () {
         // alert('successfully login');
         console.log('login successfully');
+        localStorage.setItem('PlivoLogin', 'true');
     };
     ActiveComponent.prototype.LogOut = function () {
         //alert('LogOut');
-        localStorage.removeItem('endpointID');
-        localStorage.removeItem('csio_auth_data');
         this.plivoWebSdk.client.logout();
-        //alert('logOut function called');
         console.log('logOut function called');
     };
     ActiveComponent.prototype.onLogout = function () {
         //alert('successfully log Out');
         console.log('successfully log Out');
+        localStorage.removeItem('PlivoLogin');
+        localStorage.removeItem('endpointID');
+        localStorage.removeItem('csio_auth_data');
     };
     ActiveComponent.prototype.OnCallReceive = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {

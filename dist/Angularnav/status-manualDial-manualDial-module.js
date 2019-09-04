@@ -145,12 +145,13 @@ var ManualDialComponent = /** @class */ (function () {
         this.minutes = 0;
         this.hours = 0;
         this.initPhone(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
-        // if(!localStorage.getItem('endpointID') && !localStorage.getItem('csio_auth_data')){
-        //   this.login(localStorage.getItem("PlivoUserId"),localStorage.getItem("PlivoPassword"));
-        // }else{
-        //  // this.logOut();
-        //   this.login(localStorage.getItem("PlivoUserId"),localStorage.getItem("PlivoPassword"));
-        // }
+        if (!localStorage.getItem('endpointID') && !localStorage.getItem('csio_auth_data')) {
+            this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+        }
+        else {
+            // this.logOut();
+            this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+        }
         var agentId = localStorage.getItem('PlivoUserId');
         agentId = agentId.concat('@phone.plivo.com');
         var Ojb = { status: "manual",
