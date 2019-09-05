@@ -58,7 +58,7 @@ module.exports = ".grid-container {\r\n    margin: 20px;\r\n  }\r\n  \r\n  .dash
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ol>\r\n        <li>\r\n\r\n        </li>\r\n        <li>\r\n          <button mat-raised-button (click)=\"openDialog()\">Pick one</button>\r\n        </li>\r\n        <li *ngIf=\"animal\">\r\n          You chose: <i>{{animal}}</i>\r\n        </li>\r\n      </ol>\r\n      <button mat-raised-button (click)=\"openDialog2()\">Open Dialog box2</button>"
+module.exports = "<!-- <ol>\r\n        <li>\r\n\r\n        </li>\r\n        <li>\r\n          <button mat-raised-button (click)=\"openDialog()\">Pick one</button>\r\n        </li>\r\n        <li *ngIf=\"animal\">\r\n          You chose: <i>{{animal}}</i>\r\n        </li>\r\n      </ol>\r\n      <button mat-raised-button (click)=\"openDialog2()\">Open Dialog box2</button> -->\r\n\r\n      CallBack"
 
 /***/ }),
 

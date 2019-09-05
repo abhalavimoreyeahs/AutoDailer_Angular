@@ -58,7 +58,7 @@ module.exports = ".my-form{\r\n    min-width: 150px;\r\n    max-width: 500px;\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\"margin-top: 10%\">\r\n \r\n        <mat-toolbar >\r\n                <div class=\"container-fluid\">\r\n                        <span> Edit Campaigns Details</span>\r\n                </div>\r\n          </mat-toolbar>\r\n          <mat-card class=\"my-card\" style=\"max-height:60%\">      \r\n   \r\n          <mat-card-content class=\"z-depth center\" flex=\"50\" >\r\n            <form >\r\n            \r\n               <mat-form-field  >\r\n                      <mat-label>Campaigns Name</mat-label>\r\n                      <input  matInput  placeholder=\"Campaigns Name\" style=\"max-width: 100px\" [(ngModel)]=\"campingname\" name=\"campingname\" [value]=\"\" required>\r\n              \r\n                    \r\n                    </mat-form-field>\r\n\r\n                 <mat-form-field style=\"margin-left:20%\">\r\n                  <mat-label>Start Date</mat-label>\r\n                  <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\" [(ngModel)]=\"startdate\"  name=\"startdate\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"picker\" (click)=\"selectDate(startdate)\"></mat-datepicker-toggle>\r\n                  <mat-datepicker #picker></mat-datepicker>\r\n              </mat-form-field><br>\r\n        \r\n\r\n                                    <mat-form-field>\r\n                                      <mat-select placeholder=\"Assign To Manager\" name=\"assignedto\" [(ngModel)]=\"assignedto\">\r\n                                        <mat-option *ngFor=\"let role of ManagerData\" [value]=\"role.id\">{{ role.email }}</mat-option>\r\n                                      </mat-select>\r\n                                    </mat-form-field>\r\n                                    <!--(selectionChange)=\"educationLevelChangeAction(education_level)\"-->\r\n                  \r\n                                    <mat-form-field style=\"margin-left:20%\">\r\n  <mat-label>Select Campaign Members</mat-label>\r\n  <mat-select multiple name=\"campingmembers\"  [(ngModel)]=\"campingmembers\">\r\n    <mat-option *ngFor=\"let customer of CustomerData\" [value]=\"customer.Mobile\">{{customer.Name}}</mat-option>\r\n  </mat-select>\r\n</mat-form-field><br>\r\n\r\n        \r\n               \r\n        \r\n              <mat-card-content style=\"padding:1%\">\r\n                <form class=\"my-form\">\r\n                   <!--FORM FIELDS-->\r\n                </form>\r\n              </mat-card-content>\r\n              <mat-card-actions style=\" margin:auto;display:block;padding-left: 14%;\">                \r\n                <button mat-raised-button (click)=\"Edit()\" color=\"primary\" style=\"padding:0px 35px 0px 35px\">Edit</button>\r\n                <button mat-raised-button (click)=\"Cancel()\" color=\"bg-danger\" style=\"margin-left:12%; padding:0px 35px 0px 35px\">Cancel</button>\r\n              </mat-card-actions>\r\n      \r\n            </form>\r\n          </mat-card-content>\r\n            \r\n            <mat-card-actions>\r\n              <!-- REGISTER BUTTON -->\r\n            </mat-card-actions>\r\n          </mat-card>\r\n        \r\n        </div>\r\n"
+module.exports = "<div class=\"container\" style=\"margin-top: 10%\">\r\n\r\n  <mat-toolbar>\r\n    <div class=\"container-fluid\">\r\n      <span> Edit Campaigns Details</span>\r\n    </div>\r\n  </mat-toolbar>\r\n  <mat-card class=\"my-card\" style=\"max-height:60%\">\r\n\r\n    <mat-card-content class=\"z-depth center\" flex=\"50\">\r\n      <form>\r\n\r\n        <mat-form-field>\r\n          <mat-label>Campaigns Name</mat-label>\r\n          <input matInput placeholder=\"Campaigns Name\" style=\"max-width: 100px\" [(ngModel)]=\"campingname\"\r\n            name=\"campingname\" [value]=\"\" required>\r\n\r\n\r\n        </mat-form-field>\r\n\r\n        <mat-form-field style=\"margin-left:20%\">\r\n          <mat-label>Start Date</mat-label>\r\n          <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\" [(ngModel)]=\"startdate\" name=\"startdate\">\r\n          <mat-datepicker-toggle matSuffix [for]=\"picker\" (click)=\"selectDate(startdate)\"></mat-datepicker-toggle>\r\n          <mat-datepicker #picker></mat-datepicker>\r\n        </mat-form-field><br>\r\n\r\n\r\n        <mat-form-field>\r\n          <mat-select placeholder=\"Assign To Manager\" name=\"assignedto\" [(ngModel)]=\"assignedto\">\r\n            <mat-option *ngFor=\"let role of ManagerData\" [value]=\"role.id\">{{ role.email }}</mat-option>\r\n          </mat-select>\r\n        </mat-form-field>\r\n        <!--(selectionChange)=\"educationLevelChangeAction(education_level)\"-->\r\n\r\n        <mat-form-field style=\"margin-left:20%\">\r\n          <mat-label>Select Campaign Members</mat-label>\r\n          <mat-select multiple name=\"customerId\" [(ngModel)]=\"customerId\">\r\n            <mat-option *ngFor=\"let customer of CustomerData\" [value]=\"customer._id\">{{customer.Name}}</mat-option>\r\n          </mat-select>\r\n        </mat-form-field><br>\r\n\r\n\r\n        <mat-card-content style=\"padding:1%\">\r\n          <form class=\"my-form\">\r\n            <!--FORM FIELDS-->\r\n          </form>\r\n        </mat-card-content>\r\n        <mat-card-actions style=\" margin:auto;display:block;padding-left: 14%;\">\r\n          <button mat-raised-button (click)=\"Edit()\" color=\"primary\" style=\"padding:0px 35px 0px 35px\">Edit</button>\r\n          <button mat-raised-button (click)=\"Cancel()\" color=\"bg-danger\"\r\n            style=\"margin-left:12%; padding:0px 35px 0px 35px\">Cancel</button>\r\n        </mat-card-actions>\r\n\r\n      </form>\r\n    </mat-card-content>\r\n\r\n    <mat-card-actions>\r\n      <!-- REGISTER BUTTON -->\r\n    </mat-card-actions>\r\n  </mat-card>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -95,6 +95,7 @@ var EditCampaignComponent = /** @class */ (function () {
         this.service = service;
         this.router = router;
         this.Campaigns = {};
+        this.customerId = [];
         this.EditId = this.service.getEditId();
         console.log('Edit Id:', this.EditId);
         if (this.EditId) {
@@ -103,11 +104,18 @@ var EditCampaignComponent = /** @class */ (function () {
                 campingId: this.EditId
             };
             this.service.getSingleCampaign(this.data).subscribe(function (data) {
+                debugger;
                 console.log('data:', data);
                 _this.startdate = new Date(data['message'][0]['startdate']);
                 _this.campingname = data['message'][0]['campingname'];
-                _this.assignedto = data['message'][0]['assignedto'];
-                _this.campingmembers = data['message'][0]['campingmembers'];
+                _this.assignedto = data['message'][0]['assignedto']['_id'];
+                //this.campingmembers = data['message'][0]['campingmembers'];
+                if (data['message'][0]['customerId']) {
+                    for (var i = 0; i < data['message'][0]['customerId'].length; i++) {
+                        _this.customerId.push(data['message'][0]['customerId'][i]['_id']);
+                    }
+                }
+                console.log('customerId', _this.customerId);
                 _this.campingid = data['message'][0]['_id'];
                 //this.displayAssaignedManager = data['message'][0]['assignedtoByname'];
                 // this.startdate = data['message']['startdate'];
@@ -126,11 +134,12 @@ var EditCampaignComponent = /** @class */ (function () {
     };
     EditCampaignComponent.prototype.Edit = function () {
         var _this = this;
+        debugger;
         this.Campaigns = {
             startdate: new Date(this.startdate).getTime(),
             campingname: this.campingname,
             assignedto: this.assignedto,
-            campingmembers: this.campingmembers,
+            customerId: this.customerId,
             campingid: this.campingid
         };
         this.service.editCampaign(this.Campaigns).subscribe(function (data) {

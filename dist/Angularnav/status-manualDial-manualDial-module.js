@@ -96,12 +96,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var rxjs_add_observable_interval__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/add/observable/interval */ "./node_modules/rxjs-compat/_esm5/add/observable/interval.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../autoDialer.service */ "./src/app/autoDialer.service.ts");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var amazing_time_picker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! amazing-time-picker */ "./node_modules/amazing-time-picker/amazing-time-picker.es5.js");
-/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! plivo-browser-sdk */ "./node_modules/plivo-browser-sdk/dist/plivo.js");
-/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../autoDialer.service */ "./src/app/autoDialer.service.ts");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var amazing_time_picker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! amazing-time-picker */ "./node_modules/amazing-time-picker/amazing-time-picker.es5.js");
+/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! plivo-browser-sdk */ "./node_modules/plivo-browser-sdk/dist/plivo.js");
+/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
@@ -110,6 +112,8 @@ __webpack_require__.r(__webpack_exports__);
 
  // for dateClick
 
+
+//toastr
 
 //interval
 
@@ -121,8 +125,29 @@ __webpack_require__.r(__webpack_exports__);
 
 //Plivo
 
+//Routing
+
 var ManualDialComponent = /** @class */ (function () {
-    function ManualDialComponent(breakpointObserver, service, dialog) {
+    function ManualDialComponent(toastrService, router, breakpointObserver, service, dialog) {
+        // this.router.events.subscribe((ev) => {
+        //   if (ev instanceof NavigationEnd) { /* Your code goes here on every router change */
+        //    console.log(ev);
+        //    if(localStorage.getItem('endpointID') && localStorage.getItem('csio_auth_data')){
+        //     this.logOut();
+        //     localStorage.removeItem('endpointID');
+        //     localStorage.removeItem('csio_auth_data');
+        //     console.log('Plivo logout ...',ev.url);
+        //    }else if(localStorage.getItem('PlivoLogin')) {
+        //     this.logOut();
+        //     console.log('else part for logout');
+        //    }else{
+        //      console.log('2 nd else');
+        //    }
+        //   }
+        // });
+        var _this = this;
+        this.toastrService = toastrService;
+        this.router = router;
         this.breakpointObserver = breakpointObserver;
         this.service = service;
         this.dialog = dialog;
@@ -146,11 +171,17 @@ var ManualDialComponent = /** @class */ (function () {
         this.hours = 0;
         this.initPhone(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
         if (!localStorage.getItem('endpointID') && !localStorage.getItem('csio_auth_data')) {
-            this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+            setTimeout(function () {
+                console.log('login is initiated');
+                _this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+            }, 5000);
         }
         else {
             // this.logOut();
-            this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+            setTimeout(function () {
+                console.log('login is initiated');
+                _this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+            }, 5000);
         }
         var agentId = localStorage.getItem('PlivoUserId');
         agentId = agentId.concat('@phone.plivo.com');
@@ -183,6 +214,15 @@ var ManualDialComponent = /** @class */ (function () {
             console.log('display:', CallSchedule);
             _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatTableDataSource"](CallSchedule);
         });
+    };
+    // on reloading logout agnet from plivo
+    ManualDialComponent.prototype.unloadHandler = function (event) {
+        // this.plivoWebSdk.client && this.plivoWebSdk.client.logout();
+        // this.plivoWebSdk.client.logout();
+        this.logOut();
+        console.log("Processing beforeunload...");
+        // Do more processing...
+        event.returnValue = false;
     };
     ManualDialComponent.prototype.pushNumbers = function (number) {
         this.MobileNumber = this.MobileNumber.concat(number);
@@ -223,7 +263,7 @@ var ManualDialComponent = /** @class */ (function () {
                 this.seconds = 0;
                 this.minutes = 0;
                 this.hours = 0;
-                this.sub = Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["interval"])(1000)
+                this.sub = Object(rxjs__WEBPACK_IMPORTED_MODULE_10__["interval"])(1000)
                     .subscribe(function (val) {
                     _this.seconds += 1;
                     if (_this.seconds > 60) {
@@ -271,10 +311,10 @@ var ManualDialComponent = /** @class */ (function () {
             "audioConstraints": { "optional": [{ "googAutoGainControl": false }, { "googEchoCancellation": false }] },
             "enableTracking": true
         };
-        this.plivoWebSdk = new plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_13___default.a(options);
+        this.plivoWebSdk = new plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14___default.a(options);
         // this.plivoWebSdk.client.on('onWebrtcNotSupported', this.onWebrtcNotSupported);
         this.plivoWebSdk.client.on('onLogin', this.onLogin); // msg not showing //this function gets called when user successfully login/ login failed
-        //  this.plivoWebSdk.client.on('onLogout', this.onLogout); // plivo method not working
+        this.plivoWebSdk.client.on('onLogout', this.onLogout); // plivo method not working
         //  this.plivoWebSdk.client.on('onLoginFailed', this.onLoginFailed);
         this.plivoWebSdk.client.on('onCallRemoteRinging', this.onCallRemoteRinging);
         this.plivoWebSdk.client.on('onIncomingCallCanceled', this.onIncomingCallCanceled);
@@ -307,10 +347,20 @@ var ManualDialComponent = /** @class */ (function () {
     ManualDialComponent.prototype.onLogin = function () {
         // //alert('successfully login');
         console.log('login successfully');
+        localStorage.setItem('PlivoLogin', 'true');
+        //this.showToaster('Plivo Login Successfully')
+        //this.toastrService.success('Campaign Saved Successful');
     };
     ManualDialComponent.prototype.logOut = function () {
         //alert('LogOut');
-        this.plivoWebSdk.client.logOut();
+        this.plivoWebSdk.client.logout();
+    };
+    ManualDialComponent.prototype.onLogout = function () {
+        //alert('successfully log Out');
+        console.log('successfully log Out');
+        localStorage.removeItem('PlivoLogin');
+        localStorage.removeItem('endpointID');
+        localStorage.removeItem('csio_auth_data');
     };
     ManualDialComponent.prototype.makeCall = function () {
         //var dest = document.getElementById('number')
@@ -433,17 +483,36 @@ var ManualDialComponent = /** @class */ (function () {
             });
         });
     };
+    //notification
+    ManualDialComponent.prototype.showToaster = function (msg) {
+        this.toastrService.success(msg);
+    };
+    ManualDialComponent.prototype.ErrorSuccess = function () {
+        this.toastrService.error('Failed: Unable to Save Campaign');
+    };
+    ManualDialComponent.prototype.infoSuccess = function () {
+        this.toastrService.info('info msg', 'Info!');
+    };
+    ManualDialComponent.prototype.warningSuccess = function () {
+        this.toastrService.warning('this is warning');
+    };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('calendar'),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _fullcalendar_angular__WEBPACK_IMPORTED_MODULE_3__["FullCalendarComponent"])
     ], ManualDialComponent.prototype, "calendarComponent", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])("window:beforeunload", ["$event"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Event]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", void 0)
+    ], ManualDialComponent.prototype, "unloadHandler", null);
     ManualDialComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-manualDial',
             template: __webpack_require__(/*! ./manualDial.component.html */ "./src/app/agent/status/manualDial/manualDial.component.html"),
             styles: [__webpack_require__(/*! ./manualDial.component.css */ "./src/app/agent/status/manualDial/manualDial.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_10__["AutoDialService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialog"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ngx_toastr__WEBPACK_IMPORTED_MODULE_9__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_15__["Router"], _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_11__["AutoDialService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_12__["MatDialog"]])
     ], ManualDialComponent);
     return ManualDialComponent;
 }());
@@ -504,9 +573,9 @@ var FeedBackComponent = /** @class */ (function () {
             selector: 'feedback',
             template: __webpack_require__(/*! ./feedback.html */ "./src/app/agent/status/manualDial/feedback.html"),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [amazing_time_picker__WEBPACK_IMPORTED_MODULE_12__["AmazingTimePickerService"],
-            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogRef"], Object])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_12__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [amazing_time_picker__WEBPACK_IMPORTED_MODULE_13__["AmazingTimePickerService"],
+            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_12__["MatDialogRef"], Object])
     ], FeedBackComponent);
     return FeedBackComponent;
 }());

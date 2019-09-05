@@ -146,13 +146,13 @@ var ActiveComponent = /** @class */ (function () {
         this.router.events.subscribe(function (ev) {
             if (ev instanceof _angular_router__WEBPACK_IMPORTED_MODULE_16__["NavigationEnd"]) { /* Your code goes here on every router change */
                 console.log(ev);
-                if (localStorage.getItem('endpointID') && localStorage.getItem('csio_auth_data')) {
+                if (localStorage.getItem('endpointID') && localStorage.getItem('csio_auth_data')) { // && ev.url!= '/agent/active' && ev.url != '/agent/manualdial'
                     _this.LogOut();
                     localStorage.removeItem('endpointID');
                     localStorage.removeItem('csio_auth_data');
                     console.log('Plivo logout ...', ev.url);
                 }
-                else if (localStorage.getItem('PlivoLogin')) {
+                else if (localStorage.getItem('PlivoLogin')) { //&& (ev.url!= '/agent/active') && ev.url != '/agent/manualdial'
                     _this.LogOut();
                     console.log('else part for logout');
                 }
@@ -163,11 +163,15 @@ var ActiveComponent = /** @class */ (function () {
         });
         this.initPhone(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
         if (!localStorage.getItem('endpointID') && !localStorage.getItem('csio_auth_data')) {
-            this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+            setTimeout(function () {
+                _this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+            }, 5000);
         }
         else {
             this.LogOut();
-            this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+            setTimeout(function () {
+                _this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
+            }, 5000);
         }
         // this.login("shubham125559174721784","12345");
         var agentId = localStorage.getItem('PlivoUserId');
@@ -292,7 +296,7 @@ var ActiveComponent = /** @class */ (function () {
         this.plivoWebSdk.client.on('onCalling', this.onCalling);
         this.plivoWebSdk.client.on('onIncomingCall', this.onIncomingCall); // when incomming call trigger this function is called
         this.plivoWebSdk.client.on('onMediaPermission', this.onMediaPermission);
-        //  this.plivoWebSdk.client.on('mediaMetrics', this.mediaMetrics);
+        this.plivoWebSdk.client.on('mediaMetrics', this.mediaMetrics);
         //  this.plivoWebSdk.client.on('audioDeviceChange',this.audioDeviceChange);
         this.plivoWebSdk.client.setRingTone(true);
         this.plivoWebSdk.client.setRingToneBack(true);
@@ -315,6 +319,9 @@ var ActiveComponent = /** @class */ (function () {
         // alert('successfully login');
         console.log('login successfully');
         localStorage.setItem('PlivoLogin', 'true');
+        //this.showLoginSuccess()
+        //this.showToaster('plivo Login Successfully');
+        //this.toastrService.success('plivo Login Successfully'); //toastrService
     };
     ActiveComponent.prototype.LogOut = function () {
         //alert('LogOut');
@@ -435,7 +442,7 @@ var ActiveComponent = /** @class */ (function () {
         console.log('remote ringing');
     };
     ActiveComponent.prototype.onMediaConnected = function (UUID) {
-        //debugger;
+        debugger;
         this.CallUUID = UUID['callUUID'];
         localStorage.setItem('uuid', UUID['callUUID']);
         console.log('media connected', UUID);
@@ -444,7 +451,12 @@ var ActiveComponent = /** @class */ (function () {
         console.log('uuid: ', this.CallUUID);
     };
     ActiveComponent.prototype.onMediaPermission = function () {
+        debugger;
         console.log('media permission');
+    };
+    ActiveComponent.prototype.mediaMetrics = function () {
+        debugger;
+        console.log('media Metrics');
     };
     //Dialog function
     ActiveComponent.prototype.openDialog = function () {
@@ -486,7 +498,7 @@ var ActiveComponent = /** @class */ (function () {
             _this.service.sendCustomerFeedback(result).subscribe(function (data) {
                 console.log(data);
                 if (data['success'] == 'true') {
-                    _this.showToaster();
+                    _this.showToaster('Feedback Saved Successfully');
                 }
                 localStorage.removeItem('uuid');
             });
@@ -514,8 +526,11 @@ var ActiveComponent = /** @class */ (function () {
         });
     };
     //notification
-    ActiveComponent.prototype.showToaster = function () {
-        this.toastrService.success('Feedback Saved Successfully');
+    ActiveComponent.prototype.showToaster = function (msg) {
+        this.toastrService.success(msg);
+    };
+    ActiveComponent.prototype.showLoginSuccess = function () {
+        this.toastrService.success('Plivo login success');
     };
     ActiveComponent.prototype.ErrorSuccess = function () {
         this.toastrService.error('Failed: Unable to Save Campaign');
