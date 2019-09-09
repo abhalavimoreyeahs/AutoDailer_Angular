@@ -318,6 +318,9 @@ var CampaignComponent = /** @class */ (function () {
     CampaignComponent.prototype.warningSuccess = function () {
         this.toastrService.warning('this is warning');
     };
+    CampaignComponent.prototype.showSuccessfullyDeletedCampaign = function () {
+        this.toastrService.success('Campaign Deleted Successfully');
+    };
     //Dialog function
     CampaignComponent.prototype.openDialog = function () {
         var _this = this;
@@ -333,6 +336,9 @@ var CampaignComponent = /** @class */ (function () {
             if (result) {
                 _this.dataToDelete = { campingId: _this.DeleteCampaign };
                 _this.service.deleteCampaign(_this.dataToDelete).subscribe(function (data) {
+                    debugger;
+                    console.log(data);
+                    _this.showSuccessfullyDeletedCampaign();
                     _this.ngOnInit();
                 });
             }

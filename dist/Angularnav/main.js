@@ -112,6 +112,11 @@ var map = {
 		"common",
 		"manager-manager-module"
 	],
+	"./managerDetails/manager.module": [
+		"./src/app/layout/managerDetails/manager.module.ts",
+		"common",
+		"managerDetails-manager-module"
+	],
 	"./not-found/not-found.module": [
 		"./src/app/not-found/not-found.module.ts",
 		"default~agent-agent-module~layout-layout-module~manager-manager-module~not-found-not-found-module",
@@ -186,6 +191,10 @@ var map = {
 	"./viewCampaign/viewCampaign.module": [
 		"./src/app/manager/viewCampaign/viewCampaign.module.ts",
 		"viewCampaign-viewCampaign-module"
+	],
+	"./viewCustomer/customer.module": [
+		"./src/app/layout/viewCustomer/customer.module.ts",
+		"viewCustomer-customer-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -472,6 +481,7 @@ var AutoDialService = /** @class */ (function () {
         this._getSingleCampaign = this.path + "/v0.1/getSingleCamping";
         this._getAllAgents = this.path + "/v0.1/getAllAgents";
         this._getManagerDetails = this.path + "/v0.1/getAssignedAgent";
+        this._getAllManagerData = this.path + "/v0.1/getAllManagers";
         this._getAgentDataForDashboard = this.path + "/v0.1/DashboardDataForAllAgent";
         this._getParentAndChildCallDetail = this.path + "/v0.1/getParentAndChildScheduleCalls?recordid=5d4bf6f9698dc220246def94";
         this._getCallInfoDashboard = this.path + "/v0.1/callStatus";
@@ -527,6 +537,9 @@ var AutoDialService = /** @class */ (function () {
     //-----------------------------------------------------------------------------
     AutoDialService.prototype.getAllManagers = function () {
         return this.http.get(this._getAllManagers);
+    };
+    AutoDialService.prototype.getAllManagerDetails = function () {
+        return this.http.get(this._getAllManagerData);
     };
     AutoDialService.prototype.getAllAgents = function () {
         return this.http.get(this._getAllAgents);

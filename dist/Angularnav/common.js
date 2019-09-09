@@ -81,6 +81,125 @@ var CallDialogComponent = /** @class */ (function () {
 
 
 
+/***/ }),
+
+/***/ "./src/app/shared/services/admin.service.ts":
+/*!**************************************************!*\
+  !*** ./src/app/shared/services/admin.service.ts ***!
+  \**************************************************/
+/*! exports provided: AdminService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminService", function() { return AdminService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+var AdminService = /** @class */ (function () {
+    function AdminService(http) {
+        this.http = http;
+        this.apiURL = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiURL;
+    }
+    AdminService.prototype.login = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/login', data);
+    };
+    AdminService.prototype.excelUploading = function (file) {
+        return this.http.post(this.apiURL + '/v0.1/excelUpload', file);
+    };
+    AdminService.prototype.createCampaign = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/createCamping', data);
+    };
+    AdminService.prototype.getAllCampaign = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAllCamping');
+    };
+    AdminService.prototype.getAllManagers = function () {
+        return this.http.get(this.apiURL + '/v0.1/RequestMangerDetails');
+    };
+    AdminService.prototype.getAllAgents = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAllAgents');
+    };
+    AdminService.prototype.saveEmployee = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/auth', data);
+    };
+    AdminService.prototype.editCampaign = function (data) {
+        return this.http.put(this.apiURL + '/v0.1/editCamping', data);
+    };
+    AdminService.prototype.deleteCampaign = function (camName) {
+        return this.http.delete(this.apiURL + ("/v0.1/deleteCamping?campingname=" + camName['campingname']));
+    };
+    AdminService.prototype.getAllCustomer = function () {
+        return this.http.get(this.apiURL + '/v0.1/RequestCustomerDetails');
+    };
+    AdminService.prototype.setEditId = function (id) {
+        this.editId = id;
+    };
+    AdminService.prototype.getEditId = function () {
+        return this.editId;
+    };
+    AdminService.prototype.getSingleCampaign = function (campaignId) {
+        console.log('body data:', campaignId);
+        return this.http.post(this.apiURL + '/v0.1/getSingleCamping', campaignId);
+    };
+    AdminService.prototype.getAgentDashboardDetails = function () {
+        return this.http.get(this.apiURL + '/v0.1/DashboardDataForAllAgent');
+    };
+    AdminService.prototype.getParentAndChildScheduleCall = function () {
+        return this.http.get(this.apiURL + '/v0.1/getParentAndChildScheduleCalls?recordid=5d4bf6f9698dc220246def94');
+    };
+    AdminService.prototype.getAdminDashboardCallInfo = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/callStatus', data);
+    };
+    AdminService.prototype.getManagerDetails = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAllManagerDetails');
+    };
+    AdminService.prototype.getSingleManagerDetails = function (managerId) {
+        return this.http.get(this.apiURL + '/v0.1/getSingleManagerDetails?managerId=' + managerId);
+    };
+    AdminService.prototype.getAvailabelAgent = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAvailableAgent');
+    };
+    AdminService.prototype.getUsers = function () {
+        return this.data = [
+            { name: 'Avinash', email: "a@gmail.com", phone: '46415454' },
+            { name: 'Shyam', email: "shyam@gmail.com", phone: '46415454' },
+            { name: 'Rohit', email: "rohit@gmail.com", phone: '46415454' },
+            { name: 'David', email: "david@gmail.com", phone: '46415454' },
+            { name: 'Pyush', email: "pyush@gmail.com", phone: '46415454' },
+            { name: 'Avinash1', email: "a@gmail.com", phone: '46415454' },
+            { name: 'Shyam2', email: "shyam@gmail.com", phone: '46415454' },
+            { name: 'Rohit3', email: "rohit@gmail.com", phone: '46415454' },
+            { name: 'David4', email: "david@gmail.com", phone: '46415454' },
+            { name: 'Avinash5', email: "a@gmail.com", phone: '46415454' },
+            { name: 'Shyam6', email: "shyam@gmail.com", phone: '46415454' },
+            { name: 'Rohit7', email: "rohit@gmail.com", phone: '46415454' },
+            { name: 'David8', email: "david@gmail.com", phone: '46415454' },
+        ];
+    };
+    AdminService.prototype.getDummyData = function () {
+        return this.data = [
+            { Name: 'Avinash', Age: 23, DOB: '31/05/1996', Mobile: '9479831284', Domicile: 'Rajendra Nager', City: 'Indore' },
+            { Name: 'Avinash', Age: 23, DOB: '31/05/1996', Mobile: '9479831284', Domicile: 'Rajendra Nager', City: 'Indore' },
+            { Name: 'Avinash', Age: 23, DOB: '31/05/1996', Mobile: '9479831284', Domicile: 'Rajendra Nager', City: 'Indore' },
+            { Name: 'Avinash', Age: 23, DOB: '31/05/1996', Mobile: '9479831284', Domicile: 'Rajendra Nager', City: 'Indore' },
+        ];
+    };
+    AdminService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], AdminService);
+    return AdminService;
+}());
+
+
+
 /***/ })
 
 }]);
