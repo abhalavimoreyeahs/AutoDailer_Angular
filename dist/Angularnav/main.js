@@ -22,7 +22,7 @@ var map = {
 	],
 	"./Dialler/dialler.module": [
 		"./src/app/agent/calls/Dialler/dialler.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"common",
 		"Dialler-dialler-module"
 	],
@@ -36,7 +36,7 @@ var map = {
 	],
 	"./PhoneBook/phoneBook.module": [
 		"./src/app/agent/calls/PhoneBook/phoneBook.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
 		"common",
 		"PhoneBook-phoneBook-module"
@@ -50,27 +50,31 @@ var map = {
 	],
 	"./agent-dashboard/agent-dashboard.module": [
 		"./src/app/agent/agent-dashboard/agent-dashboard.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"common",
 		"agent-dashboard-agent-dashboard-module"
 	],
 	"./agent/agent.module": [
 		"./src/app/agent/agent.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"default~agent-agent-module~layout-layout-module~manager-manager-module~not-found-not-found-module",
 		"common",
 		"agent-agent-module"
 	],
 	"./calendar/view.module": [
 		"./src/app/agent/calendar/view.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
 		"common",
 		"calendar-view-module"
 	],
+	"./callInfo/callInfo.module": [
+		"./src/app/layout/callInfo/callInfo.module.ts",
+		"callInfo-callInfo-module"
+	],
 	"./calls/call.module": [
 		"./src/app/agent/calls/call.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"common",
 		"calls-call-module"
 	],
@@ -96,7 +100,7 @@ var map = {
 	],
 	"./login/login.module": [
 		"./src/app/login/login.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"common",
 		"login-login-module"
 	],
@@ -133,16 +137,22 @@ var map = {
 		"./src/app/layout/onBoardEmployee/employee.module.ts",
 		"onBoardEmployee-employee-module"
 	],
+	"./scheduled-calls/scheduledCall.module": [
+		"./src/app/agent/scheduled-calls/scheduledCall.module.ts",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
+		"common",
+		"scheduled-calls-scheduledCall-module"
+	],
 	"./setting/setting.module": [
 		"./src/app/agent/setting/setting.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"default~setting-setting-module~status-active-active-module~status-manualDial-manualDial-module",
 		"common",
 		"setting-setting-module"
 	],
 	"./status/active/active.module": [
 		"./src/app/agent/status/active/active.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
 		"default~setting-setting-module~status-active-active-module~status-manualDial-manualDial-module",
 		"common",
@@ -150,19 +160,19 @@ var map = {
 	],
 	"./status/break/break.module": [
 		"./src/app/agent/status/break/break.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"common",
 		"status-break-break-module"
 	],
 	"./status/callback/callback.module": [
 		"./src/app/agent/status/callback/callback.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"common",
 		"status-callback-callback-module"
 	],
 	"./status/manualDial/manualDial.module": [
 		"./src/app/agent/status/manualDial/manualDial.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
 		"default~setting-setting-module~status-active-active-module~status-manualDial-manualDial-module",
 		"common",
@@ -170,19 +180,19 @@ var map = {
 	],
 	"./status/meetingWithCustomer/customerMeet.module": [
 		"./src/app/agent/status/meetingWithCustomer/customerMeet.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"common",
 		"status-meetingWithCustomer-customerMeet-module"
 	],
 	"./status/training/training.module": [
 		"./src/app/agent/status/training/training.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"common",
 		"status-training-training-module"
 	],
 	"./try-dashboard/try-dashboard.module": [
 		"./src/app/try-dashboard/try-dashboard.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~23045c26",
+		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~9af28116",
 		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
 		"default~admin-adminDashboard-module~manager-dashboard-manager-dashboard-module~try-dashboard-try-das~6277ff14",
 		"common",
