@@ -18,7 +18,7 @@ module.exports = "\r\n<h2 mat-dialog-title style=\"text-align: center\">On Break
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<h2 mat-dialog-title style=\"text-align: center\">Break Reason</h2>\r\n<mat-dialog-content style=\"text-align:center\">\r\n        <!-- <div class=\"row\"> -->\r\n\r\n                <mat-form-field >\r\n                        <mat-label>Break Reason</mat-label>\r\n                        <input   matInput  placeholder=\"Caller Name\" style=\"max-width: 100px\" [(ngModel)]=\"data.reason\" name=\"reason\" [value]=\"\" required>                      \r\n               </mat-form-field> <br>\r\n                <!-- <div class=\"col\" style=\"margin-left:5%\">\r\n                        <mat-form-field>\r\n                                <mat-label>Caller Name</mat-label>\r\n                                <input  matInput  placeholder=\"Caller Name\" style=\"max-width: 100px\" [(ngModel)]=\"data.name\" name=\"name\" [value]=\"\" required>                      \r\n                       </mat-form-field><br>\r\n                       <mat-form-field *ngIf=\"select\">\r\n                            <mat-label>CallBack Date</mat-label>\r\n                            <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\" [(ngModel)]=\"data.startdate\"  name=\"startdate\">\r\n                            <mat-datepicker-toggle matSuffix [for]=\"picker\" (click)=\"selectDate(startdate)\"></mat-datepicker-toggle>\r\n                            <mat-datepicker #picker></mat-datepicker>   \r\n                    </mat-form-field>                  \r\n                </div>\r\n                <div class=\"col\">                  \r\n                        <mat-form-field>\r\n                                <mat-label>Customer Interested</mat-label>\r\n                                 <mat-select [(ngModel)]=\"select\">\r\n                                        <mat-option  [value]=\"0\"> Active </mat-option>\r\n                                        <mat-option  [value]=\"1\"> Manual </mat-option>\r\n                                 </mat-select>\r\n                       </mat-form-field>                            \r\n                </div> -->\r\n              <!-- </div> -->\r\n</mat-dialog-content>\r\n\r\n<mat-dialog-actions style=\"text-align:center;display: flex;justify-content: center;\">\r\n    <!-- <button mat-button (click)=\"onNoClick()\" class=\"mat-raised-button\" style=\"width:100px\">No Thanks</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->\r\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial class=\"mat-raised-button mat-primary\" style=\"width:100px\">Submit</button>\r\n</mat-dialog-actions>"
+module.exports = "<a href=\"javascript:void(0)\"><mat-icon style=\"float:right;margin-top:-3%;margin-right:-3%;color:lightgray\" (click)=\"onNoClick()\" >clear</mat-icon></a>\r\n<h2 mat-dialog-title style=\"text-align: center\">Break Reason</h2>\r\n<mat-dialog-content style=\"text-align:center\">\r\n        <!-- <div class=\"row\"> -->\r\n\r\n                <mat-form-field >\r\n                        <mat-label>Break Reason</mat-label>\r\n                        <input   matInput  placeholder=\"Caller Name\" style=\"max-width: 100px\" [(ngModel)]=\"data.reason\" name=\"reason\" [value]=\"\" required>                      \r\n               </mat-form-field> <br>\r\n                <!-- <div class=\"col\" style=\"margin-left:5%\">\r\n                        <mat-form-field>\r\n                                <mat-label>Caller Name</mat-label>\r\n                                <input  matInput  placeholder=\"Caller Name\" style=\"max-width: 100px\" [(ngModel)]=\"data.name\" name=\"name\" [value]=\"\" required>                      \r\n                       </mat-form-field><br>\r\n                       <mat-form-field *ngIf=\"select\">\r\n                            <mat-label>CallBack Date</mat-label>\r\n                            <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\" [(ngModel)]=\"data.startdate\"  name=\"startdate\">\r\n                            <mat-datepicker-toggle matSuffix [for]=\"picker\" (click)=\"selectDate(startdate)\"></mat-datepicker-toggle>\r\n                            <mat-datepicker #picker></mat-datepicker>   \r\n                    </mat-form-field>                  \r\n                </div>\r\n                <div class=\"col\">                  \r\n                        <mat-form-field>\r\n                                <mat-label>Customer Interested</mat-label>\r\n                                 <mat-select [(ngModel)]=\"select\">\r\n                                        <mat-option  [value]=\"0\"> Active </mat-option>\r\n                                        <mat-option  [value]=\"1\"> Manual </mat-option>\r\n                                 </mat-select>\r\n                       </mat-form-field>                            \r\n                </div> -->\r\n              <!-- </div> -->\r\n</mat-dialog-content>\r\n\r\n<mat-dialog-actions style=\"text-align:center;display: flex;justify-content: center;\">\r\n    <!-- <button mat-button (click)=\"onNoClick()\" class=\"mat-raised-button\" style=\"width:100px\">No Thanks</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->\r\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial class=\"mat-raised-button mat-primary\" style=\"width:100px\">Submit</button>\r\n</mat-dialog-actions>"
 
 /***/ }),
 
@@ -80,7 +80,7 @@ module.exports = "body {\r\n  /* background-image: url('../../../../assets/autod
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<body></body>"
+module.exports = "<body>\r\n    <div style=\"display: flex;\r\n    justify-content: center;\r\n    align-items: center;width:100%; height: 100%\">\r\n    <h2 style=\"color:honeydew\"> Break</h2>\r\n\r\n   </div>\r\n</body>"
 
 /***/ }),
 
@@ -139,7 +139,6 @@ var BreakComponent = /** @class */ (function () {
     //Break Reason
     //Dialog function
     BreakComponent.prototype.openReasonDialog = function () {
-        var _this = this;
         console.log(this.Call);
         var dialogRef = this.dialog.open(BreakReasonComponent, {
             width: '550px',
@@ -149,7 +148,7 @@ var BreakComponent = /** @class */ (function () {
         dialogRef.afterClosed().subscribe(function (result) {
             console.log('The dialog was closed');
             console.log(result);
-            _this.openDialog();
+            // this.openDialog();
         });
     };
     BreakComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

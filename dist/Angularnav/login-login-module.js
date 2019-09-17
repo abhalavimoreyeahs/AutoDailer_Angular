@@ -111,6 +111,7 @@ var LoginComponent = /** @class */ (function () {
                 if (data.success == true) {
                     localStorage.setItem('token', data.apiKey);
                     localStorage.setItem('role', data.user.users.role);
+                    localStorage.setItem('username', data.user.users.firstName + " " + data.user.users.lastName);
                     _this.Role = data.user.users.role;
                     _this.UserName = data.user.users.firstName + ' ' + data.user.users.lastName;
                     _this.service.setUserName(_this.UserName);

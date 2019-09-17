@@ -272,6 +272,7 @@ var LayoutComponent = /** @class */ (function () {
     //logOut
     LayoutComponent.prototype.logOut = function () {
         localStorage.removeItem('token');
+        localStorage.removeItem('username');
         this.showToaster();
         this._router.navigate(['/login']);
     };

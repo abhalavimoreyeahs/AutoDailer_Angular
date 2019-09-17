@@ -18,6 +18,7 @@ var map = {
 	],
 	"./AssignedAgent/assignedAgent.module": [
 		"./src/app/layout/AssignedAgent/assignedAgent.module.ts",
+		"common",
 		"AssignedAgent-assignedAgent-module"
 	],
 	"./Dialler/dialler.module": [
@@ -495,6 +496,7 @@ var AutoDialService = /** @class */ (function () {
         this._getAgentDataForDashboard = this.path + "/v0.1/DashboardDataForAllAgent";
         this._getParentAndChildCallDetail = this.path + "/v0.1/getParentAndChildScheduleCalls?recordid=5d4bf6f9698dc220246def94";
         this._getCallInfoDashboard = this.path + "/v0.1/callStatus";
+        this._getAssignAgentToManager = this.path + "/v0.1/assignAgentToManager";
         // Run and Stop Campaign
         this._run_campaign = this.path + "/v0.1/runCamping";
         this._stop_campaign = this.path + "/v0.1/stopCamping";
@@ -593,6 +595,10 @@ var AutoDialService = /** @class */ (function () {
     AutoDialService.prototype.getAdminDashboardCallInfo = function (data) {
         return this.http.put(this._getCallInfoDashboard, data);
     };
+    //Assing Agent to Manager
+    AutoDialService.prototype.assignAgentToManager = function (data) {
+        return this.http.post(this._getAssignAgentToManager, data);
+    };
     //Manager API Hit
     AutoDialService.prototype.campaignAssignedToManager = function () {
         return this.http.get(this._viewManagerCampaign);
@@ -613,8 +619,8 @@ var AutoDialService = /** @class */ (function () {
     AutoDialService.prototype.sendManualCallFeedBack = function (feedback) {
         return this.http.post(this._sendManualCallFeedback, feedback);
     };
-    AutoDialService.prototype.getScheduledCallForAgent = function (agentId) {
-        return this.http.get(this._getScheduledCall + "?agentid=" + agentId['agentid']);
+    AutoDialService.prototype.getScheduledCallForAgent = function (data) {
+        return this.http.get("" + this._getScheduledCall + "?agentid=" + data['agentid'] + "&startTime=" + data['startTime'] + "&endTime=" + data['endTime']);
     };
     AutoDialService.prototype.getParentAndChildScheduleCall = function () {
         return this.http.get("" + this._getParentAndChildCallDetail);

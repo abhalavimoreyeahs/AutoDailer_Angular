@@ -164,6 +164,12 @@ var AdminService = /** @class */ (function () {
     AdminService.prototype.getAvailabelAgent = function () {
         return this.http.get(this.apiURL + '/v0.1/getAvailableAgent');
     };
+    AdminService.prototype.assignAgentToManager = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/assignAgentToManager', data);
+    };
+    AdminService.prototype.getAllAssignedAgent = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAllAssignedAgent');
+    };
     AdminService.prototype.getUsers = function () {
         return this.data = [
             { name: 'Avinash', email: "a@gmail.com", phone: '46415454' },
