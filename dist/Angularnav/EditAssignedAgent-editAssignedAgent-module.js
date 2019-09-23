@@ -47,7 +47,7 @@ var EditAssignedAgentRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "button{\r\n margin:2% 2% 2% 2%;\r\n}\r\n\r\n  .actions {\r\n    justify-content: flex-end;\r\n  }\r\n\r\n  .container {\r\n    height: 100%;\r\n  }\r\n\r\n  .active-list-item {\r\n    color: #3F51B5 !important; /* Note: You could also use a custom theme */\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L0VtcGxveWVlL0VkaXRBc3NpZ25lZEFnZW50L2VkaXRBc3NpZ25lZEFnZW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxrQkFBa0I7QUFDbkI7O0VBRUU7SUFDRSx5QkFBeUI7RUFDM0I7O0VBRUE7SUFDRSxZQUFZO0VBQ2Q7O0VBRUE7SUFDRSx5QkFBeUIsRUFBRSw0Q0FBNEM7RUFDekUiLCJmaWxlIjoic3JjL2FwcC9sYXlvdXQvRW1wbG95ZWUvRWRpdEFzc2lnbmVkQWdlbnQvZWRpdEFzc2lnbmVkQWdlbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJ1dHRvbntcclxuIG1hcmdpbjoyJSAyJSAyJSAyJTtcclxufVxyXG5cclxuICAuYWN0aW9ucyB7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xyXG4gIH1cclxuICBcclxuICAuY29udGFpbmVyIHtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICB9XHJcblxyXG4gIC5hY3RpdmUtbGlzdC1pdGVtIHtcclxuICAgIGNvbG9yOiAjM0Y1MUI1ICFpbXBvcnRhbnQ7IC8qIE5vdGU6IFlvdSBjb3VsZCBhbHNvIHVzZSBhIGN1c3RvbSB0aGVtZSAqL1xyXG4gIH0iXX0= */"
+module.exports = "button{\n margin:2% 2% 2% 2%;\n}\n\n  .actions {\n    justify-content: flex-end;\n  }\n\n  .container {\n    height: 100%;\n  }\n\n  .active-list-item {\n    color: #3F51B5 !important; /* Note: You could also use a custom theme */\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L0VtcGxveWVlL0VkaXRBc3NpZ25lZEFnZW50L2VkaXRBc3NpZ25lZEFnZW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxrQkFBa0I7QUFDbkI7O0VBRUU7SUFDRSx5QkFBeUI7RUFDM0I7O0VBRUE7SUFDRSxZQUFZO0VBQ2Q7O0VBRUE7SUFDRSx5QkFBeUIsRUFBRSw0Q0FBNEM7RUFDekUiLCJmaWxlIjoic3JjL2FwcC9sYXlvdXQvRW1wbG95ZWUvRWRpdEFzc2lnbmVkQWdlbnQvZWRpdEFzc2lnbmVkQWdlbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJ1dHRvbntcbiBtYXJnaW46MiUgMiUgMiUgMiU7XG59XG5cbiAgLmFjdGlvbnMge1xuICAgIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIH1cbiAgXG4gIC5jb250YWluZXIge1xuICAgIGhlaWdodDogMTAwJTtcbiAgfVxuXG4gIC5hY3RpdmUtbGlzdC1pdGVtIHtcbiAgICBjb2xvcjogIzNGNTFCNSAhaW1wb3J0YW50OyAvKiBOb3RlOiBZb3UgY291bGQgYWxzbyB1c2UgYSBjdXN0b20gdGhlbWUgKi9cbiAgfSJdfQ== */"
 
 /***/ }),
 
@@ -58,7 +58,7 @@ module.exports = "button{\r\n margin:2% 2% 2% 2%;\r\n}\r\n\r\n  .actions {\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h3 style=\"color:black\">Edit Assaigned Agents Data</h3>\r\n"
+module.exports = "<h3 style=\"color:black\">Edit Assaigned Agents Data</h3>\n"
 
 /***/ }),
 
