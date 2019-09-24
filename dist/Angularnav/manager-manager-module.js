@@ -80,7 +80,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _shared_services_manager_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/services/manager.service */ "./src/app/shared/services/manager.service.ts");
+/* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../autoDialer.service */ "./src/app/autoDialer.service.ts");
 
 
 
@@ -127,16 +127,17 @@ var ManagerComponent = /** @class */ (function () {
             this.contentMargin = 240;
         }
     };
-    //   viewCampaign(){
-    //       alert('msg');
-    //       this.service.campaignAssignedToManager().subscribe((data)=>{
-    //           if(data['success']=== true){
-    //             this.ViewCompaignboolean = true;
-    //             this.AllCompaign = data['message'];
-    //           }
-    //           console.log(data);
-    //       })
-    //   }
+    ManagerComponent.prototype.viewCampaign = function () {
+        var _this = this;
+        alert('msg');
+        this.service.campaignAssignedToManager().subscribe(function (data) {
+            if (data['success'] === true) {
+                _this.ViewCompaignboolean = true;
+                _this.AllCompaign = data['message'];
+            }
+            console.log(data);
+        });
+    };
     //logOut
     ManagerComponent.prototype.logOut = function () {
         localStorage.removeItem('token');
@@ -153,7 +154,7 @@ var ManagerComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./manager.component.html */ "./src/app/manager/manager.component.html"),
             styles: [__webpack_require__(/*! ./manager.component.css */ "./src/app/manager/manager.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _shared_services_manager_service__WEBPACK_IMPORTED_MODULE_3__["ManagerService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__["AutoDialService"]])
     ], ManagerComponent);
     return ManagerComponent;
 }());

@@ -58,7 +58,7 @@ module.exports = ".container-fluid {\n  background-image: url('autodial_img-1-01
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\" style=\"margin-top:0%\">\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <!-- <button (click)=\"customCall()\" id=\"btn\">Receive call btn</button> -->\n      <button (click)=\"OnCallReceive()\" id=\"btnOnCallReceive\" hidden>Call Pick Up</button>\n      <button (click)=\"OnCallReject()\" id=\"btn\" hidden>Reject Call</button>\n      <button (click)=\"openDialog()\" id=\"dialogBox\" hidden>Open DialogBox</button>\n      <button (click)=\"feedBack()\" id=\"feedBack\" hidden>FeedBack Dialog</button>\n      <button (click)=\"createEvent()\" hidden>Create Event Dialog</button>\n      <button (click)=\"hitCallDetail()\" id=\"callDetails\" hidden>HitCallDetailAPI</button>\n\n    </div>\n    <div class=\"col-sm-4\" style=\" color:white;margin-top:8%;\">\n      <!-- *ngIf=\"callBoolean\" -->\n      <div class=\"col\" style=\"display: grid;  justify-content: center;align-items: center;\" *ngIf=\"callBoolean\">\n        <h4 style=\"color:white\">Incomming:</h4>\n        <h4 style=\"color:white\">{{Number}}</h4><br>\n        <h3 style=\"color:white\"> {{ hours | number : '2.0-0' }} : {{ minutes | number : '2.0-0'}} :\n          {{seconds | number : '2.0-0'}}</h3>\n        <div class=\"row\">\n          <div class=\"col\">\n            <!-- <img src=\"../../../../assets/Hangup1.png\" style=\"height:100px; width: 100px\">  -->\n            Hangup\n          </div>\n          <div class=\"col\">\n            <!-- <img src=\"../../../../assets/Mic2.png\" style=\"height:100px; width: 100px\"> -->\n            Microphone\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"col-sm-4\" style=\" color:white;margin-top:4%\">\n      <div class='app'>\n        <div class='app-calendar' *ngIf=\"calendarVisible\">\n          <full-calendar #calendar defaultView=\"dayGridMonth\" [header]=\"{\n                    left: 'prev,next today',\n                    center: 'title',\n                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'\n                  }\" [plugins]=\"calendarPlugins\" [weekends]=\"calendarWeekends\" [events]=\"calendarEvents\"\n            (dateClick)=\"handleDateClick($event)\"></full-calendar>\n        </div>\n\n      </div>\n      <!------------------------------------------------------------------------------>\n      <!-- <div >\n  \n        <table mat-table matSort [dataSource]=\"dataSource\" >\n\n          <ng-container matColumnDef=\"Caller Name\">\n            <th mat-header-cell mat-sort-header *matHeaderCellDef><h6>Caller Name</h6></th>\n            <td mat-cell *matCellDef=\"let user\"> {{user.customerName | titlecase }} </td>\n          </ng-container>\n          <ng-container matColumnDef=\"Caller No\">\n              <th mat-header-cell mat-sort-header *matHeaderCellDef><h6> Caller Number </h6></th>\n              <td mat-cell *matCellDef=\"let user\"> {{user.customerMobNo }} </td>\n            </ng-container>\n         \n          <ng-container matColumnDef=\"Date\">\n            <th mat-header-cell mat-sort-header *matHeaderCellDef><h6> Date </h6> </th>\n            <td mat-cell *matCellDef=\"let user\"> {{user.createdAt | date: 'dd/MMM/yyyy h:mm:ss a'}} </td>\n          </ng-container>\n          <ng-container matColumnDef=\"Note\">\n            <th mat-header-cell mat-sort-header *matHeaderCellDef><h6> Note</h6></th>\n            <td mat-cell *matCellDef=\"let user\"> {{user.descrptionOnCall}}</td>\n          </ng-container>\n\n          <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n          <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\n      \n      \n        </table>\n      </div> -->\n      <!-- <table class=\"table table-striped\">\n        <thead>\n          <tr>\n            <th>Caller Name</th>\n            <th>Caller No</th>\n            <th>Date</th>\n            <th>Note</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor = 'let user of showCreatedCall'>\n            <td>{{user.customerName | titlecase }}</td>\n            <td>{{user.customerMobNo }}</td>\n            <td>{{user.createdAt | date: 'dd/MMM/yyyy h:mm:ss a'}}</td>\n            <td>{{user.descrptionOnCall}}</td>\n          </tr>\n         \n        </tbody>\n      </table> -->\n      <!------------------------------------------------------------------------------>\n    </div>\n  </div>\n\n  <!-- draggable div for notes-->\n  <div id=\"accordion\">\n    <div class=\"card notes\">\n      <div class=\"card-header\">\n        <a class=\"card-link\" data-toggle=\"collapse\" href=\"#collapseOne\">\n          Quick notes\n        </a>\n      </div>\n      <div id=\"collapseOne\" class=\"collapse\" data-parent=\"#accordion\">\n        <div class=\"card-body\" style=\"background-color: white;padding: 0.25rem;\">\n          <textarea style=\"height:300px;width:100%;position:relative\" [(ngModel)]=\"notes\" name=\"notes\"> </textarea>\n        </div>\n      </div>\n    </div>\n\n\n  </div>\n</div>\n\n<!-- <input atp-time-picker (click)=\"open()\" value=\"19:00\" /> -->\n<button (click)=\"getTalkTime()\" id=\"startTime\" hidden>Start Time</button>\n<button (click)=\"end()\" id=\"endTime\" hidden>End time</button>\n<button (click)=\"LogOut()\" id=\"logOut\" hidden>Logout Plivo</button>"
+module.exports = "<div class=\"container-fluid\" style=\"margin-top:0%\">\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <!-- <button (click)=\"customCall()\" id=\"btn\">Receive call btn</button> -->\n      <button (click)=\"OnCallReceive()\" id=\"btnOnCallReceive\" hidden>Call Pick Up</button>\n      <button (click)=\"OnCallReject()\" id=\"btn\" hidden>Reject Call</button>\n      <button (click)=\"openDialog()\" id=\"dialogBox\" hidden>Open DialogBox</button>\n      <button (click)=\"feedBack()\" id=\"feedBack\" hidden>FeedBack Dialog</button>\n      <button (click)=\"createEvent()\" hidden>Create Event Dialog</button>\n      <button (click)=\"hitCallDetail()\" id=\"callDetails\" hidden>HitCallDetailAPI</button>\n\n    </div>\n    <div class=\"col-sm-4\" style=\" color:white;margin-top:8%;\">\n      <!-- *ngIf=\"callBoolean\" -->\n      <div class=\"col\" style=\"display: grid;  justify-content: center;align-items: center;\" *ngIf=\"callBoolean\">\n        <h4 style=\"color:white\">Incomming:</h4>\n        <h4 style=\"color:white\">{{Number}}</h4><br>\n        <h3 style=\"color:white\"> {{ hours | number : '2.0-0' }} : {{ minutes | number : '2.0-0'}} :\n          {{seconds | number : '2.0-0'}}</h3>\n        <div class=\"row\">\n          <div class=\"col\">\n            <!-- <img src=\"../../../../assets/Hangup1.png\" style=\"height:100px; width: 100px\">  -->\n            Hangup\n          </div>\n          <div class=\"col\">\n            <!-- <img src=\"../../../../assets/Mic2.png\" style=\"height:100px; width: 100px\"> -->\n            Microphone\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"col-sm-4\" style=\" color:white;margin-top:4%\">\n      <div class='app'>\n        <div class='app-calendar' *ngIf=\"calendarVisible\">\n          <full-calendar #calendar defaultView=\"dayGridMonth\" [header]=\"{\n                    left: 'prev,next today',\n                    center: 'title',\n                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'\n                  }\" [plugins]=\"calendarPlugins\" [weekends]=\"calendarWeekends\" [events]=\"calendarEvents\"\n            (dateClick)=\"handleDateClick($event)\"></full-calendar>\n        </div>\n\n      </div>\n      <!------------------------------------------------------------------------------>\n      <!-- <div >\n  \n        <table mat-table matSort [dataSource]=\"dataSource\" >\n\n          <ng-container matColumnDef=\"Caller Name\">\n            <th mat-header-cell mat-sort-header *matHeaderCellDef><h6>Caller Name</h6></th>\n            <td mat-cell *matCellDef=\"let user\"> {{user.customerName | titlecase }} </td>\n          </ng-container>\n          <ng-container matColumnDef=\"Caller No\">\n              <th mat-header-cell mat-sort-header *matHeaderCellDef><h6> Caller Number </h6></th>\n              <td mat-cell *matCellDef=\"let user\"> {{user.customerMobNo }} </td>\n            </ng-container>\n         \n          <ng-container matColumnDef=\"Date\">\n            <th mat-header-cell mat-sort-header *matHeaderCellDef><h6> Date </h6> </th>\n            <td mat-cell *matCellDef=\"let user\"> {{user.createdAt | date: 'dd/MMM/yyyy h:mm:ss a'}} </td>\n          </ng-container>\n          <ng-container matColumnDef=\"Note\">\n            <th mat-header-cell mat-sort-header *matHeaderCellDef><h6> Note</h6></th>\n            <td mat-cell *matCellDef=\"let user\"> {{user.descrptionOnCall}}</td>\n          </ng-container>\n\n          <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n          <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\n      \n      \n        </table>\n      </div> -->\n      <!-- <table class=\"table table-striped\">\n        <thead>\n          <tr>\n            <th>Caller Name</th>\n            <th>Caller No</th>\n            <th>Date</th>\n            <th>Note</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor = 'let user of showCreatedCall'>\n            <td>{{user.customerName | titlecase }}</td>\n            <td>{{user.customerMobNo }}</td>\n            <td>{{user.createdAt | date: 'dd/MMM/yyyy h:mm:ss a'}}</td>\n            <td>{{user.descrptionOnCall}}</td>\n          </tr>\n         \n        </tbody>\n      </table> -->\n      <!------------------------------------------------------------------------------>\n    </div>\n  </div>\n\n  <!-- draggable div for notes-->\n  <div id=\"accordion\">\n    <div class=\"card notes\">\n      <div class=\"card-header\">\n        <a class=\"card-link\" data-toggle=\"collapse\" href=\"#collapseOne\">\n          Quick notes\n        </a>\n      </div>\n      <div id=\"collapseOne\" class=\"collapse\" data-parent=\"#accordion\">\n        <div class=\"card-body\" style=\"background-color: white;padding: 0.25rem;\">\n          <textarea style=\"height:150px;width:100%;position:relative\" [(ngModel)]=\"notes\" name=\"notes\"> </textarea>\n        </div>\n      </div>\n    </div>\n\n\n  </div>\n</div>\n\n<!-- <input atp-time-picker (click)=\"open()\" value=\"19:00\" /> -->\n<button (click)=\"getTalkTime()\" id=\"startTime\" hidden>Start Time</button>\n<button (click)=\"end()\" id=\"endTime\" hidden>End time</button>\n<button (click)=\"LogOut()\" id=\"logOut\" hidden>Logout Plivo</button>"
 
 /***/ }),
 
@@ -175,9 +175,8 @@ var ActiveComponent = /** @class */ (function () {
         // }, 15000);
     }
     ActiveComponent.prototype.ngOnInit = function () {
-        var _this = this;
         //------------plivo login----------------------
-        localStorage.setItem('status', 'Active');
+        var _this = this;
         this.initPhone(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
         if (!localStorage.getItem('endpointID') && !localStorage.getItem('csio_auth_data')) {
             // setTimeout(()=>{
@@ -193,18 +192,15 @@ var ActiveComponent = /** @class */ (function () {
             // }, 5000); 
         }
         // this.login("shubham125559174721784","12345");
-        var plivoId = localStorage.getItem('PlivoUserId');
-        var agentId = plivoId.concat('@phone.plivo.com');
+        var agentId = localStorage.getItem('PlivoUserId');
+        agentId = agentId.concat('@phone.plivo.com');
         var Ojb = {
             status: "active",
             currentstatus: "NotOnCall",
-            sipendpoint: plivoId
+            sipendpoint: agentId
         };
         this.service.sendAgentStatus(Ojb).subscribe(function (data) {
             console.log(data);
-            if (data['success'] == true) {
-                _this.showToaster('Active Status');
-            }
         });
         //-------------------------------------
         // let agentId = localStorage.getItem('PlivoUserId');
@@ -374,7 +370,6 @@ var ActiveComponent = /** @class */ (function () {
         localStorage.removeItem('PlivoLogin');
         localStorage.removeItem('endpointID');
         localStorage.removeItem('csio_auth_data');
-        localStorage.removeItem('status');
     };
     ActiveComponent.prototype.OnCallReceive = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
@@ -465,21 +460,7 @@ var ActiveComponent = /** @class */ (function () {
                 if (data['message'][0]['isCallPIckedUp'] === "normal_clearing") {
                     _this.feedBack(callDuration);
                 }
-                else {
-                    var plivoId = localStorage.getItem('PlivoUserId');
-                    var agentId = plivoId.concat('@phone.plivo.com');
-                    var Ojb = {
-                        status: "active",
-                        currentstatus: "NotOnCall",
-                        sipendpoint: plivoId
-                    };
-                    _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
-                        console.log(data);
-                        if (data['success'] == true) {
-                            _this.showToaster('Active Status');
-                        }
-                    });
-                }
+                // else if()
             }
         });
         //  localStorage.removeItem('uuid');
@@ -522,6 +503,7 @@ var ActiveComponent = /** @class */ (function () {
         var dialogRef = this.dialog.open(_my_dialog_my_dialog_component__WEBPACK_IMPORTED_MODULE_8__["MyDialogComponent"], {
             width: '550px',
             data: { number: localStorage.getItem('Number'), name: localStorage.getItem('Name') },
+            disableClose: true
         });
         dialogRef.afterClosed().subscribe(function (result) {
             console.log('The dialog was closed');

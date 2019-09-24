@@ -191,11 +191,11 @@ var ManualDialComponent = /** @class */ (function () {
                 _this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
                 //}, 5000); 
             }
-            var plivoId = localStorage.getItem('PlivoUserId');
-            var agentId = plivoId.concat('@phone.plivo.com');
+            var agentId = localStorage.getItem('PlivoUserId');
+            agentId = agentId.concat('@phone.plivo.com');
             var Ojb = { status: "manual",
                 currentstatus: "NotOnCall",
-                sipendpoint: plivoId
+                sipendpoint: agentId
             };
             _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
                 console.log(data);
@@ -228,9 +228,10 @@ var ManualDialComponent = /** @class */ (function () {
     // this.router.navigateByUrl(this.router.url).then(e=>{
     // this.dslkflks()
     //   })
-    ManualDialComponent.prototype.ngOnInit = function () {
-        localStorage.setItem('status', 'Manual');
-    };
+    //   ngOnInitFuncion() {
+    //     this.router.navigate(['/agent/manualdial'])
+    // //---------------------plivo login------------------------
+    //     }
     ManualDialComponent.prototype.ngOnDestroy = function () {
         this.logOut();
     };
@@ -398,7 +399,6 @@ var ManualDialComponent = /** @class */ (function () {
         localStorage.removeItem('PlivoLogin');
         localStorage.removeItem('endpointID');
         localStorage.removeItem('csio_auth_data');
-        localStorage.removeItem('status');
     };
     ManualDialComponent.prototype.makeCall = function () {
         //var dest = document.getElementById('number')
