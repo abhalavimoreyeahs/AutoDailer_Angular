@@ -195,7 +195,8 @@ var ManualDialComponent = /** @class */ (function () {
             agentId = agentId.concat('@phone.plivo.com');
             var Ojb = { status: "manual",
                 currentstatus: "NotOnCall",
-                sipendpoint: agentId
+                sipendpoint: agentId,
+                reason: null
             };
             _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
                 console.log(data);
@@ -625,7 +626,7 @@ var FeedBackComponent = /** @class */ (function () {
     }
     //select feedback list
     FeedBackComponent.prototype.onChange = function () {
-        if (this.data['isCustomerInterested'] == 3) {
+        if (this.data['isCustomerInterested'] == 3 || this.data['isCustomerInterseted'] === 2) {
             this.select = true;
             this.data['ischeduldedCallBack'] = true;
         }

@@ -18,7 +18,7 @@ module.exports = "\n<h2 mat-dialog-title style=\"text-align: center\">On Break</
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a href=\"javascript:void(0)\"><mat-icon style=\"float:right;margin-top:-3%;margin-right:-3%;color:lightgray\" (click)=\"onNoClick()\" >clear</mat-icon></a>\n<h2 mat-dialog-title style=\"text-align: center\">Break Reason</h2>\n<mat-dialog-content style=\"text-align:center\">\n        <!-- <div class=\"row\"> -->\n\n                <mat-form-field >\n                        <mat-label>Break Reason</mat-label>\n                        <input   matInput  placeholder=\"Caller Name\" style=\"max-width: 100px\" [(ngModel)]=\"data.reason\" name=\"reason\" [value]=\"\" required>                      \n               </mat-form-field> <br>\n                <!-- <div class=\"col\" style=\"margin-left:5%\">\n                        <mat-form-field>\n                                <mat-label>Caller Name</mat-label>\n                                <input  matInput  placeholder=\"Caller Name\" style=\"max-width: 100px\" [(ngModel)]=\"data.name\" name=\"name\" [value]=\"\" required>                      \n                       </mat-form-field><br>\n                       <mat-form-field *ngIf=\"select\">\n                            <mat-label>CallBack Date</mat-label>\n                            <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\" [(ngModel)]=\"data.startdate\"  name=\"startdate\">\n                            <mat-datepicker-toggle matSuffix [for]=\"picker\" (click)=\"selectDate(startdate)\"></mat-datepicker-toggle>\n                            <mat-datepicker #picker></mat-datepicker>   \n                    </mat-form-field>                  \n                </div>\n                <div class=\"col\">                  \n                        <mat-form-field>\n                                <mat-label>Customer Interested</mat-label>\n                                 <mat-select [(ngModel)]=\"select\">\n                                        <mat-option  [value]=\"0\"> Active </mat-option>\n                                        <mat-option  [value]=\"1\"> Manual </mat-option>\n                                 </mat-select>\n                       </mat-form-field>                            \n                </div> -->\n              <!-- </div> -->\n</mat-dialog-content>\n\n<mat-dialog-actions style=\"text-align:center;display: flex;justify-content: center;\">\n    <!-- <button mat-button (click)=\"onNoClick()\" class=\"mat-raised-button\" style=\"width:100px\">No Thanks</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial class=\"mat-raised-button mat-primary\" style=\"width:100px\">Submit</button>\n</mat-dialog-actions>"
+module.exports = "<a href=\"javascript:void(0)\">\n        <mat-icon style=\"float:right;margin-top:-3%;margin-right:-3%;color:lightgray\" (click)=\"onNoClick()\">clear\n        </mat-icon>\n</a>\n<h2 mat-dialog-title style=\"text-align: center\">Break Reason</h2>\n<mat-dialog-content style=\"text-align:center\">\n        <!-- <div class=\"row\"> -->\n\n        <mat-form-field>\n                <!-- <mat-label>Break Reason</mat-label>\n                        <input   matInput  placeholder=\"Caller Name\" style=\"max-width: 100px\" [(ngModel)]=\"data.reason\" name=\"reason\" [value]=\"\" required>  -->\n\n                <mat-label>Break Reason</mat-label>\n\n                <mat-select [(ngModel)]=\"data.reason\" name=\"reason\" required>\n                        <mat-option *ngFor=\"let item of Break\" [value]=\"item.value\">\n                                {{item.name}}\n                        </mat-option>\n                </mat-select>\n        </mat-form-field> <br>\n\n</mat-dialog-content>\n\n<mat-dialog-actions style=\"text-align:center;display: flex;justify-content: center;\">\n        <!-- <button mat-button (click)=\"onNoClick()\" class=\"mat-raised-button\" style=\"width:100px\">No Thanks</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->\n        <button mat-button (click)=\"ok()\" cdkFocusInitial class=\"mat-raised-button mat-primary\"\n                style=\"width:100px\">Submit</button>\n</mat-dialog-actions>\n\n<!-------------------------------------NEW CODE ------------------------------------>"
 
 /***/ }),
 
@@ -117,7 +117,8 @@ var BreakComponent = /** @class */ (function () {
         agentId = agentId.concat('@phone.plivo.com');
         var Ojb = { status: "break",
             currentstatus: "notOnCall",
-            sipendpoint: agentId
+            sipendpoint: agentId,
+            reason: null
         };
         this.service.sendAgentStatus(Ojb).subscribe(function (data) {
             console.log(data);
@@ -125,6 +126,7 @@ var BreakComponent = /** @class */ (function () {
     }
     //Dialog function
     BreakComponent.prototype.openDialog = function () {
+        var _this = this;
         console.log(this.Call);
         var dialogRef = this.dialog.open(BreakDialogComponent, {
             width: '550px',
@@ -134,6 +136,16 @@ var BreakComponent = /** @class */ (function () {
         dialogRef.afterClosed().subscribe(function (result) {
             console.log('The dialog was closed');
             console.log(result);
+            var agentId = localStorage.getItem('PlivoUserId');
+            agentId = agentId.concat('@phone.plivo.com');
+            var Ojb = { status: "break",
+                currentstatus: "notOnCall",
+                sipendpoint: agentId,
+                reason: result['reason']
+            };
+            _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
+                console.log(data);
+            });
         });
     };
     //Break Reason
@@ -168,14 +180,27 @@ var BreakReasonComponent = /** @class */ (function () {
     function BreakReasonComponent(dialogRef, data) {
         this.dialogRef = dialogRef;
         this.data = data;
+        this.Break = [
+            { value: 0, name: "regular break" },
+            { value: 1, name: "meeting with customer" },
+            { value: 2, name: "training" },
+            { value: 3, name: "occasional break" }
+        ];
     }
     BreakReasonComponent.prototype.onNoClick = function () {
+        //alert('alert called noclick');
         this.dialogRef.close();
     };
     BreakReasonComponent.prototype.cancel = function () {
+        //alert('alert called cancel');
     };
     BreakReasonComponent.prototype.ok = function () {
-        this.dialogRef.close("can pass string");
+        if (this.data['reason'] != null) {
+            this.dialogRef.close(this.data);
+        }
+        else {
+            alert('Please select reaon');
+        }
         //save the doc
     };
     BreakReasonComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -195,14 +220,27 @@ var BreakDialogComponent = /** @class */ (function () {
     function BreakDialogComponent(dialogRef, data) {
         this.dialogRef = dialogRef;
         this.data = data;
+        this.Break = [
+            { value: 0, name: "regular break" },
+            { value: 1, name: "meeting with customer" },
+            { value: 2, name: "training" },
+            { value: 3, name: "occasional break" }
+        ];
     }
     BreakDialogComponent.prototype.onNoClick = function () {
+        alert('alert called');
         this.dialogRef.close();
     };
     BreakDialogComponent.prototype.cancel = function () {
+        alert('alert called');
     };
     BreakDialogComponent.prototype.ok = function () {
-        this.dialogRef.close("can pass string");
+        if (this.data['reason']) {
+            this.dialogRef.close("can pass string");
+        }
+        else {
+            alert('Please select reaon');
+        }
         //save the doc
     };
     BreakDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

@@ -4801,7 +4801,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mainDiv\" style=\"background-color:#ecf0f5\"> \n  <div class=\"content-wrapper\" style=\"padding: 1.8rem;\">\n   <div class=\"content-header row\">\n   \n   </div>\n   <div class=\"content-body\">\n    <div class=\"row\">\n      <div class=\"col-sm\"> \n          <div class=\"card\">\n              <div class=\"card-content\" style=\"background-image: linear-gradient( to right, #008385, #00E7EB );\">\n                  <div class=\"media align-items-stretch\">\n                    <div style=\"width:100px; height:90px; padding: 5% 5% 5% 5%;\">\n                      <img src=\"../../../assets/calendar-with-a-clock-time-tools (2)@2x.png\" style=\"width: 50px;  height: 40px; \">\n                    </div>\n                      <div style=\"margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;\" >\n                          <h5>Today's Scheduled Calls</h5>\n                          <h5 class=\"text-bold-400 mb-0\"><i class=\"ft-plus\"></i> 28</h5>\n                      </div>\n                  </div>\n              </div>\n          </div> </div>\n     <div class=\"col-sm\">\n        <div class=\"card\">\n            <div class=\"card-content\" style=\"background-image: linear-gradient( to right, #FF425C, #FF7588 );\">\n                <div class=\"media align-items-stretch\">\n                    <div style=\"width:100px; height:90px; padding: 5% 5% 5% 5%;\">\n                      <img src=\"../../../assets/call-back@2x.png\" style=\"width: 50px;  height: 40px;\">\n                    \n                    </div>\n                    <div style=\"margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;\" >\n                        <h5>Call Attended</h5>\n                        <h5 class=\"text-bold-400 mb-0\"><i class=\"ft-plus\"></i> 25</h5>\n                    </div>\n                </div>\n            </div>\n        </div>\n     </div>\n     <div class=\"col-sm\">\n        <div class=\"card\">\n            <div class=\"card-content\" style=\"background-image: linear-gradient( to right, #FF864A, #FFA87D );\">\n                <div class=\"media align-items-stretch\">\n                    <div style=\"width:100px; height:90px; padding: 5% 5% 5% 5%;\">\n                      <img src=\"../../assets/call-back@2x.png\" style=\"width: 50px;  height: 40px;\">\n                    </div>\n                    <div style=\"margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;\" >\n                        <h5>Manual Dial</h5>\n                        <h5 class=\"text-bold-400 mb-0\"><i class=\"ft-plus\"></i> 28</h5>\n                    </div>\n                </div>\n            </div>\n        </div> </div>\n     <div class=\"col-sm\"> \n        <div class=\"card\">\n            <div class=\"card-content\" style=\"background-image: linear-gradient( to right, #11A578, #32EAB2 );\">\n                <div class=\"media align-items-stretch\">\n                  <div style=\"width:100px; height:90px; padding: 5% 5% 5% 5%;\">\n                    <img src=\"../../assets/call-back@2x.png\" style=\"width: 50px;  height: 40px;\">\n                  </div>\n                    <div style=\"margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;\" >\n                        <h5>Active Time</h5>\n                        <h5 class=\"text-bold-400 mb-0\"><i class=\"ft-plus\"></i> 5 Hours</h5>\n                    </div>\n                </div>\n            </div>\n        </div>\n       </div>\n    </div>\n    \n    <div class=\"row match-height\" style=\"margin-top:1%\">\n    \n    <div  class=\"col-xl-3 col-lg-12\">\n       <div class=\"card\" style=\"width:100%;height:100% ;\">\n        <!-- <div class=\"card-header\" style=\"background-color: none;\">\n            <h4 class=\"card-title\" style=\"font-weight:normal\">Call </h4>\n        </div> -->\n        <canvas id=\"tryBar\" width=\"400\" height=\"400\"></canvas>\n              </div>\n      \n    </div>\n    <div  class=\"col-xl-3 col-lg-12\">\n        <div class=\"card\" style=\"width:100%;height:100% ;\">\n            <canvas id=\"barGraph\" width=\"400\" height=\"400\"></canvas>\n                  </div>\n    </div>\n    <div class=\"col-xl-4 col-lg-12\">\n            <div class=\"card\" style=\"height: 402px;\">\n        <!-- <div class=\"chart-container\" style=\"position: relative; height:40vh;\">    \n            <canvas id=\"canvasBar\">{{ BarChart }}</canvas>    \n          </div>  -->\n          </div>\n    </div>\n    <div class=\"col-xl-2 col-lg-12\">\n            <div class=\"card\" style=\"width:100%; height:402px\">\n                <div class=\"card-header\" style=\"background-color: none;\">\n                    <h4 class=\"card-title\" style=\"font-weight:normal\">Agent Status</h4>\n                    <a class=\"heading-elements-toggle\"><i class=\"fa fa-ellipsis-v font-medium-3\"></i></a>\n                    <div class=\"heading-elements\">\n                        <ul class=\"list-inline mb-0\">\n                            <li><a data-action=\"reload\"><i class=\"ft-rotate-cw\"></i></a></li>\n                            <li><a data-action=\"expand\"><i class=\"ft-maximize\"></i></a></li>\n                        </ul>\n                    </div>\n                </div>\n                <div class=\"card-content\">\n    \n                    <div class=\"table-responsive\">\n                        <table id=\"recent-orders\" class=\"table table-hover mb-0 ps-container ps-theme-default\" style=\"font-size: 1rem; font-weight: 400;  line-height: 1.45;\">\n                            <thead>\n      \n                            </thead>\n                            <tbody>\n                                <tr>\n                                    <td class=\"text-truncate\">Active</td>\n                                    <td class=\"text-truncate\">28</td>\n                                </tr>\n                                <tr>\n                                     <td class=\"text-truncate\">On the Phone</td>\n                                    <td class=\"text-truncate\">10</td>\n                                </tr>\n                                <tr>\n                                    <td class=\"text-truncate\">Manual Dial</td>\n                                    <td class=\"text-truncate\">06</td>\n                                </tr>\n                                <tr>\n                                    <td class=\"text-truncate\">Callback</td>\n                                    <td class=\"text-truncate\">5</td>\n                                </tr>\n                                <tr>\n                                    <td class=\"text-truncate\">Break</td>\n                                    <td class=\"text-truncate\">7</td>\n                                </tr>\n                                <tr>\n                                     <td class=\"text-truncate\">Training</td>\n                                    <td class=\"text-truncate\">0</td>\n                                </tr>\n                                <tr>\n                                     <td class=\"text-truncate\">Meeting with Customer</td>\n                                       <td class=\"text-truncate\">0</td>\n                                 </tr>\n                        \n                            </tbody>\n                        </table>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <!----------------------------------------------------------------------------------------------------------------------------->\n    <div class=\"row match-height\" style=\"margin-top:1%\">\n        <div  class=\"col-xl-4 col-lg-12\">\n            <div class=\"card\" style=\"width:100%; height:402px\">\n                <div class=\"card-header\">\n                  <h4 class=\"card-title\" style=\"font-family: sans-serif; font-weight: none; color: gray;\">Number of Scheduled Call Being Placed</h4>\n                  <a class=\"heading-elements-toggle\"><i class=\"fa fa-ellipsis-v font-medium-3\"></i></a>\n                  <div class=\"heading-elements\">\n                      <ul class=\"list-inline mb-0\">\n                          <li><a data-action=\"reload\"><i class=\"ft-rotate-cw\"></i></a></li>\n                          <li><a data-action=\"expand\"><i class=\"ft-maximize\"></i></a></li>\n                      </ul>\n                  </div>\n              </div>\n              \n            </div>  \n      </div>\n      <div  class=\"col-xl-4 col-lg-12\">\n          <div class=\"card\" style=\"width:100%; height:402px\">\n              <div class=\"card-header\">\n                  <h4 class=\"card-title\" style=\"font-family: sans-serif; font-weight: none; color: gray;\">Campaign Running Today</h4>\n                  <a class=\"heading-elements-toggle\"><i class=\"fa fa-ellipsis-v font-medium-3\"></i></a>\n                  <div class=\"heading-elements\">\n                      <ul class=\"list-inline mb-0\">\n                          <li><a data-action=\"reload\"><i class=\"ft-rotate-cw\"></i></a></li>\n                          <li><a data-action=\"expand\"><i class=\"ft-maximize\"></i></a></li>\n                      </ul>\n                  </div>\n              </div>\n            \n            </div>  \n      </div>\n      <div  class=\"col-xl-4 col-lg-12\">\n        <div class=\"card\" style=\"width:100%; height:402px;\">\n            <div class=\"card-header\">\n                <h4 class=\"card-title\" style=\"font-family: sans-serif; font-weight: none; color: gray;\">Extra field</h4>\n                <a class=\"heading-elements-toggle\"><i class=\"fa fa-ellipsis-v font-medium-3\"></i></a>\n                <div class=\"heading-elements\">\n                    <ul class=\"list-inline mb-0\">\n                        <li><a data-action=\"reload\"><i class=\"ft-rotate-cw\"></i></a></li>\n                        <li><a data-action=\"expand\"><i class=\"ft-maximize\"></i></a></li>\n                    </ul>\n                </div>\n            </div>\n          </div>  \n    </div>\n      </div>\n   \n   </div>\n  \n  </div>\n \n </div>\n"
+module.exports = "<div class=\"mainDiv\" style=\"background-color:#ecf0f5\"> \n    <div class=\"content-wrapper\" style=\"padding: 1.8rem;\">\n     <div class=\"content-header row\">\n     \n     </div>\n     <div class=\"content-body\">\n      <div class=\"row\">\n        <div class=\"col-sm\"> \n            <div class=\"card\">\n                <div class=\"card-content\" style=\"background-image: linear-gradient( to right, #008385, #00E7EB );\">\n                    <div class=\"media align-items-stretch\">\n                      <div style=\"width:100px; height:90px; padding: 5% 5% 5% 5%;\">\n                        <img src=\"../../../assets/calendar-with-a-clock-time-tools (2)@2x.png\" style=\"width: 50px;  height: 40px; \">\n                      </div>\n                        <div style=\"margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;\" >\n                            <h5>Today's Scheduled Calls</h5>\n                            <h5 class=\"text-bold-400 mb-0\"><i class=\"ft-plus\"></i> {{TodayScheduledCall}}</h5>\n                        </div>\n                    </div>\n                </div>\n            </div> </div>\n       <div class=\"col-sm\">\n          <div class=\"card\">\n              <div class=\"card-content\" style=\"background-image: linear-gradient( to right, #FF425C, #FF7588 );\">\n                  <div class=\"media align-items-stretch\">\n                      <div style=\"width:100px; height:90px; padding: 5% 5% 5% 5%;\">\n                        <img src=\"../../../assets/call-back@2x.png\" style=\"width: 50px;  height: 40px;\">\n                      \n                      </div>\n                      <div style=\"margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;\" >\n                          <h5>Call Attended</h5>\n                          <h5 class=\"text-bold-400 mb-0\"><i class=\"ft-plus\"></i> {{callAttended}}</h5>\n                      </div>\n                  </div>\n              </div>\n          </div>\n       </div>\n       <div class=\"col-sm\">\n          <div class=\"card\">\n              <div class=\"card-content\" style=\"background-image: linear-gradient( to right, #FF864A, #FFA87D );\">\n                  <div class=\"media align-items-stretch\">\n                      <div style=\"width:100px; height:90px; padding: 5% 5% 5% 5%;\">\n                        <img src=\"../../assets/call-back@2x.png\" style=\"width: 50px;  height: 40px;\">\n                      </div>\n                      <div style=\"margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;\" >\n                          <h5>Agent Active On Call</h5>\n                          <h5 class=\"text-bold-400 mb-0\"><i class=\"ft-plus\"></i> {{agentActiveOnCall}}</h5>\n                      </div>\n                  </div>\n              </div>\n          </div> </div>\n       <div class=\"col-sm\"> \n          <div class=\"card\">\n              <div class=\"card-content\" style=\"background-image: linear-gradient( to right, #11A578, #32EAB2 );\">\n                  <div class=\"media align-items-stretch\">\n                    <div style=\"width:100px; height:90px; padding: 5% 5% 5% 5%;\">\n                      <img src=\"../../assets/call-back@2x.png\" style=\"width: 50px;  height: 40px;\">\n                    </div>\n                      <div style=\"margin-top: 5%;   margin-left: 2%;    color: white;    font-family: sans-serif;\" >\n                          <h5>Agent Waiting</h5>\n                          <h5 class=\"text-bold-400 mb-0\"><i class=\"ft-plus\"></i> {{agentWatitingForCall}}</h5>\n                      </div>\n                  </div>\n              </div>\n          </div>\n         </div>\n      </div>\n      \n      <div class=\"row match-height\" style=\"margin-top:1%\">\n      \n      <div  class=\"col-xl-3 col-lg-12\">\n         <div class=\"card\" style=\"width:100%;height:100% ;\">\n          <!-- <div class=\"card-header\" style=\"background-color: none;\">\n              <h4 class=\"card-title\" style=\"font-weight:normal\">Call </h4>\n          </div> -->\n          <canvas id=\"tryBar\" width=\"400\" height=\"400\"></canvas>\n                </div>\n        \n      </div>\n      <div  class=\"col-xl-3 col-lg-12\">\n          <div class=\"card\" style=\"width:100%;height:100% ;\">\n              <canvas id=\"barGraph\" width=\"400\" height=\"400\"></canvas>\n                    </div>\n      </div>\n      <div class=\"col-xl-4 col-lg-12\">\n              <div class=\"card\" style=\"height: 402px;\">\n                  <div class=\"card-header\" style=\"background-color: white;\">\n                      <h4 class=\"card-title\" style=\"font-weight:normal\">Campaings </h4>\n                      <a class=\"heading-elements-toggle\"><i class=\"fa fa-ellipsis-v font-medium-3\"></i></a>\n                      <div class=\"heading-elements\">\n                          <ul class=\"list-inline mb-0\">\n                              <li><a data-action=\"reload\"><i class=\"ft-rotate-cw\"></i></a></li>\n                              <li><a data-action=\"expand\"><i class=\"ft-maximize\"></i></a></li>\n                          </ul>\n                      </div>\n                  </div>\n                  <div class=\"card-content\">\n                      <div class=\"table-responsive\">\n                          <table id=\"recent-orders\" class=\"table table-hover mb-0 ps-container ps-theme-default\" style=\"font-size: 1rem; font-weight: 400;  line-height: 1.45;\">\n                              <thead>\n        \n                              </thead>\n                              <tbody>\n                                  <tr *ngIf=\"RunningCampaign.name\">\n                                      <td class=\"text-truncate\">Campaign Running now: <h5 style=\"color:hotpink\"><b>{{RunningCampaign.name | titlecase}} </b> </h5></td>\n                                      <td class=\"text-truncate\"> Total Customers: <h5 style=\"color:green\"><b>{{RunningCampaign.customers}} </b></h5></td>\n                                  </tr>\n                                  <tr>\n                                      <td>\n                                      <span>\n                                              -- contacts called (in this Campaign)\n                                      </span><br>\n                                      <span>\n                                              -- contacts remaining (in this Campaign)\n                                      </span>\n                                      </td>\n                                      <!-- <td class=\"text-truncate\">On the Phone</td>\n                                      <td class=\"text-truncate\">10</td> -->\n                                  </tr>\n                                  <tr>\n                                      <td class=\"text-truncate\">Campaign in Queue </td>\n                                      <td class=\"text-truncate\"> <h5 style=\"color:green\"><b> {{QueueCount}} </b></h5></td>\n                                  </tr>\n                                  <tr *ngFor=\"let data of campaignInQueue;\">\n                                      <td class=\"text-truncate\">{{data.campaignName | titlecase}}: queueStatus({{data.queueStatus}}) + contacts: {{data.customers}} </td>\n                                      <td class=\"text-truncate\"></td>\n                                  </tr>\n                                  \n                          \n                              </tbody>\n                          </table>\n                      </div>\n  \n                  </div>\n            </div>\n      </div>\n      <div class=\"col-xl-2 col-lg-12\">\n              <div class=\"card\" style=\"width:100%; height:402px\">\n                  <div class=\"card-header\" style=\"background-color: white;\">\n                      <h4 class=\"card-title\" style=\"font-weight:normal\">Agent Status</h4>\n                      <a class=\"heading-elements-toggle\"><i class=\"fa fa-ellipsis-v font-medium-3\"></i></a>\n                      <div class=\"heading-elements\">\n                          <ul class=\"list-inline mb-0\">\n                              <li><a data-action=\"reload\"><i class=\"ft-rotate-cw\"></i></a></li>\n                              <li><a data-action=\"expand\"><i class=\"ft-maximize\"></i></a></li>\n                          </ul>\n                      </div>\n                  </div>\n                  <div class=\"card-content\">\n      \n                      <div class=\"table-responsive\" *ngIf=\"AgentStatus\">\n                          <table id=\"recent-orders\" class=\"table table-hover mb-0 ps-container ps-theme-default\" style=\"font-size: 1rem; font-weight: 400;  line-height: 1.45;\">\n                              <thead>\n        \n                              </thead>\n                              <tbody>\n                                  <tr>\n                                      <td class=\"text-truncate\">Active</td>\n                                      <td class=\"text-truncate\">{{AgentStatus.active}}</td>\n                                  </tr>\n                                  <!-- <tr>\n                                       <td class=\"text-truncate\">On the Phone</td>\n                                      <td class=\"text-truncate\">10</td>\n                                  </tr> -->\n                                  <tr>\n                                      <td class=\"text-truncate\">Manual Dial</td>\n                                      <td class=\"text-truncate\">{{AgentStatus.manual}}</td>\n                                  </tr>\n                                  <tr>\n                                      <td class=\"text-truncate\">Callback</td>\n                                      <td class=\"text-truncate\">{{AgentStatus.callback}}</td>\n                                  </tr>\n                                  <tr>\n                                      <td class=\"text-truncate\">Break</td>\n                                      <td class=\"text-truncate\">{{AgentStatus.Break}}</td>\n                                  </tr>\n                                  <tr>\n                                       <td class=\"text-truncate\">Training</td>\n                                      <td class=\"text-truncate\">0</td>\n                                  </tr>\n                                  <tr>\n                                       <td class=\"text-truncate\">Meeting with Customer</td>\n                                         <td class=\"text-truncate\">0</td>\n                                   </tr>\n                          \n                              </tbody>\n                          </table>\n                      </div>\n                  </div>\n              </div>\n          </div>\n      </div>\n  \n      <!----------------------------------------------------------------------------------------------------------------------------->\n      <!-- <div class=\"row match-height\" style=\"margin-top:1%\">\n          <div  class=\"col-xl-4 col-lg-12\">\n              <div class=\"card\" style=\"width:100%; height:402px\">\n                  <div class=\"card-header\">\n                    <h4 class=\"card-title\" style=\"font-family: sans-serif; font-weight: none; color: gray;\">Number of Scheduled Call Being Placed</h4>\n                    <a class=\"heading-elements-toggle\"><i class=\"fa fa-ellipsis-v font-medium-3\"></i></a>\n                    <div class=\"heading-elements\">\n                        <ul class=\"list-inline mb-0\">\n                            <li><a data-action=\"reload\"><i class=\"ft-rotate-cw\"></i></a></li>\n                            <li><a data-action=\"expand\"><i class=\"ft-maximize\"></i></a></li>\n                        </ul>\n                    </div>\n                </div>\n                \n              </div>  \n        </div>\n        <div  class=\"col-xl-4 col-lg-12\">\n            <div class=\"card\" style=\"width:100%; height:402px\">\n                <div class=\"card-header\">\n                    <h4 class=\"card-title\" style=\"font-family: sans-serif; font-weight: none; color: gray;\">Campaign Running Today</h4>\n                    <a class=\"heading-elements-toggle\"><i class=\"fa fa-ellipsis-v font-medium-3\"></i></a>\n                    <div class=\"heading-elements\">\n                        <ul class=\"list-inline mb-0\">\n                            <li><a data-action=\"reload\"><i class=\"ft-rotate-cw\"></i></a></li>\n                            <li><a data-action=\"expand\"><i class=\"ft-maximize\"></i></a></li>\n                        </ul>\n                    </div>\n                </div>\n              \n              </div>  \n        </div>\n        <div  class=\"col-xl-4 col-lg-12\">\n          <div class=\"card\" style=\"width:100%; height:402px;\">\n              <div class=\"card-header\">\n                  <h4 class=\"card-title\" style=\"font-family: sans-serif; font-weight: none; color: gray;\">Extra field</h4>\n                  <a class=\"heading-elements-toggle\"><i class=\"fa fa-ellipsis-v font-medium-3\"></i></a>\n                  <div class=\"heading-elements\">\n                      <ul class=\"list-inline mb-0\">\n                          <li><a data-action=\"reload\"><i class=\"ft-rotate-cw\"></i></a></li>\n                          <li><a data-action=\"expand\"><i class=\"ft-maximize\"></i></a></li>\n                      </ul>\n                  </div>\n              </div>\n            </div>  \n      </div>\n        </div> -->\n     \n     </div>\n    \n    </div>\n   \n   </div>\n  "
 
 /***/ }),
 
@@ -4819,9 +4819,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../autoDialer.service */ "./src/app/autoDialer.service.ts");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _shared_services_manager_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/services/manager.service */ "./src/app/shared/services/manager.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_6__);
 
 
 //import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -4830,26 +4831,55 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var ManagerDashboardComponent = /** @class */ (function () {
-    function ManagerDashboardComponent(toastrService, formBuilder, service) {
+    function ManagerDashboardComponent(toastrService, formBuilder, service, managerService) {
         this.toastrService = toastrService;
         this.formBuilder = formBuilder;
         this.service = service;
+        this.managerService = managerService;
         this.BarChart = [];
         this.stackedBar = [];
+        this.CallToday = [0, 0, 0, 0, 0];
+        // CallDetails
+        this.agentActiveOnCall = 0;
+        this.agentWatitingForCall = 0;
+        this.successfullCall = 0;
+        this.callFailed = 0;
+        this.noAnswer = 0;
+        this.TodayScheduledCall = 0;
+        this.callAttended = 0;
         this.Status = ['Introduction Calls', 'Follow up Calls', 'Deals done', 'Not Interested', 'Call Back', 'Voice mail', 'call answered'];
         this.data = [8, 5, 1, 3, 2, 0, 0];
         this.Color = ['rgb(0, 227, 150)', 'rgb(0, 143, 251)', 'rgb(254, 176, 25)', 'rgb(255, 69, 96)', 'rgb(119, 93, 208)', '#DEB887', 'black'];
+        this.campaignInQueue = [];
+        this.QueueCount = 0;
+        this.RunningCampaign = { name: 'None', customers: 0 };
+        this.CallInfoType = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        this.callApi();
     }
+    // this.RunningCampaign.name =<any>'None';
+    // this.
+    // callType
     ManagerDashboardComponent.prototype.ngOnInit = function () {
         //Bar Graph
-        this.BarChart = new chart_js__WEBPACK_IMPORTED_MODULE_5__["Chart"]('barGraph', {
+        this.BarChart = new chart_js__WEBPACK_IMPORTED_MODULE_6__["Chart"]('barGraph', {
             type: 'horizontalBar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: [
+                    "Dealdone",
+                    "Introductioncalls",
+                    "Followupcalls",
+                    "Callback",
+                    "Voicemail",
+                    "Blacklist",
+                    "Numberdoesnotmatch",
+                    "Underage",
+                    "Duplicate"
+                ],
                 datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
+                        label: 'calls',
+                        data: this.CallInfoType,
                         backgroundColor: [
                             'rgb(0, 227, 150)',
                             'rgb(0, 143, 251)',
@@ -4888,13 +4918,13 @@ var ManagerDashboardComponent = /** @class */ (function () {
             }
         });
         // second chart
-        this.stackedBar = new chart_js__WEBPACK_IMPORTED_MODULE_5__["Chart"]('tryBar', {
+        this.stackedBar = new chart_js__WEBPACK_IMPORTED_MODULE_6__["Chart"]('tryBar', {
             type: 'doughnut',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['SuccessFul Call', 'No Answer', 'call Failed', 'Wrong Number', 'NumberBusy'],
                 datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
+                        label: '# call Info',
+                        data: this.CallToday,
                         backgroundColor: [
                             'rgb(0, 227, 150)',
                             'rgb(0, 143, 251)',
@@ -4915,6 +4945,9 @@ var ManagerDashboardComponent = /** @class */ (function () {
                     }]
             },
             options: {
+                legend: { display: false, position: 'right',
+                    labels: { fontColor: 'rgb(0,0,0)' }
+                },
                 scales: {
                     yAxes: [{
                             ticks: {
@@ -4932,6 +4965,66 @@ var ManagerDashboardComponent = /** @class */ (function () {
                                 display: false,
                             },
                         }],
+                }
+            }
+        });
+    };
+    ManagerDashboardComponent.prototype.callApi = function () {
+        var _this = this;
+        debugger;
+        this.managerService.getCampaignDetails().subscribe(function (data) {
+            console.log(data);
+            if (data['success'] == true) {
+                _this.campaign = data['campaignStatus'];
+                for (var i = 0; i < data['campaignStatus'].length; i++) {
+                    if (data['campaignStatus'][i]['status'] == 1) {
+                        _this.RunningCampaign.name = data['campaignStatus'][i]['campingname'],
+                            _this.RunningCampaign.customers = data['campaignStatus'][i]['customers'];
+                    }
+                    else if (data['campaignStatus'][i]['status'] == 2) {
+                        _this.QueueCount++;
+                        _this.campaignInQueue.push({ queueStatus: data['campaignStatus'][i]['queueStatus'],
+                            campaignName: data['campaignStatus'][i]['campingname'],
+                            customers: data['campaignStatus'][i]['customers']
+                        });
+                    }
+                }
+            }
+        });
+        this.managerService.getAgentStatus().subscribe(function (data) {
+            console.log(data);
+            if (data['success'] == true) {
+                _this.AgentStatus = data['statusObj'];
+            }
+        });
+        this.managerService.getCallInfo().subscribe(function (data) {
+            console.log(data);
+            if (data['success'] == true) {
+                _this.CallInfoType[0] = data['message']['Dealdone'],
+                    _this.CallInfoType[1] = data['message']['Introductioncalls'],
+                    _this.CallInfoType[2] = data['message']['Followupcalls'],
+                    _this.CallInfoType[3] = data['message']['Callback'],
+                    _this.CallInfoType[4] = data['message']['Voicemail'],
+                    _this.CallInfoType[5] = data['message']['Blacklist'],
+                    _this.CallInfoType[6] = data['message']['Numberdoesnotmatch'],
+                    _this.CallInfoType[7] = data['message']['Underage'],
+                    _this.CallInfoType[8] = data['message']['Duplicate'];
+                _this.ngOnInit();
+            }
+        });
+        this.managerService.getCallDetailsForBadges().subscribe(function (data) {
+            console.log(data);
+            if (data['success'] == true) {
+                if (data['message']) {
+                    _this.agentActiveOnCall = data['message']['agentActiveOnCall'];
+                    _this.agentWatitingForCall = data['message']['agentWatitingForCall'];
+                    _this.CallToday[0] = _this.successfullCall = data['message']['successfullCall'];
+                    _this.CallToday[2] = _this.callFailed = data['message']['callFailed'];
+                    ;
+                    _this.CallToday[1] = _this.noAnswer = data['message']['noAnswer'];
+                    _this.TodayScheduledCall = data['message']['TodayScheduledCall'];
+                    _this.callAttended = data['message']['noAnswer'] + data['message']['successfullCall'];
+                    _this.ngOnInit();
                 }
             }
         });
@@ -4955,7 +5048,7 @@ var ManagerDashboardComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./manager-dashboard.component.html */ "./src/app/manager/manager-dashboard/manager-dashboard.component.html"),
             styles: [__webpack_require__(/*! ./manager-dashboard.component.css */ "./src/app/manager/manager-dashboard/manager-dashboard.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__["AutoDialService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__["AutoDialService"], _shared_services_manager_service__WEBPACK_IMPORTED_MODULE_4__["ManagerService"]])
     ], ManagerDashboardComponent);
     return ManagerDashboardComponent;
 }());

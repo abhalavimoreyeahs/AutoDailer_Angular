@@ -170,6 +170,26 @@ var AdminService = /** @class */ (function () {
     AdminService.prototype.getAllAssignedAgent = function () {
         return this.http.get(this.apiURL + '/v0.1/getAllAssignedAgent');
     };
+    AdminService.prototype.getCallbackScheduledByAgent = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAllScheduledCallback');
+    };
+    //dashboard apis
+    AdminService.prototype.getAllAgnetStatus = function () {
+        return this.http.get(this.apiURL + '/v0.1/AgentCampaignStatus');
+    };
+    AdminService.prototype.getAllCampaignStatus = function () {
+        return this.http.get(this.apiURL + '/v0.1/GetCampaignDetails');
+    };
+    AdminService.prototype.getAllCallHangupInfo = function () {
+        return this.http.get(this.apiURL + '/v0.1/getCallHangupInfo');
+    };
+    //get running Campaing Details
+    AdminService.prototype.getRunningCampaignDetails = function () {
+        return this.http.get(this.apiURL + '/v0.1/getRunningCampaignDetails');
+    };
+    AdminService.prototype.getTodaysCallDetails = function () {
+        return this.http.get(this.apiURL + '/v0.1/getTodayCallDetails');
+    };
     AdminService.prototype.getUsers = function () {
         return this.data = [
             { name: 'Avinash', email: "a@gmail.com", phone: '46415454' },
@@ -202,6 +222,116 @@ var AdminService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], AdminService);
     return AdminService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/services/agent.ts":
+/*!******************************************!*\
+  !*** ./src/app/shared/services/agent.ts ***!
+  \******************************************/
+/*! exports provided: AgentService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AgentService", function() { return AgentService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+var AgentService = /** @class */ (function () {
+    function AgentService(http) {
+        this.http = http;
+        this.apiURL = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiURL;
+    }
+    AgentService.prototype.sendAgentStatus = function (data) {
+        return this.http.put(this.apiURL + '/v0.1/agentCurrentStatus', data);
+    };
+    AgentService.prototype.getCallDetails = function (uuid) {
+        return this.http.post(this.apiURL + '/v0.1/getInfoaftercallTerminated', uuid);
+    };
+    AgentService.prototype.sendCustomerFeedback = function (feedback) {
+        return this.http.post(this.apiURL + '/v0.1/AgentSubmitFeedback', feedback);
+    };
+    AgentService.prototype.getScheduledCallForAgent = function (agentId) {
+        return this.http.get(this.apiURL + ("/v0.1/getScheduleCallForAgent?agentid=" + agentId['agentid']));
+    };
+    AgentService.prototype.getMyAllNotes = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAgentNotes');
+    };
+    AgentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], AgentService);
+    return AgentService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/services/manager.service.ts":
+/*!****************************************************!*\
+  !*** ./src/app/shared/services/manager.service.ts ***!
+  \****************************************************/
+/*! exports provided: ManagerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManagerService", function() { return ManagerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+var ManagerService = /** @class */ (function () {
+    function ManagerService(http) {
+        this.http = http;
+        this.apiURL = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiURL;
+    }
+    ManagerService.prototype.campaignAssignedToManager = function () {
+        return this.http.get(this.apiURL + '/v0.1/campingAssignedToManager');
+    };
+    ManagerService.prototype.getAssaignedAgentToManager = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/getAssignedAgent', data);
+    };
+    ManagerService.prototype.getCampaignDetails = function () {
+        debugger;
+        return this.http.get(this.apiURL + '/v0.1/getCampingDetails');
+    };
+    ManagerService.prototype.getAgentStatus = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAgentDetails');
+    };
+    ManagerService.prototype.getAgentFeedbackData = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAgentFeedbackData');
+    };
+    //manager dashboard
+    ManagerService.prototype.getCallInfo = function () {
+        return this.http.get(this.apiURL + '/v0.1/callInfoTypeForManager');
+    };
+    ManagerService.prototype.getCallDetailsForBadges = function () {
+        return this.http.get(this.apiURL + '/v0.1/getCallDetailsForBadgesManager');
+    };
+    ManagerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], ManagerService);
+    return ManagerService;
 }());
 
 

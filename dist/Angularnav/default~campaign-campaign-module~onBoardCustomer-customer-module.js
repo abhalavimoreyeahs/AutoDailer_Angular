@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~admin-adminDashboard-module~campaign-campaign-module~onBoardCustomer-customer-module"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~campaign-campaign-module~onBoardCustomer-customer-module"],{
 
 /***/ "./node_modules/ts-xlsx/lib/main.browser.js":
 /*!**************************************************!*\
@@ -49504,4 +49504,4 @@ exports.createContext = Script.createContext = function (context) {
 /***/ })
 
 }]);
-//# sourceMappingURL=default~admin-adminDashboard-module~campaign-campaign-module~onBoardCustomer-customer-module.js.map
+//# sourceMappingURL=default~campaign-campaign-module~onBoardCustomer-customer-module.js.map
