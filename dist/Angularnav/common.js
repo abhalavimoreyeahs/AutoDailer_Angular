@@ -266,6 +266,9 @@ var AgentService = /** @class */ (function () {
     AgentService.prototype.getMyAllNotes = function () {
         return this.http.get(this.apiURL + '/v0.1/getAgentNotes');
     };
+    AgentService.prototype.setAgentStatusTime = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/saveAgentStatusTime', data);
+    };
     AgentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'

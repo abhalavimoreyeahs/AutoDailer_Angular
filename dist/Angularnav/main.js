@@ -66,6 +66,11 @@ var map = {
 		"common",
 		"agent-agent-module"
 	],
+	"./agentFeedbackForm/agentfeedback.module": [
+		"./src/app/agent/agentFeedbackForm/agentfeedback.module.ts",
+		"common",
+		"agentFeedbackForm-agentfeedback-module"
+	],
 	"./calendar/view.module": [
 		"./src/app/agent/calendar/view.module.ts",
 		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",

@@ -5023,7 +5023,7 @@ var ManagerDashboardComponent = /** @class */ (function () {
                     ;
                     _this.CallToday[1] = _this.noAnswer = data['message']['noAnswer'];
                     _this.TodayScheduledCall = data['message']['TodayScheduledCall'];
-                    _this.callAttended = data['message']['noAnswer'] + data['message']['successfullCall'];
+                    _this.callAttended = data['message']['noAnswer'] + data['message']['successfullCall'] + data['message']['callFailed'];
                     _this.ngOnInit();
                 }
             }

@@ -100,7 +100,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
 /* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../autoDialer.service */ "./src/app/autoDialer.service.ts");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _shared_services_agent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/services/agent */ "./src/app/shared/services/agent.ts");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+
 
 
 
@@ -108,7 +110,9 @@ __webpack_require__.r(__webpack_exports__);
 //Dialog Box
 
 var BreakComponent = /** @class */ (function () {
-    function BreakComponent(breakpointObserver, dialog, service) {
+    function BreakComponent(agentService, breakpointObserver, dialog, service) {
+        var _this = this;
+        this.agentService = agentService;
         this.breakpointObserver = breakpointObserver;
         this.dialog = dialog;
         this.service = service;
@@ -120,15 +124,36 @@ var BreakComponent = /** @class */ (function () {
             sipendpoint: agentId,
             reason: null
         };
-        this.service.sendAgentStatus(Ojb).subscribe(function (data) {
+        var statusChange = { status: "break" };
+        this.agentService.setAgentStatusTime(statusChange).subscribe(function (data) {
             console.log(data);
+            _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
+                console.log(data);
+            });
         });
+        // this.service.sendAgentStatus(Ojb).subscribe((data)=>{
+        //   console.log(data);
+        // })
     }
     //Dialog function
     BreakComponent.prototype.openDialog = function () {
-        var _this = this;
         console.log(this.Call);
         var dialogRef = this.dialog.open(BreakDialogComponent, {
+            width: '550px',
+            data: { number: this.Number },
+            disableClose: true
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            debugger;
+            console.log('The dialog was closed');
+        });
+    };
+    //Break Reason
+    //Dialog function
+    BreakComponent.prototype.openReasonDialog = function () {
+        var _this = this;
+        console.log(this.Call);
+        var dialogRef = this.dialog.open(BreakReasonComponent, {
             width: '550px',
             data: { number: this.Number },
             disableClose: true
@@ -146,20 +171,6 @@ var BreakComponent = /** @class */ (function () {
             _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
                 console.log(data);
             });
-        });
-    };
-    //Break Reason
-    //Dialog function
-    BreakComponent.prototype.openReasonDialog = function () {
-        console.log(this.Call);
-        var dialogRef = this.dialog.open(BreakReasonComponent, {
-            width: '550px',
-            data: { number: this.Number },
-            disableClose: true
-        });
-        dialogRef.afterClosed().subscribe(function (result) {
-            console.log('The dialog was closed');
-            console.log(result);
             // this.openDialog();
         });
     };
@@ -169,7 +180,7 @@ var BreakComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./break.component.html */ "./src/app/agent/status/break/break.component.html"),
             styles: [__webpack_require__(/*! ./break.component.css */ "./src/app/agent/status/break/break.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__["AutoDialService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_agent__WEBPACK_IMPORTED_MODULE_4__["AgentService"], _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__["AutoDialService"]])
     ], BreakComponent);
     return BreakComponent;
 }());
@@ -208,8 +219,8 @@ var BreakReasonComponent = /** @class */ (function () {
             selector: 'breakReason',
             template: __webpack_require__(/*! ./break-reason.html */ "./src/app/agent/status/break/break-reason.html"),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogRef"], Object])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialogRef"], Object])
     ], BreakReasonComponent);
     return BreakReasonComponent;
 }());
@@ -248,8 +259,8 @@ var BreakDialogComponent = /** @class */ (function () {
             selector: 'breakDialog',
             template: __webpack_require__(/*! ./break-dialogBox.html */ "./src/app/agent/status/break/break-dialogBox.html"),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogRef"], Object])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialogRef"], Object])
     ], BreakDialogComponent);
     return BreakDialogComponent;
 }());

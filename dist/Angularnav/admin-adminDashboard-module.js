@@ -103,7 +103,13 @@ var AdminDashboardComponent = /** @class */ (function () {
         this.dummyData = this.service.getDummyData();
         this.displayData = ['S No', 'Name', 'Age', 'DOB', 'Mobile', 'Domicile', 'City'];
         this.agentOnBreak = 0;
+        this.agentOnCall = 0;
         this.agentWaitingForCall = 0;
+        this.hangupSourceAgent = 0;
+        this.hangupSourceCustomer = 0;
+        this.callPlacedSuccessfully = 0;
+        this.callFailed = 0;
+        this.callback = 0;
         this.callInfoLabel = [];
         this.callInfoData = [];
         //Today's Call Details: 
@@ -130,6 +136,8 @@ var AdminDashboardComponent = /** @class */ (function () {
         this.BarChartlabel = [];
         this.data1Success = [];
         this.data2Unsuccess = [];
+        this.callTimeOut = [];
+        this.callBusy = [];
         //  getCallInfo(){
         //    let data ={ week: true}
         //    this.service.getAdminDashboardCallInfo(data).subscribe((data)=>{
@@ -358,6 +366,16 @@ var AdminDashboardComponent = /** @class */ (function () {
                         data: this.data1Success,
                     },
                     {
+                        label: "No answer",
+                        backgroundColor: "#ffc107",
+                        data: this.callTimeOut
+                    },
+                    {
+                        label: "Busy",
+                        backgroundColor: "#20c997",
+                        data: this.callBusy
+                    },
+                    {
                         label: "Unsuccessful Call",
                         backgroundColor: "#FF0000",
                         data: this.data2Unsuccess
@@ -474,6 +492,8 @@ var AdminDashboardComponent = /** @class */ (function () {
                     _this.BarChartlabel.push(data['ArrayData'][j]['day']);
                     _this.data1Success.push(data['ArrayData'][j]['successful']);
                     _this.data2Unsuccess.push(data['ArrayData'][j]['unsuccssful']);
+                    _this.callTimeOut.push(data['ArrayData'][j]['noAnswer']);
+                    _this.callBusy.push(data['ArrayData'][j]['callBusy']);
                     //debugger;
                     _this.ngOnInit();
                 }

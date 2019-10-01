@@ -81,26 +81,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../autoDialer.service */ "./src/app/autoDialer.service.ts");
-/* harmony import */ var rxjs_add_observable_interval__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/add/observable/interval */ "./node_modules/rxjs-compat/_esm5/add/observable/interval.js");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var _my_dialog_my_dialog_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./my-dialog/my-dialog.component */ "./src/app/agent/status/active/my-dialog/my-dialog.component.ts");
-/* harmony import */ var _fullcalendar_angular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fullcalendar/angular */ "./node_modules/@fullcalendar/angular/fesm5/fullcalendar-angular.js");
-/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fullcalendar/daygrid */ "./node_modules/@fullcalendar/daygrid/main.js");
-/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fullcalendar/timegrid */ "./node_modules/@fullcalendar/timegrid/main.js");
-/* harmony import */ var _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fullcalendar/interaction */ "./node_modules/@fullcalendar/interaction/main.js");
-/* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var amazing_time_picker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! amazing-time-picker */ "./node_modules/amazing-time-picker/amazing-time-picker.es5.js");
-/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! plivo-browser-sdk */ "./node_modules/plivo-browser-sdk/dist/plivo.js");
-/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm5/paginator.es5.js");
-/* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
-/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm5/sort.es5.js");
+/* harmony import */ var _shared_services_agent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/services/agent */ "./src/app/shared/services/agent.ts");
+/* harmony import */ var rxjs_add_observable_interval__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/observable/interval */ "./node_modules/rxjs-compat/_esm5/add/observable/interval.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _my_dialog_my_dialog_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./my-dialog/my-dialog.component */ "./src/app/agent/status/active/my-dialog/my-dialog.component.ts");
+/* harmony import */ var _fullcalendar_angular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fullcalendar/angular */ "./node_modules/@fullcalendar/angular/fesm5/fullcalendar-angular.js");
+/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fullcalendar/daygrid */ "./node_modules/@fullcalendar/daygrid/main.js");
+/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fullcalendar/timegrid */ "./node_modules/@fullcalendar/timegrid/main.js");
+/* harmony import */ var _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fullcalendar/interaction */ "./node_modules/@fullcalendar/interaction/main.js");
+/* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var amazing_time_picker__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! amazing-time-picker */ "./node_modules/amazing-time-picker/amazing-time-picker.es5.js");
+/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! plivo-browser-sdk */ "./node_modules/plivo-browser-sdk/dist/plivo.js");
+/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm5/paginator.es5.js");
+/* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm5/sort.es5.js");
+
 
 
 
@@ -134,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ActiveComponent = /** @class */ (function () {
-    function ActiveComponent(router, http, dialog, service, atp, toastrService) {
+    function ActiveComponent(router, http, dialog, service, agentService, toastrService) {
         // this.router.events.subscribe((ev) => {
         //   if (ev instanceof NavigationEnd) { /* Your code goes here on every router change */
         //  console.log(ev);
@@ -155,13 +157,13 @@ var ActiveComponent = /** @class */ (function () {
         this.http = http;
         this.dialog = dialog;
         this.service = service;
-        this.atp = atp;
+        this.agentService = agentService;
         this.toastrService = toastrService;
         this.callBoolean = false;
         this.displayedColumns = ['Caller Name', 'Caller No', 'Date', 'Note'];
-        this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_19__["SelectionModel"](true, []);
+        this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_20__["SelectionModel"](true, []);
         this.calendarVisible = true;
-        this.calendarPlugins = [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_10___default.a, _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_11___default.a, _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_12___default.a];
+        this.calendarPlugins = [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_11___default.a, _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_12___default.a, _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_13___default.a];
         this.calendarWeekends = true;
         this.calendarEvents = [
         // { title: 'Avinash Bhalavi', start:  '2019-08-06' , end : '2019-08-07' }, 
@@ -200,9 +202,17 @@ var ActiveComponent = /** @class */ (function () {
             sipendpoint: agentId,
             reason: null
         };
-        this.service.sendAgentStatus(Ojb).subscribe(function (data) {
+        // set agent status time
+        var statusChange = { status: "active" };
+        this.agentService.setAgentStatusTime(statusChange).subscribe(function (data) {
             console.log(data);
+            _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
+                console.log(data);
+            });
         });
+        // this.service.sendAgentStatus(Ojb).subscribe((data) => {
+        //   console.log(data);
+        // })
         //-------------------------------------
         // let agentId = localStorage.getItem('PlivoUserId');
         // agentId = agentId.concat('@phone.plivo.com');
@@ -213,7 +223,7 @@ var ActiveComponent = /** @class */ (function () {
         this.service.getScheduledCallForAgent(data).subscribe(function (data) {
             console.log('scheduled calendar:', data);
             _this.showCreatedCall = data['message'];
-            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatTableDataSource"](_this.showCreatedCall);
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatTableDataSource"](_this.showCreatedCall);
             _this.dataSource.paginator = _this.paginator;
             _this.dataSource.sort = _this.sort;
             var CallSchedule = [];
@@ -263,7 +273,7 @@ var ActiveComponent = /** @class */ (function () {
                 this.seconds = 0;
                 this.minutes = 0;
                 this.hours = 0;
-                this.sub = Object(rxjs__WEBPACK_IMPORTED_MODULE_15__["interval"])(1000)
+                this.sub = Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["interval"])(1000)
                     .subscribe(function (val) {
                     _this.seconds += 1;
                     if (_this.seconds > 60) {
@@ -304,12 +314,12 @@ var ActiveComponent = /** @class */ (function () {
         // }
     };
     //TimePicker function
-    ActiveComponent.prototype.open = function () {
-        var amazingTimePicker = this.atp.open();
-        amazingTimePicker.afterClose().subscribe(function (time) {
-            console.log('time:', time);
-        });
-    };
+    // open() {
+    //   const amazingTimePicker = this.atp.open();
+    //   amazingTimePicker.afterClose().subscribe(time => {
+    //     console.log('time:', time);
+    //   })
+    // }
     //Plivo Code
     //initialize Plivo
     ActiveComponent.prototype.initPhone = function (username, password) {
@@ -319,7 +329,7 @@ var ActiveComponent = /** @class */ (function () {
             "audioConstraints": { "optional": [{ "googAutoGainControl": false }, { "googEchoCancellation": false }] },
             "enableTracking": true
         };
-        this.plivoWebSdk = new plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14___default.a(options);
+        this.plivoWebSdk = new plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15___default.a(options);
         // this.plivoWebSdk.client.on('onWebrtcNotSupported', this.onWebrtcNotSupported);
         this.plivoWebSdk.client.on('onLogin', this.onLogin); // msg not showing //this function gets called when user successfully login/ login failed
         this.plivoWebSdk.client.on('onLogout', this.onLogout); // plivo method not working
@@ -517,7 +527,7 @@ var ActiveComponent = /** @class */ (function () {
     ActiveComponent.prototype.openDialog = function () {
         // debugger;
         console.log(this.Call);
-        var dialogRef = this.dialog.open(_my_dialog_my_dialog_component__WEBPACK_IMPORTED_MODULE_8__["MyDialogComponent"], {
+        var dialogRef = this.dialog.open(_my_dialog_my_dialog_component__WEBPACK_IMPORTED_MODULE_9__["MyDialogComponent"], {
             width: '550px',
             data: { number: localStorage.getItem('Number'), name: localStorage.getItem('Name') },
             disableClose: true
@@ -574,6 +584,7 @@ var ActiveComponent = /** @class */ (function () {
                 console.log(data);
                 if (data['success'] == 'true') {
                     _this.showToaster('Feedback Saved Successfully');
+                    _this.notes = '';
                 }
                 localStorage.removeItem('uuid');
             });
@@ -619,16 +630,16 @@ var ActiveComponent = /** @class */ (function () {
         this.toastrService.warning('this is warning');
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_18__["MatPaginator"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_18__["MatPaginator"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_19__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_19__["MatPaginator"])
     ], ActiveComponent.prototype, "paginator", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_20__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_20__["MatSort"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_21__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_21__["MatSort"])
     ], ActiveComponent.prototype, "sort", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('calendar'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _fullcalendar_angular__WEBPACK_IMPORTED_MODULE_9__["FullCalendarComponent"])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _fullcalendar_angular__WEBPACK_IMPORTED_MODULE_10__["FullCalendarComponent"])
     ], ActiveComponent.prototype, "calendarComponent", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])("window:beforeunload", ["$event"]),
@@ -642,7 +653,7 @@ var ActiveComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./active.component.html */ "./src/app/agent/status/active/active.component.html"),
             styles: [__webpack_require__(/*! ./active.component.css */ "./src/app/agent/status/active/active.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_16__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_4__["AutoDialService"], amazing_time_picker__WEBPACK_IMPORTED_MODULE_13__["AmazingTimePickerService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_17__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_4__["AutoDialService"], _shared_services_agent__WEBPACK_IMPORTED_MODULE_5__["AgentService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrService"]])
     ], ActiveComponent);
     return ActiveComponent;
 }());
@@ -700,9 +711,9 @@ var FeedBackComponent = /** @class */ (function () {
             selector: 'feedback',
             template: __webpack_require__(/*! ./feedback.html */ "./src/app/agent/status/active/feedback.html"),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [amazing_time_picker__WEBPACK_IMPORTED_MODULE_13__["AmazingTimePickerService"],
-            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [amazing_time_picker__WEBPACK_IMPORTED_MODULE_14__["AmazingTimePickerService"],
+            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogRef"], Object])
     ], FeedBackComponent);
     return FeedBackComponent;
 }());
@@ -721,8 +732,8 @@ var CreateEventComponent = /** @class */ (function () {
             selector: 'createEvent-dialog',
             template: __webpack_require__(/*! ./createEvent.html */ "./src/app/agent/status/active/createEvent.html"),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogRef"], Object])
     ], CreateEventComponent);
     return CreateEventComponent;
 }());
@@ -748,7 +759,7 @@ var JpDraggableDialogDirective = /** @class */ (function () {
         this._cd = _cd;
         this._delta = { x: 0, y: 0 };
         this._offset = { x: 0, y: 0 };
-        this._destroy$ = new rxjs__WEBPACK_IMPORTED_MODULE_15__["Subject"]();
+        this._destroy$ = new rxjs__WEBPACK_IMPORTED_MODULE_16__["Subject"]();
         this._isResized = false;
     }
     JpDraggableDialogDirective.prototype.ngOnInit = function () {
@@ -769,9 +780,9 @@ var JpDraggableDialogDirective = /** @class */ (function () {
     JpDraggableDialogDirective.prototype._setupEvents = function () {
         var _this = this;
         this._zone.runOutsideAngular(function () {
-            var mousedown$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_15__["fromEvent"])(_this._handle, 'mousedown');
-            var mousemove$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_15__["fromEvent"])(document, 'mousemove');
-            var mouseup$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_15__["fromEvent"])(document, 'mouseup');
+            var mousedown$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["fromEvent"])(_this._handle, 'mousedown');
+            var mousemove$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["fromEvent"])(document, 'mousemove');
+            var mouseup$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["fromEvent"])(document, 'mouseup');
             var mousedrag$ = mousedown$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(function (event) {
                 var startX = event.clientX;
                 var startY = event.clientY;
@@ -783,7 +794,7 @@ var JpDraggableDialogDirective = /** @class */ (function () {
                     startX > rectX.right - 15 &&
                     startX <= rectX.right) {
                     _this._isResized = true;
-                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_15__["of"])(null);
+                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["of"])(null);
                 }
                 return mousemove$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (innerEvent) {
                     innerEvent.preventDefault();
@@ -928,7 +939,7 @@ module.exports = "<h2 mat-dialog-title style=\"text-align: center\">Schedule Cal
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<section id=\"basic-form-layouts\">\n        <div class=\"row text-left\">\n          <div class=\"col-sm-12\">\n            <div class=\"content-header\" style=\"text-align:center\">\n            <!-- <h2> Feedback </h2> -->\n            </div>\n          </div>\n        </div>\n        <div class=\"row text-left\">\n          <div class=\"col-md-12\">\n            <div class=\"card\">\n    \n              <div class=\"card-content\">\n                <div class=\"px-3\">\n                  <form class=\"form\" style=\"text-align:center\">\n                    <div class=\"form-body\">\n                      <h4 class=\"form-section\" style=\"text-align:center;padding:3%\" ><i class=\"ft-user\"></i> Feedback</h4>\n                      <div class=\"row\">\n                            <div class=\"col\">\n                  \n                              <mat-form-field>\n                                <mat-label>Caller Name</mat-label>\n                           \n                                <input matInput placeholder=\"Caller Name\" [(ngModel)]=\"data.customerName\" name=\"customerName\" required>                \n                              </mat-form-field>\n                            </div>\n                            <div class=\"col\">\n                    \n                              <mat-form-field>\n                                <mat-label>Caller Number</mat-label>\n                              \n                                <input matInput placeholder=\"Caller Number\"  [(ngModel)]=\"data.customerMobNo\" name=\"customerMobNo\" [value]=\"\" required>\n                              </mat-form-field>\n                            </div>\n                          </div>\n                          <div class=\"row\">\n                                <div class=\"col-md-6\">\n                      \n                                  <mat-form-field>\n                                    <mat-label>Duration</mat-label>\n                                    <input matInput placeholder=\"Call Duration\" [(ngModel)]=\"data.callDuration\" name=\"callDuration\" [value]=\"\" required>                       \n                                  </mat-form-field>\n                                </div>\n                                <div class=\"col-md-6\">\n                              \n                                <mat-form-field>\n                                        <mat-label>Customer Interested</mat-label>\n                                        \n                                         <mat-select [(ngModel)]=\"data.isCustomerInterseted\" name=\"isCustomerInterseted\" (ngModelChange)=\"onChange($event)\" required>\n                                            <mat-option *ngFor=\"let item of Agent\" [value]=\"item.value\">\n                                              {{item.name}}\n                                            </mat-option>\n                                          </mat-select>\n                               </mat-form-field>\n                                </div>\n                              </div>\n\n      \n                      <div class=\"row\">\n                          <div class=\"col-md-12\" style=\"padding-left:10%; padding-right:10%\">\n                      <mat-form-field style=\"width:100%\">\n                        <mat-label>Add Description</mat-label>\n                        <textarea matInput placeholder=\"Add desc\"   [(ngModel)]=\"data.descrptionOnCall\" name=\"descrptionOnCall\" [value]=\"\" required></textarea>                           \n                      </mat-form-field>\n                      </div>\n                      </div>\n\n                      <div class=\"row\">\n                            <div class=\"col-md-12\" style=\"padding-left:10%; padding-right:10%\">\n                                    <mat-form-field *ngIf=\"select\" style=\"width:100%\">\n                                            <mat-label>CallBack Date</mat-label>\n                                            <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\" [(ngModel)]=\"data.startdate\"  name=\"startdate\">\n                                            <mat-datepicker-toggle matSuffix [for]=\"picker\" (click)=\"selectDate(startdate)\"></mat-datepicker-toggle>\n                                            <mat-datepicker #picker></mat-datepicker>   \n                                    </mat-form-field> \n                        </div>\n                        </div>\n    \n                      <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                    <mat-form-field *ngIf=\"select\">\n                                            <mat-label>Start Time</mat-label>\n                                          \n                                            <input matInput   type=\"time\" placeholder=\"Choose start Time\" \n                                                name=\"callBackStartTime\" [(ngModel)]=\"data.callBackStartTime\" [value]=\"\">\n                            \n                                    </mat-form-field>\n                            </div>\n                            <div class=\"col-md-6\">\n                          \n                                    <mat-form-field *ngIf=\"select\">\n                                            <mat-label>End Time</mat-label>\n                                            <input matInput type=\"time\" placeholder=\"Choose end Time\" name=\"callBackEndTime\"\n                                                [(ngModel)]=\"data.callBackEndTime\" [value]=\"\">\n                            \n                                        </mat-form-field>\n                            </div>\n                     </div>\n                    </div>\n      \n                    <div class=\"form-actions\" style=\"padding:3%\">\n                            <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial class=\"mat-raised-button mat-primary\" style=\"width:100px\">Submit</button>\n                      <!-- <button type=\"button\" class=\"btn btn-raised btn-raised btn-warning mr-1\">\n                        <i class=\"ft-x\"></i> Cancel\n                      </button>\n                      <button type=\"button\" class=\"btn btn-raised btn-raised btn-primary\">\n                        <i class=\"fa fa-check-square-o\"></i> Save\n                      </button> -->\n                    </div>\n                  </form>\n                </div>\n              </div>\n            </div>\n          </div>\n    \n        </div>\n    </section>   "
+module.exports = "\n<section id=\"basic-form-layouts\">\n        <div class=\"row text-left\">\n          <div class=\"col-sm-12\">\n            <div class=\"content-header\" style=\"text-align:center\">\n            <!-- <h2> Feedback </h2> -->\n            </div>\n          </div>\n        </div>\n        <div class=\"row text-left\">\n          <div class=\"col-md-12\">\n            <div class=\"card\">\n    \n              <div class=\"card-content\">\n                <div class=\"px-3\">\n                  <form class=\"form\" style=\"text-align:center\">\n                    <div class=\"form-body\">\n                      <h4 class=\"form-section\" style=\"text-align:center;padding:3%\" ><i class=\"ft-user\"></i> Feedback</h4>\n                      <div class=\"row\">\n                            <div class=\"col\">\n                  \n                              <mat-form-field>\n                                <mat-label>Caller Name</mat-label>\n                           \n                                <input matInput placeholder=\"Caller Name\" [(ngModel)]=\"data.customerName\" name=\"customerName\" required>                \n                              </mat-form-field>\n                            </div>\n                            <div class=\"col\">\n                    \n                              <mat-form-field>\n                                <mat-label>Caller Number</mat-label>\n                              \n                                <input matInput placeholder=\"Caller Number\"  [(ngModel)]=\"data.customerMobNo\" name=\"customerMobNo\" [value]=\"\" required>\n                              </mat-form-field>\n                            </div>\n                          </div>\n                          <div class=\"row\">\n                                <div class=\"col-md-6\">\n                      \n                                  <mat-form-field>\n                                    <mat-label>Duration</mat-label>\n                                    <input matInput placeholder=\"Call Duration\" [(ngModel)]=\"data.callDuration\" name=\"callDuration\" [value]=\"\" required disabled>                       \n                                  </mat-form-field>\n                                </div>\n                                <div class=\"col-md-6\">\n                              \n                                <mat-form-field>\n                                        <mat-label>Customer Interested</mat-label>\n                                        \n                                         <mat-select [(ngModel)]=\"data.isCustomerInterseted\" name=\"isCustomerInterseted\" (ngModelChange)=\"onChange($event)\" required>\n                                            <mat-option *ngFor=\"let item of Agent\" [value]=\"item.value\">\n                                              {{item.name}}\n                                            </mat-option>\n                                          </mat-select>\n                               </mat-form-field>\n                                </div>\n                              </div>\n\n      \n                      <div class=\"row\">\n                          <div class=\"col-md-12\" style=\"padding-left:10%; padding-right:10%\">\n                      <mat-form-field style=\"width:100%\">\n                        <mat-label>Add Description</mat-label>\n                        <textarea matInput placeholder=\"Add desc\"   [(ngModel)]=\"data.descrptionOnCall\" name=\"descrptionOnCall\" [value]=\"\" required></textarea>                           \n                      </mat-form-field>\n                      </div>\n                      </div>\n\n                      <div class=\"row\">\n                            <div class=\"col-md-12\" style=\"padding-left:10%; padding-right:10%\">\n                                    <mat-form-field *ngIf=\"select\" style=\"width:100%\">\n                                            <mat-label>CallBack Date</mat-label>\n                                            <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\" [(ngModel)]=\"data.startdate\"  name=\"startdate\">\n                                            <mat-datepicker-toggle matSuffix [for]=\"picker\" (click)=\"selectDate(startdate)\"></mat-datepicker-toggle>\n                                            <mat-datepicker #picker></mat-datepicker>   \n                                    </mat-form-field> \n                        </div>\n                        </div>\n    \n                      <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                    <mat-form-field *ngIf=\"select\">\n                                            <mat-label>Start Time</mat-label>\n                                          \n                                            <input matInput   type=\"time\" placeholder=\"Choose start Time\" \n                                                name=\"callBackStartTime\" [(ngModel)]=\"data.callBackStartTime\" [value]=\"\">\n                            \n                                    </mat-form-field>\n                            </div>\n                            <div class=\"col-md-6\">\n                          \n                                    <mat-form-field *ngIf=\"select\">\n                                            <mat-label>End Time</mat-label>\n                                            <input matInput type=\"time\" placeholder=\"Choose end Time\" name=\"callBackEndTime\"\n                                                [(ngModel)]=\"data.callBackEndTime\" [value]=\"\">\n                            \n                                        </mat-form-field>\n                            </div>\n                     </div>\n                    </div>\n      \n                    <div class=\"form-actions\" style=\"padding:3%\">\n                            <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial class=\"mat-raised-button mat-primary\" style=\"width:100px\">Submit</button>\n                      <!-- <button type=\"button\" class=\"btn btn-raised btn-raised btn-warning mr-1\">\n                        <i class=\"ft-x\"></i> Cancel\n                      </button>\n                      <button type=\"button\" class=\"btn btn-raised btn-raised btn-primary\">\n                        <i class=\"fa fa-check-square-o\"></i> Save\n                      </button> -->\n                    </div>\n                  </form>\n                </div>\n              </div>\n            </div>\n          </div>\n    \n        </div>\n    </section>   "
 
 /***/ }),
 
