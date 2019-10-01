@@ -111,7 +111,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var BreakComponent = /** @class */ (function () {
     function BreakComponent(agentService, breakpointObserver, dialog, service) {
-        var _this = this;
         this.agentService = agentService;
         this.breakpointObserver = breakpointObserver;
         this.dialog = dialog;
@@ -124,12 +123,12 @@ var BreakComponent = /** @class */ (function () {
             sipendpoint: agentId,
             reason: null
         };
-        var statusChange = { status: "break" };
-        this.agentService.setAgentStatusTime(statusChange).subscribe(function (data) {
+        //  let statusChange = {status: "break"}
+        //  this.agentService.setAgentStatusTime(statusChange).subscribe((data)=>{
+        //      console.log(data);
+        //  })
+        this.service.sendAgentStatus(Ojb).subscribe(function (data) {
             console.log(data);
-            _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
-                console.log(data);
-            });
         });
         // this.service.sendAgentStatus(Ojb).subscribe((data)=>{
         //   console.log(data);

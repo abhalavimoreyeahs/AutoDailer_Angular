@@ -203,12 +203,12 @@ var ActiveComponent = /** @class */ (function () {
             reason: null
         };
         // set agent status time
-        var statusChange = { status: "active" };
-        this.agentService.setAgentStatusTime(statusChange).subscribe(function (data) {
+        // let statusChange = {status: "active"}
+        // this.agentService.setAgentStatusTime(statusChange).subscribe((data)=>{
+        //     console.log(data);
+        // })
+        this.service.sendAgentStatus(Ojb).subscribe(function (data) {
             console.log(data);
-            _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
-                console.log(data);
-            });
         });
         // this.service.sendAgentStatus(Ojb).subscribe((data) => {
         //   console.log(data);
@@ -474,19 +474,9 @@ var ActiveComponent = /** @class */ (function () {
                 if (data['message'][0]['isCallPIckedUp'] === "normal_clearing") {
                     _this.feedBack(callDuration);
                 }
-                // change status code to active
-                var agentId = localStorage.getItem('PlivoUserId');
-                agentId = agentId.concat('@phone.plivo.com');
-                var Ojb = {
-                    status: "active",
-                    currentstatus: "NotOnCall",
-                    sipendpoint: agentId,
-                    reason: null
-                };
-                _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
-                    console.log(data);
-                    console.log('status changed');
-                });
+                else {
+                    console.log('EXCEPTIONAL CASE: SHOULD HANDLE PROPERLY This the case when call is not normal_clearing ');
+                }
                 // ----------end -------------------------
             }
         });

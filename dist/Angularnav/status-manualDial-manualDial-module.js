@@ -202,12 +202,12 @@ var ManualDialComponent = /** @class */ (function () {
                 reason: null
             };
             // set agent status time
-            var statusChange = { status: "manual" };
-            _this.agentService.setAgentStatusTime(statusChange).subscribe(function (data) {
+            //  let statusChange = {status: "manual"}
+            //  this.agentService.setAgentStatusTime(statusChange).subscribe((data)=>{
+            //      console.log(data);
+            //  })
+            _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
                 console.log(data);
-                _this.service.sendAgentStatus(Ojb).subscribe(function (data) {
-                    console.log(data);
-                });
             });
             //----------------------------------------------------------
             // agentId =  localStorage.getItem('PlivoUserId');
