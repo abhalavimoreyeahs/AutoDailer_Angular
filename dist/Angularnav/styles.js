@@ -639,9 +639,9 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\User\Desktop\gitAutodialer\AutoDialer\src\styles.css */"./src/styles.css");
-__webpack_require__(/*! C:\Users\User\Desktop\gitAutodialer\AutoDialer\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! C:\Users\User\Desktop\gitAutodialer\AutoDialer\node_modules\chartist\dist\chartist.css */"./node_modules/chartist/dist/chartist.css");
+__webpack_require__(/*! C:\Users\User\Desktop\AutoDialer_local\localFrontEnd\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\User\Desktop\AutoDialer_local\localFrontEnd\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! C:\Users\User\Desktop\AutoDialer_local\localFrontEnd\node_modules\chartist\dist\chartist.css */"./node_modules/chartist/dist/chartist.css");
 
 
 /***/ })

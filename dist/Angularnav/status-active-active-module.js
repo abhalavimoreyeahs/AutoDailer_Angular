@@ -66,7 +66,7 @@ module.exports = "<div class=\"container-fluid\" style=\"margin-top:0%\">\n  <di
 /*!*********************************************************!*\
   !*** ./src/app/agent/status/active/active.component.ts ***!
   \*********************************************************/
-/*! exports provided: ActiveComponent, FeedBackComponent, CreateEventComponent, CdkDragDropHandleExample, JpDraggableDialogDirective */
+/*! exports provided: ActiveComponent, FeedBackComponent, CreateEventComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74,14 +74,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActiveComponent", function() { return ActiveComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeedBackComponent", function() { return FeedBackComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateEventComponent", function() { return CreateEventComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CdkDragDropHandleExample", function() { return CdkDragDropHandleExample; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JpDraggableDialogDirective", function() { return JpDraggableDialogDirective; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../autoDialer.service */ "./src/app/autoDialer.service.ts");
-/* harmony import */ var _shared_services_agent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared/services/agent */ "./src/app/shared/services/agent.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../autoDialer.service */ "./src/app/autoDialer.service.ts");
+/* harmony import */ var _shared_services_agent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/services/agent */ "./src/app/shared/services/agent.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var rxjs_add_observable_interval__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/observable/interval */ "./node_modules/rxjs-compat/_esm5/add/observable/interval.js");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
@@ -102,7 +100,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm5/paginator.es5.js");
 /* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
 /* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm5/sort.es5.js");
-
 
 
 
@@ -132,27 +129,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//Draggable code
-
-
 var ActiveComponent = /** @class */ (function () {
     function ActiveComponent(router, http, dialog, service, agentService, toastrService) {
-        // this.router.events.subscribe((ev) => {
-        //   if (ev instanceof NavigationEnd) { /* Your code goes here on every router change */
-        //  console.log(ev);
-        //  if(localStorage.getItem('endpointID') && localStorage.getItem('csio_auth_data')){ // && ev.url!= '/agent/active' && ev.url != '/agent/manualdial'
-        //   this.LogOut();
-        //   localStorage.removeItem('endpointID');
-        //   localStorage.removeItem('csio_auth_data');
-        //  // console.log('Plivo logout ...',ev.url);
-        //  }else if(localStorage.getItem('PlivoLogin') ) { //&& (ev.url!= '/agent/active') && ev.url != '/agent/manualdial'
-        //   this.LogOut();
-        //   console.log('else part for logout');
-        //  }else{
-        //    console.log('2 nd else');
-        //  }
-        //   }
-        // });
         this.router = router;
         this.http = http;
         this.dialog = dialog;
@@ -165,33 +143,24 @@ var ActiveComponent = /** @class */ (function () {
         this.calendarVisible = true;
         this.calendarPlugins = [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_11___default.a, _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_12___default.a, _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_13___default.a];
         this.calendarWeekends = true;
-        this.calendarEvents = [
-        // { title: 'Avinash Bhalavi', start:  '2019-08-06' , end : '2019-08-07' }, 
-        ];
-        // Timer 
+        this.calendarEvents = [];
+        // Timer to show sec hour and min but not using now in active mode 
         this.hours = 0;
         this.seconds = 0;
         this.minutes = 0;
-        //   setTimeout(() => {
-        // this.onIncomingCall('1','2');
-        // }, 15000);
     }
     ActiveComponent.prototype.ngOnInit = function () {
         //------------plivo login----------------------
         var _this = this;
         this.initPhone(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
         if (!localStorage.getItem('endpointID') && !localStorage.getItem('csio_auth_data')) {
-            // setTimeout(()=>{
-            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["delay"])(2000),
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["delay"])(2000),
                 this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
-            // }, 5000); 
         }
         else {
             this.LogOut();
-            // setTimeout(()=>{
-            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["delay"])(2000),
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["delay"])(2000),
                 this.login(localStorage.getItem("PlivoUserId"), localStorage.getItem("PlivoPassword"));
-            // }, 5000); 
         }
         // this.login("shubham125559174721784","12345");
         var agentId = localStorage.getItem('PlivoUserId');
@@ -210,9 +179,6 @@ var ActiveComponent = /** @class */ (function () {
         this.service.sendAgentStatus(Ojb).subscribe(function (data) {
             console.log(data);
         });
-        // this.service.sendAgentStatus(Ojb).subscribe((data) => {
-        //   console.log(data);
-        // })
         //-------------------------------------
         // let agentId = localStorage.getItem('PlivoUserId');
         // agentId = agentId.concat('@phone.plivo.com');
@@ -257,10 +223,8 @@ var ActiveComponent = /** @class */ (function () {
     ActiveComponent.prototype.autoClick = function () {
         alert('auto Click');
     };
-    // on reloading logout agnet from plivo
+    // on reloading logout agent from plivo // this also works if someone kill web application
     ActiveComponent.prototype.unloadHandler = function (event) {
-        // this.plivoWebSdk.client && this.plivoWebSdk.client.logout();
-        // this.plivoWebSdk.client.logout();
         this.LogOut();
         console.log("Processing beforeunload...");
         // Do more processing...
@@ -313,13 +277,6 @@ var ActiveComponent = /** @class */ (function () {
         //   })
         // }
     };
-    //TimePicker function
-    // open() {
-    //   const amazingTimePicker = this.atp.open();
-    //   amazingTimePicker.afterClose().subscribe(time => {
-    //     console.log('time:', time);
-    //   })
-    // }
     //Plivo Code
     //initialize Plivo
     ActiveComponent.prototype.initPhone = function (username, password) {
@@ -355,8 +312,6 @@ var ActiveComponent = /** @class */ (function () {
         if (username && password) {
             var data = this.plivoWebSdk.client.login(username, password);
             console.log('login:', data);
-            // $('#sipUserName').html('sip:'+username+'@'+ this.plivoWebSdk.client.phone.configuration.hostport_params);
-            // document.querySelector('title').innerHTML=username;
         }
         else {
             console.error('username/password missing!');
@@ -643,7 +598,7 @@ var ActiveComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./active.component.html */ "./src/app/agent/status/active/active.component.html"),
             styles: [__webpack_require__(/*! ./active.component.css */ "./src/app/agent/status/active/active.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_17__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_4__["AutoDialService"], _shared_services_agent__WEBPACK_IMPORTED_MODULE_5__["AgentService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_17__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__["AutoDialService"], _shared_services_agent__WEBPACK_IMPORTED_MODULE_4__["AgentService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrService"]])
     ], ActiveComponent);
     return ActiveComponent;
 }());
@@ -728,109 +683,6 @@ var CreateEventComponent = /** @class */ (function () {
     return CreateEventComponent;
 }());
 
-// notes div
-var CdkDragDropHandleExample = /** @class */ (function () {
-    function CdkDragDropHandleExample() {
-    }
-    CdkDragDropHandleExample = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'cdk-drag-drop-handle-example',
-            template: __webpack_require__(/*! ./cdk-drag-drop-handle-example.html */ "./src/app/agent/status/active/cdk-drag-drop-handle-example.html"),
-        })
-    ], CdkDragDropHandleExample);
-    return CdkDragDropHandleExample;
-}());
-
-//Dragabble code
-var JpDraggableDialogDirective = /** @class */ (function () {
-    function JpDraggableDialogDirective(_elementRef, _zone, _cd) {
-        this._elementRef = _elementRef;
-        this._zone = _zone;
-        this._cd = _cd;
-        this._delta = { x: 0, y: 0 };
-        this._offset = { x: 0, y: 0 };
-        this._destroy$ = new rxjs__WEBPACK_IMPORTED_MODULE_16__["Subject"]();
-        this._isResized = false;
-    }
-    JpDraggableDialogDirective.prototype.ngOnInit = function () {
-        this._elementRef.nativeElement.style.cursor = 'default';
-        this._handle = this._elementRef.nativeElement.parentElement.parentElement.parentElement;
-        this._target = this._elementRef.nativeElement.parentElement.parentElement.parentElement;
-        this._container = this._elementRef.nativeElement.parentElement.parentElement;
-        this._container.style.resize = 'both';
-        this._container.style.overflow = 'hidden';
-        this._setupEvents();
-    };
-    JpDraggableDialogDirective.prototype.ngOnDestroy = function () {
-        if (!!this._destroy$ && !this._destroy$.closed) {
-            this._destroy$.next();
-            this._destroy$.complete();
-        }
-    };
-    JpDraggableDialogDirective.prototype._setupEvents = function () {
-        var _this = this;
-        this._zone.runOutsideAngular(function () {
-            var mousedown$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["fromEvent"])(_this._handle, 'mousedown');
-            var mousemove$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["fromEvent"])(document, 'mousemove');
-            var mouseup$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["fromEvent"])(document, 'mouseup');
-            var mousedrag$ = mousedown$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(function (event) {
-                var startX = event.clientX;
-                var startY = event.clientY;
-                var rectX = _this._container.getBoundingClientRect();
-                if (
-                // if the user is clicking on the bottom-right corner, he will resize the dialog
-                startY > rectX.bottom - 15 &&
-                    startY <= rectX.bottom &&
-                    startX > rectX.right - 15 &&
-                    startX <= rectX.right) {
-                    _this._isResized = true;
-                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["of"])(null);
-                }
-                return mousemove$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (innerEvent) {
-                    innerEvent.preventDefault();
-                    _this._delta = {
-                        x: innerEvent.clientX - startX,
-                        y: innerEvent.clientY - startY,
-                    };
-                }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(mouseup$));
-            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(_this._destroy$));
-            mousedrag$.subscribe(function () {
-                if (_this._delta.x === 0 && _this._delta.y === 0) {
-                    return;
-                }
-                _this._translate();
-            });
-            mouseup$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(_this._destroy$)).subscribe(function () {
-                if (_this._isResized) {
-                    _this._handle.style.width = 'auto';
-                }
-                _this._offset.x += _this._delta.x;
-                _this._offset.y += _this._delta.y;
-                _this._delta = { x: 0, y: 0 };
-                _this._cd.markForCheck();
-            });
-        });
-    };
-    JpDraggableDialogDirective.prototype._translate = function () {
-        var _this = this;
-        // this._target.style.left = `${this._offset.x + this._delta.x}px`;
-        // this._target.style.top = `${this._offset.y + this._delta.y}px`;
-        // this._target.style.position = 'relative';
-        requestAnimationFrame(function () {
-            _this._target.style.transform = "\n        translate(" + (_this._offset.x + _this._delta.x) + "px,\n                  " + (_this._offset.y + _this._delta.y) + "px)\n      ";
-        });
-    };
-    JpDraggableDialogDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
-            selector: '[appJpDraggableDialog]',
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"],
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"],
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]])
-    ], JpDraggableDialogDirective);
-    return JpDraggableDialogDirective;
-}());
-
 
 
 /***/ }),
@@ -897,17 +749,6 @@ var ActiveModule = /** @class */ (function () {
 }());
 
 
-
-/***/ }),
-
-/***/ "./src/app/agent/status/active/cdk-drag-drop-handle-example.html":
-/*!***********************************************************************!*\
-  !*** ./src/app/agent/status/active/cdk-drag-drop-handle-example.html ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"example-box\" cdkDrag>\n\n    <textarea style=\"width:100%; height:100%\"></textarea>\n    <div class=\"example-handle\" cdkDragHandle>\n      <svg width=\"24px\" fill=\"currentColor\" viewBox=\"0 0 24 24\">\n        <path d=\"M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z\"></path>\n        <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      </svg>\n    </div>\n  </div>"
 
 /***/ }),
 

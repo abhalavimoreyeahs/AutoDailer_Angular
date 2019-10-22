@@ -396,7 +396,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular_font_awesome__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! angular-font-awesome */ "./node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js");
 /* harmony import */ var ng_pick_datetime__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ng-pick-datetime */ "./node_modules/ng-pick-datetime/picker.js");
 /* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 
 
 
@@ -417,7 +416,6 @@ __webpack_require__.r(__webpack_exports__);
 //font awesome 
 
 //date time pick
-
 
 
 var AppModule = /** @class */ (function () {
@@ -463,8 +461,7 @@ var AppModule = /** @class */ (function () {
                     provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HTTP_INTERCEPTORS"],
                     useClass: _token_interceptor_service__WEBPACK_IMPORTED_MODULE_4__["TokenInterceptorService"],
                     multi: true
-                },
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_19__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_19__["HashLocationStrategy"] }],
+                }],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -507,7 +504,7 @@ var AutoDialService = /** @class */ (function () {
     function AutoDialService(http, router) {
         this.http = http;
         this.router = router;
-        this.path = 'http://18.217.160.208:8081'; //'https://auto-dialer-application.herokuapp.com';
+        this.path = 'http://18.189.120.48:8081'; //'https://auto-dialer-application.herokuapp.com';
         this._userLogIn = this.path + "/v0.1/login";
         this._fileUpload = this.path + "/v0.1/excelUpload";
         this._campaign = this.path + "/v0.1/createCamping";
@@ -1035,7 +1032,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    apiURL: 'http://18.217.160.208:8081',
+    apiURL: 'http://18.189.120.48:8081',
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -1082,7 +1079,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\User\Desktop\gitAutodialer\AutoDialer\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\User\Desktop\AutoDialer_local\localFrontEnd\src\main.ts */"./src/main.ts");
 
 
 /***/ })
