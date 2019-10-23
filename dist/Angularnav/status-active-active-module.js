@@ -91,15 +91,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fullcalendar/interaction */ "./node_modules/@fullcalendar/interaction/main.js");
 /* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var amazing_time_picker__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! amazing-time-picker */ "./node_modules/amazing-time-picker/amazing-time-picker.es5.js");
-/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! plivo-browser-sdk */ "./node_modules/plivo-browser-sdk/dist/plivo.js");
-/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm5/paginator.es5.js");
-/* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
-/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm5/sort.es5.js");
+/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! plivo-browser-sdk */ "./node_modules/plivo-browser-sdk/dist/plivo.js");
+/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm5/paginator.es5.js");
+/* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm5/sort.es5.js");
 
 
 
@@ -117,7 +116,7 @@ __webpack_require__.r(__webpack_exports__);
 
  // for dateClick
 //Time Picker
-
+// import { AmazingTimePickerService } from 'amazing-time-picker';
 //Plivo
 
 //interval
@@ -139,7 +138,7 @@ var ActiveComponent = /** @class */ (function () {
         this.toastrService = toastrService;
         this.callBoolean = false;
         this.displayedColumns = ['Caller Name', 'Caller No', 'Date', 'Note'];
-        this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_20__["SelectionModel"](true, []);
+        this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_19__["SelectionModel"](true, []);
         this.calendarVisible = true;
         this.calendarPlugins = [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_11___default.a, _fullcalendar_timegrid__WEBPACK_IMPORTED_MODULE_12___default.a, _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_13___default.a];
         this.calendarWeekends = true;
@@ -189,7 +188,7 @@ var ActiveComponent = /** @class */ (function () {
         this.service.getScheduledCallForAgent(data).subscribe(function (data) {
             console.log('scheduled calendar:', data);
             _this.showCreatedCall = data['message'];
-            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_18__["MatTableDataSource"](_this.showCreatedCall);
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_17__["MatTableDataSource"](_this.showCreatedCall);
             _this.dataSource.paginator = _this.paginator;
             _this.dataSource.sort = _this.sort;
             var CallSchedule = [];
@@ -237,7 +236,7 @@ var ActiveComponent = /** @class */ (function () {
                 this.seconds = 0;
                 this.minutes = 0;
                 this.hours = 0;
-                this.sub = Object(rxjs__WEBPACK_IMPORTED_MODULE_16__["interval"])(1000)
+                this.sub = Object(rxjs__WEBPACK_IMPORTED_MODULE_15__["interval"])(1000)
                     .subscribe(function (val) {
                     _this.seconds += 1;
                     if (_this.seconds > 60) {
@@ -286,7 +285,7 @@ var ActiveComponent = /** @class */ (function () {
             "audioConstraints": { "optional": [{ "googAutoGainControl": false }, { "googEchoCancellation": false }] },
             "enableTracking": true
         };
-        this.plivoWebSdk = new plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15___default.a(options);
+        this.plivoWebSdk = new plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_14___default.a(options);
         // this.plivoWebSdk.client.on('onWebrtcNotSupported', this.onWebrtcNotSupported);
         this.plivoWebSdk.client.on('onLogin', this.onLogin); // msg not showing //this function gets called when user successfully login/ login failed
         this.plivoWebSdk.client.on('onLogout', this.onLogout); // plivo method not working
@@ -575,12 +574,12 @@ var ActiveComponent = /** @class */ (function () {
         this.toastrService.warning('this is warning');
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_19__["MatPaginator"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_19__["MatPaginator"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_18__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_paginator__WEBPACK_IMPORTED_MODULE_18__["MatPaginator"])
     ], ActiveComponent.prototype, "paginator", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_21__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_21__["MatSort"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_20__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_sort__WEBPACK_IMPORTED_MODULE_20__["MatSort"])
     ], ActiveComponent.prototype, "sort", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('calendar'),
@@ -598,7 +597,7 @@ var ActiveComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./active.component.html */ "./src/app/agent/status/active/active.component.html"),
             styles: [__webpack_require__(/*! ./active.component.css */ "./src/app/agent/status/active/active.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_17__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__["AutoDialService"], _shared_services_agent__WEBPACK_IMPORTED_MODULE_4__["AgentService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_16__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_3__["AutoDialService"], _shared_services_agent__WEBPACK_IMPORTED_MODULE_4__["AgentService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrService"]])
     ], ActiveComponent);
     return ActiveComponent;
 }());
@@ -606,8 +605,7 @@ var ActiveComponent = /** @class */ (function () {
 //Dialog Box
 //dialog box 2
 var FeedBackComponent = /** @class */ (function () {
-    function FeedBackComponent(atp, dialogRef, data) {
-        this.atp = atp;
+    function FeedBackComponent(dialogRef, data) {
         this.dialogRef = dialogRef;
         this.data = data;
         this.Agent = [
@@ -656,9 +654,8 @@ var FeedBackComponent = /** @class */ (function () {
             selector: 'feedback',
             template: __webpack_require__(/*! ./feedback.html */ "./src/app/agent/status/active/feedback.html"),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [amazing_time_picker__WEBPACK_IMPORTED_MODULE_14__["AmazingTimePickerService"],
-            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogRef"], Object])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogRef"], Object])
     ], FeedBackComponent);
     return FeedBackComponent;
 }());
@@ -792,7 +789,7 @@ module.exports = "\n\n.card {\n    text-align:center;\n    opacity:0.9;\n  }\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div  >\n          \n    <div class=\"card\" style=\"background-color:none; margin-left:5%\">\n      <div class=\"card-body\">\n        <h4>Be Ready connecting with ...</h4>\n        <br>\n        <h2 class=\"card-title\">{{CallerName }}</h2>\n        <br>\n        <h4 class=\"card-subtitle mb-2 text-muted\">{{CallerNumber}}</h4>\n      \n        <div style=\"margin-top:10%;margin-bottom:10% \">\n          <i class=\"Phone is-animating\" style=\"margin-left:25%\"></i>\n        </div> \n        <!-- <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->\n        <!-- <a href=\"#\" class=\"card-link\">Card link</a>\n        <a href=\"#\" class=\"card-link\">Another link</a> -->\n      </div>\n    </div>\n</div>"
+module.exports = "<div  >\n          \n    <div class=\"card\" style=\"background-color:none; margin-left:5%\">\n      <div class=\"card-body\">\n        <h4>Be Ready connecting with ...</h4>\n        <br>\n        <h2 class=\"card-title\">{{CallerName }}</h2>\n        <br>\n        <h4 class=\"card-subtitle mb-2 text-muted\">{{CallerNumber}}</h4>\n      \n        <div style=\"margin-top:10%;margin-bottom:10% \">\n          <i class=\"Phone is-animating\" style=\"margin-left:25%\"></i>\n        </div> \n     \n      </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -812,6 +809,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import { setTime } from '@syncfusion/ej2-schedule';
 var MyDialogComponent = /** @class */ (function () {
     function MyDialogComponent(dialogRef, data) {
         this.dialogRef = dialogRef;

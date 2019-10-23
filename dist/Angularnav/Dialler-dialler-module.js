@@ -58,7 +58,7 @@ module.exports = "/* Dialler code*/\n\n\n.row {\n    margin: 0 auto;\n    width:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<link href=\"https://fonts.googleapis.com/css?family=Exo\" rel=\"stylesheet\">\n<link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css\" rel=\"stylesheet\">\n<div class=\"container\" style=\"margin-left:2%\">\n  <!-- <div id=\"output\">{{MobileNumber}}</div> -->\n  <div class=\"form-group\">\n    \n      <input type=\"text\" class=\"form-control\" id=\"output\" value=\"MobileNumber\" [(ngModel)]=\"MobileNumber\" placeholder=\"+91801XXXXXXX\">\n    </div>\n  <div class=\"row\" >\n    <div class=\"digit\" id=\"one\" (click)=\"pushNumbers(1)\"><h4><b>1</b></h4></div>\n    <div class=\"digit\" id=\"two\" (click)=\"pushNumbers(2)\"><h4><b>2</b></h4>\n      <div class=\"sub\"><h5>ABC</h5></div>\n    </div>\n    <div class=\"digit\" id=\"three\" (click)=\"pushNumbers(3)\"><h4><b>3</b></h4>\n      <div class=\"sub\"><h5>DEF</h5></div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"digit\" id=\"four\" (click)=\"pushNumbers(4)\"><h4><b>4</b></h4>\n      <div class=\"sub\"><h5>GHI</h5></div>\n    </div>\n    <div class=\"digit\" id=\"five\" (click)=\"pushNumbers(5)\"><h4><b>5</b></h4>\n      <div class=\"sub\"><h5>JKL</h5></div>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers(6)\"><h4><b>6</b></h4>\n      <div class=\"sub\"><h5>MNO</h5></div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"digit\" (click)=\"pushNumbers(7)\"><h4><b>7</b></h4>\n      <div class=\"sub\"><h5>PQRS</h5></div>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers(8)\"><h4><b>8</b></h4>\n      <div class=\"sub\"><h5>TUV</h5></div>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers(9)\"><h4><b>9</b></h4>\n      <div class=\"sub\"><h5>WXYZ</h5></div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"digit\" (click)=\"pushNumbers('*')\"><h4>*</h4>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers(0)\"><h4><b>0</b></h4>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers('#')\"><h4>#</h4>\n    </div>\n  </div>\n  <div class=\"botrow\"><i class=\"fa fa-star-o dig\" aria-hidden=\"true\"></i>\n    <div id=\"call\" style=\"margin-left: 5%;\" (click)=\"call()\"><i class=\"fa fa-phone\" aria-hidden=\"true\" ></i></div>\n    <i class=\"fa fa-long-arrow-left dig\" aria-hidden=\"true\" style=\"margin-left: 1%;\" (click)=\"removeNumber()\"></i>\n  </div>\n</div>"
+module.exports = "<!-- <link href=\"https://fonts.googleapis.com/css?family=Exo\" rel=\"stylesheet\">\n<link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css\" rel=\"stylesheet\">\n<div class=\"container\" style=\"margin-left:2%\">\n\n  <div class=\"form-group\">\n    \n      <input type=\"text\" class=\"form-control\" id=\"output\" value=\"MobileNumber\" [(ngModel)]=\"MobileNumber\" placeholder=\"+91801XXXXXXX\">\n    </div>\n  <div class=\"row\" >\n    <div class=\"digit\" id=\"one\" (click)=\"pushNumbers(1)\"><h4><b>1</b></h4></div>\n    <div class=\"digit\" id=\"two\" (click)=\"pushNumbers(2)\"><h4><b>2</b></h4>\n      <div class=\"sub\"><h5>ABC</h5></div>\n    </div>\n    <div class=\"digit\" id=\"three\" (click)=\"pushNumbers(3)\"><h4><b>3</b></h4>\n      <div class=\"sub\"><h5>DEF</h5></div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"digit\" id=\"four\" (click)=\"pushNumbers(4)\"><h4><b>4</b></h4>\n      <div class=\"sub\"><h5>GHI</h5></div>\n    </div>\n    <div class=\"digit\" id=\"five\" (click)=\"pushNumbers(5)\"><h4><b>5</b></h4>\n      <div class=\"sub\"><h5>JKL</h5></div>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers(6)\"><h4><b>6</b></h4>\n      <div class=\"sub\"><h5>MNO</h5></div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"digit\" (click)=\"pushNumbers(7)\"><h4><b>7</b></h4>\n      <div class=\"sub\"><h5>PQRS</h5></div>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers(8)\"><h4><b>8</b></h4>\n      <div class=\"sub\"><h5>TUV</h5></div>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers(9)\"><h4><b>9</b></h4>\n      <div class=\"sub\"><h5>WXYZ</h5></div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"digit\" (click)=\"pushNumbers('*')\"><h4>*</h4>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers(0)\"><h4><b>0</b></h4>\n    </div>\n    <div class=\"digit\" (click)=\"pushNumbers('#')\"><h4>#</h4>\n    </div>\n  </div>\n  <div class=\"botrow\"><i class=\"fa fa-star-o dig\" aria-hidden=\"true\"></i>\n    <div id=\"call\" style=\"margin-left: 5%;\" (click)=\"call()\"><i class=\"fa fa-phone\" aria-hidden=\"true\" ></i></div>\n    <i class=\"fa fa-long-arrow-left dig\" aria-hidden=\"true\" style=\"margin-left: 1%;\" (click)=\"removeNumber()\"></i>\n  </div>\n</div> -->"
 
 /***/ }),
 
@@ -134,9 +134,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dialler_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dialler-routing.module */ "./src/app/agent/calls/Dialler/dialler-routing.module.ts");
 /* harmony import */ var _dialler_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dialler.component */ "./src/app/agent/calls/Dialler/dialler.component.ts");
 /* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../material/material.module */ "./src/app/material/material.module.ts");
-/* harmony import */ var _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @syncfusion/ej2-angular-schedule */ "./node_modules/@syncfusion/ej2-angular-schedule/@syncfusion/ej2-angular-schedule.es5.js");
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -144,7 +143,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+//import {ScheduleModule, AgendaService, DayService, DragAndDropService, ResizeService, WeekService, WorkWeekService, MonthService } from '@syncfusion/ej2-angular-schedule';
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 var DiallerModule = /** @class */ (function () {
@@ -158,9 +157,10 @@ var DiallerModule = /** @class */ (function () {
                 //      BrowserAnimationsModule,
                 _material_material_module__WEBPACK_IMPORTED_MODULE_6__["MaterialModule"],
                 _dialler_routing_module__WEBPACK_IMPORTED_MODULE_4__["DiallerRoutingModule"],
-                _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["ScheduleModule"]
             ],
-            providers: [_syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["AgendaService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["DayService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["WeekService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["WorkWeekService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["MonthService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["DragAndDropService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["ResizeService"]],
+            providers: [
+            //   AgendaService, DayService, WeekService, WorkWeekService, MonthService, DragAndDropService, ResizeService
+            ],
             declarations: [_dialler_component__WEBPACK_IMPORTED_MODULE_5__["DiallerComponent"]]
         })
     ], DiallerModule);

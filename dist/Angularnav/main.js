@@ -23,7 +23,7 @@ var map = {
 	],
 	"./Dialler/dialler.module": [
 		"./src/app/agent/calls/Dialler/dialler.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"Dialler-dialler-module"
 	],
@@ -35,22 +35,15 @@ var map = {
 		"./src/app/layout/Employee/employee.module.ts",
 		"Employee-employee-module"
 	],
-	"./PhoneBook/phoneBook.module": [
-		"./src/app/agent/calls/PhoneBook/phoneBook.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
-		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
-		"common",
-		"PhoneBook-phoneBook-module"
-	],
 	"./admin/adminDashboard.module": [
 		"./src/app/layout/admin/adminDashboard.module.ts",
-		"default~admin-adminDashboard-module~manager-dashboard-manager-dashboard-module~try-dashboard-try-das~6277ff14",
+		"default~admin-adminDashboard-module~manager-dashboard-manager-dashboard-module",
 		"common",
 		"admin-adminDashboard-module"
 	],
 	"./agent-dashboard/agent-dashboard.module": [
 		"./src/app/agent/agent-dashboard/agent-dashboard.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"agent-dashboard-agent-dashboard-module"
 	],
@@ -61,7 +54,7 @@ var map = {
 	],
 	"./agent/agent.module": [
 		"./src/app/agent/agent.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"default~agent-agent-module~layout-layout-module~manager-manager-module~not-found-not-found-module",
 		"common",
 		"agent-agent-module"
@@ -71,20 +64,13 @@ var map = {
 		"common",
 		"agentFeedbackForm-agentfeedback-module"
 	],
-	"./calendar/view.module": [
-		"./src/app/agent/calendar/view.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
-		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
-		"common",
-		"calendar-view-module"
-	],
 	"./callInfo/callInfo.module": [
 		"./src/app/layout/callInfo/callInfo.module.ts",
 		"callInfo-callInfo-module"
 	],
 	"./calls/call.module": [
 		"./src/app/agent/calls/call.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"calls-call-module"
 	],
@@ -115,13 +101,13 @@ var map = {
 	],
 	"./login/login.module": [
 		"./src/app/login/login.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"login-login-module"
 	],
 	"./manager-dashboard/manager-dashboard.module": [
 		"./src/app/manager/manager-dashboard/manager-dashboard.module.ts",
-		"default~admin-adminDashboard-module~manager-dashboard-manager-dashboard-module~try-dashboard-try-das~6277ff14",
+		"default~admin-adminDashboard-module~manager-dashboard-manager-dashboard-module",
 		"common",
 		"manager-dashboard-manager-dashboard-module"
 	],
@@ -138,7 +124,7 @@ var map = {
 	],
 	"./my-notes/my-notes.module": [
 		"./src/app/agent/my-notes/my-notes.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"my-notes-my-notes-module"
 	],
@@ -165,64 +151,56 @@ var map = {
 	],
 	"./scheduled-calls/scheduledCall.module": [
 		"./src/app/agent/scheduled-calls/scheduledCall.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"scheduled-calls-scheduledCall-module"
 	],
 	"./setting/setting.module": [
 		"./src/app/agent/setting/setting.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"default~setting-setting-module~status-active-active-module~status-manualDial-manualDial-module",
 		"common",
 		"setting-setting-module"
 	],
 	"./status/active/active.module": [
 		"./src/app/agent/status/active/active.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
-		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"default~setting-setting-module~status-active-active-module~status-manualDial-manualDial-module",
+		"default~status-active-active-module~status-manualDial-manualDial-module",
 		"common",
 		"status-active-active-module"
 	],
 	"./status/break/break.module": [
 		"./src/app/agent/status/break/break.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"status-break-break-module"
 	],
 	"./status/callback/callback.module": [
 		"./src/app/agent/status/callback/callback.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"status-callback-callback-module"
 	],
 	"./status/manualDial/manualDial.module": [
 		"./src/app/agent/status/manualDial/manualDial.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
-		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"default~setting-setting-module~status-active-active-module~status-manualDial-manualDial-module",
+		"default~status-active-active-module~status-manualDial-manualDial-module",
 		"common",
 		"status-manualDial-manualDial-module"
 	],
 	"./status/meetingWithCustomer/customerMeet.module": [
 		"./src/app/agent/status/meetingWithCustomer/customerMeet.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"status-meetingWithCustomer-customerMeet-module"
 	],
 	"./status/training/training.module": [
 		"./src/app/agent/status/training/training.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
+		"default~Dialler-dialler-module~agent-agent-module~agent-dashboard-agent-dashboard-module~calls-call-~8cf3c7ed",
 		"common",
 		"status-training-training-module"
-	],
-	"./try-dashboard/try-dashboard.module": [
-		"./src/app/try-dashboard/try-dashboard.module.ts",
-		"default~Dialler-dialler-module~PhoneBook-phoneBook-module~agent-agent-module~agent-dashboard-agent-d~54f272cf",
-		"default~PhoneBook-phoneBook-module~calendar-view-module~status-active-active-module~status-manualDia~e42b9069",
-		"default~admin-adminDashboard-module~manager-dashboard-manager-dashboard-module~try-dashboard-try-das~6277ff14",
-		"common",
-		"try-dashboard-try-dashboard-module"
 	],
 	"./viewCampaign/viewCampaign.module": [
 		"./src/app/manager/viewCampaign/viewCampaign.module.ts",
@@ -281,7 +259,7 @@ var routes = [
     { path: 'manager', loadChildren: './manager/manager.module#ManagerModule', canActivateChild: [_shared_guard_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]] },
     { path: 'agent', loadChildren: './agent/agent.module#AgentModule' },
     // try dashboard
-    { path: 'dashboard', loadChildren: './try-dashboard/try-dashboard.module#TryDashboardModule' },
+    // { path: 'dashboard', loadChildren: './try-dashboard/try-dashboard.module#TryDashboardModule' },
     { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
     { path: '**', redirectTo: 'not-found' }
 ];
@@ -308,7 +286,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n   <router-outlet></router-outlet> \n  "
+module.exports = "\n<router-outlet><app-loader></app-loader></router-outlet>\n  "
 
 /***/ }),
 
@@ -387,22 +365,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sign-up/sign-up.component */ "./src/app/sign-up/sign-up.component.ts");
-/* harmony import */ var _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @syncfusion/ej2-angular-schedule */ "./node_modules/@syncfusion/ej2-angular-schedule/@syncfusion/ej2-angular-schedule.es5.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var amazing_time_picker__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! amazing-time-picker */ "./node_modules/amazing-time-picker/amazing-time-picker.es5.js");
-/* harmony import */ var angular_font_awesome__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! angular-font-awesome */ "./node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js");
-/* harmony import */ var ng_pick_datetime__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ng-pick-datetime */ "./node_modules/ng-pick-datetime/picker.js");
-/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
-
-
-
-
-
-
-//import { FormsModule } from '@angular/forms';
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _loader_interceptor__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./loader.interceptor */ "./src/app/loader.interceptor.ts");
+/* harmony import */ var _loader_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./loader.service */ "./src/app/loader.service.ts");
+/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
+/* harmony import */ var _loader_loader_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./loader/loader.component */ "./src/app/loader/loader.component.ts");
 
 
 
@@ -413,11 +382,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import {ScheduleModule, AgendaService, DayService, WeekService, WorkWeekService, MonthService } from '@syncfusion/ej2-angular-schedule';
+
+
+
+
+
+// import { AmazingTimePickerModule } from 'amazing-time-picker';
 //font awesome 
-
+//import { AngularFontAwesomeModule } from 'angular-font-awesome';
 //date time pick
+// import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 
+//  import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -425,10 +403,12 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_10__["SignUpComponent"],
+                _loader_loader_component__WEBPACK_IMPORTED_MODULE_16__["LoaderComponent"]
+                // MyDialogComponent,
+                //TryDashboardComponent
             ],
             imports: [
-                _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_18__["DragDropModule"],
+                _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_15__["DragDropModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
@@ -436,32 +416,35 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
                 //date time pick
-                ng_pick_datetime__WEBPACK_IMPORTED_MODULE_17__["OwlDateTimeModule"],
-                ng_pick_datetime__WEBPACK_IMPORTED_MODULE_17__["OwlNativeDateTimeModule"],
+                // OwlDateTimeModule, 
+                //      OwlNativeDateTimeModule,
                 //  NoopAnimationsModule,
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatGridListModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatMenuModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatButtonModule"],
-                _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_11__["ScheduleModule"],
-                amazing_time_picker__WEBPACK_IMPORTED_MODULE_15__["AmazingTimePickerModule"],
-                angular_font_awesome__WEBPACK_IMPORTED_MODULE_16__["AngularFontAwesomeModule"],
-                ngx_toastr__WEBPACK_IMPORTED_MODULE_14__["ToastrModule"].forRoot({
+                _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatGridListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatMenuModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatButtonModule"],
+                // ScheduleModule ,
+                // AmazingTimePickerModule,
+                //AngularFontAwesomeModule,
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_12__["ToastrModule"].forRoot({
                     timeOut: 2500,
                     positionClass: 'toast-top-right',
                     preventDuplicates: false
                 }),
-                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_13__["LayoutModule"],
+                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_11__["LayoutModule"],
             ],
-            providers: [_syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_11__["AgendaService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_11__["DayService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_11__["WeekService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_11__["WorkWeekService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_11__["MonthService"],
+            providers: [_loader_service__WEBPACK_IMPORTED_MODULE_14__["LoaderService"],
+                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HTTP_INTERCEPTORS"], useClass: _loader_interceptor__WEBPACK_IMPORTED_MODULE_13__["LoaderInterceptor"], multi: true },
+                // AgendaService, DayService, WeekService, WorkWeekService, MonthService,
                 {
                     provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HTTP_INTERCEPTORS"],
                     useClass: _token_interceptor_service__WEBPACK_IMPORTED_MODULE_4__["TokenInterceptorService"],
                     multi: true
-                }],
+                },
+            ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -504,7 +487,7 @@ var AutoDialService = /** @class */ (function () {
     function AutoDialService(http, router) {
         this.http = http;
         this.router = router;
-        this.path = 'http://18.189.120.48:8081'; //'https://auto-dialer-application.herokuapp.com';
+        this.path = 'https://auto-dialer-application.herokuapp.com'; //'http://3.132.179.55:8081';//'http://18.189.120.48:8081';//'https://auto-dialer-application.herokuapp.com';
         this._userLogIn = this.path + "/v0.1/login";
         this._fileUpload = this.path + "/v0.1/excelUpload";
         this._campaign = this.path + "/v0.1/createCamping";
@@ -739,6 +722,141 @@ var AutoDialService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/loader.interceptor.ts":
+/*!***************************************!*\
+  !*** ./src/app/loader.interceptor.ts ***!
+  \***************************************/
+/*! exports provided: LoaderInterceptor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoaderInterceptor", function() { return LoaderInterceptor; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _loader_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./loader.service */ "./src/app/loader.service.ts");
+
+
+
+
+var LoaderInterceptor = /** @class */ (function () {
+    function LoaderInterceptor(loaderService) {
+        this.loaderService = loaderService;
+    }
+    LoaderInterceptor.prototype.intercept = function (req, next) {
+        var _this = this;
+        this.loaderService.show();
+        return next.handle(req).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["finalize"])(function () { return _this.loaderService.hide(); }));
+    };
+    LoaderInterceptor = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_loader_service__WEBPACK_IMPORTED_MODULE_3__["LoaderService"]])
+    ], LoaderInterceptor);
+    return LoaderInterceptor;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/loader.service.ts":
+/*!***********************************!*\
+  !*** ./src/app/loader.service.ts ***!
+  \***********************************/
+/*! exports provided: LoaderService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoaderService", function() { return LoaderService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+
+
+var LoaderService = /** @class */ (function () {
+    function LoaderService() {
+        this.isLoading = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+    }
+    LoaderService.prototype.show = function () {
+        this.isLoading.next(true);
+    };
+    LoaderService.prototype.hide = function () {
+        this.isLoading.next(false);
+    };
+    LoaderService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], LoaderService);
+    return LoaderService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/loader/loader.component.css":
+/*!*********************************************!*\
+  !*** ./src/app/loader/loader.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".overlay {\r\n    position:fixed;\r\n    display:block;\r\n    width:100%;\r\n    height:100%;\r\n    top:0;\r\n    left:0;\r\n    background-color:rgba(74,74,74,.8);\r\n    z-index:99999;\r\n  }\r\n  .spinner {\r\n    position:absolute;\r\n    top:50%;\r\n    left:50%;\r\n    -webkit-transform: translate(-50%,-50%);\r\n            transform: translate(-50%,-50%);\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9hZGVyL2xvYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksY0FBYztJQUNkLGFBQWE7SUFDYixVQUFVO0lBQ1YsV0FBVztJQUNYLEtBQUs7SUFDTCxNQUFNO0lBQ04sa0NBQWtDO0lBQ2xDLGFBQWE7RUFDZjtFQUNBO0lBQ0UsaUJBQWlCO0lBQ2pCLE9BQU87SUFDUCxRQUFRO0lBQ1IsdUNBQStCO1lBQS9CLCtCQUErQjtFQUNqQyIsImZpbGUiOiJzcmMvYXBwL2xvYWRlci9sb2FkZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5vdmVybGF5IHtcclxuICAgIHBvc2l0aW9uOmZpeGVkO1xyXG4gICAgZGlzcGxheTpibG9jaztcclxuICAgIHdpZHRoOjEwMCU7XHJcbiAgICBoZWlnaHQ6MTAwJTtcclxuICAgIHRvcDowO1xyXG4gICAgbGVmdDowO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjpyZ2JhKDc0LDc0LDc0LC44KTtcclxuICAgIHotaW5kZXg6OTk5OTk7XHJcbiAgfVxyXG4gIC5zcGlubmVyIHtcclxuICAgIHBvc2l0aW9uOmFic29sdXRlO1xyXG4gICAgdG9wOjUwJTtcclxuICAgIGxlZnQ6NTAlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwtNTAlKTtcclxuICB9Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/loader/loader.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/loader/loader.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"isLoading | async\" class=\"overlay\">\r\n  <mat-progress-spinner class=\"spinner\" [color]=\"color\" [mode]=\"mode\" [value]=\"value\">\r\n  </mat-progress-spinner>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/loader/loader.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/loader/loader.component.ts ***!
+  \********************************************/
+/*! exports provided: LoaderComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoaderComponent", function() { return LoaderComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _loader_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../loader.service */ "./src/app/loader.service.ts");
+
+
+
+var LoaderComponent = /** @class */ (function () {
+    function LoaderComponent(loaderService) {
+        this.loaderService = loaderService;
+        this.color = 'primary';
+        this.mode = 'indeterminate';
+        this.value = 50;
+        this.isLoading = this.loaderService.isLoading;
+    }
+    LoaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-loader',
+            template: __webpack_require__(/*! ./loader.component.html */ "./src/app/loader/loader.component.html"),
+            styles: [__webpack_require__(/*! ./loader.component.css */ "./src/app/loader/loader.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_loader_service__WEBPACK_IMPORTED_MODULE_2__["LoaderService"]])
+    ], LoaderComponent);
+    return LoaderComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/material/material.module.ts":
 /*!*********************************************!*\
   !*** ./src/app/material/material.module.ts ***!
@@ -918,62 +1036,6 @@ var AuthGuard = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/sign-up/sign-up.component.css":
-/*!***********************************************!*\
-  !*** ./src/app/sign-up/sign-up.component.css ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".my-form{\n    min-width: 150px;\n    max-width: 500px;\n    width: 100%;\n  }\n   \n  .full-width {\n    width: 100%;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lnbi11cC9zaWduLXVwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLFdBQVc7RUFDYjs7RUFFQTtJQUNFLFdBQVc7RUFDYiIsImZpbGUiOiJzcmMvYXBwL3NpZ24tdXAvc2lnbi11cC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm15LWZvcm17XG4gICAgbWluLXdpZHRoOiAxNTBweDtcbiAgICBtYXgtd2lkdGg6IDUwMHB4O1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG4gICBcbiAgLmZ1bGwtd2lkdGgge1xuICAgIHdpZHRoOiAxMDAlO1xuICB9Il19 */"
-
-/***/ }),
-
-/***/ "./src/app/sign-up/sign-up.component.html":
-/*!************************************************!*\
-  !*** ./src/app/sign-up/sign-up.component.html ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<mat-toolbar>\n  <span>Registration</span>\n</mat-toolbar>\n<mat-card class=\"my-card\">      \n    <!-- CONTENT HERE -->\n    \n<mat-card-content>\n  <form class=\"my-form\">\n     <mat-form-field class=\"full-width\">\n            <mat-label>First Name</mat-label>\n            <input  matInput  placeholder=\"First name\"  name=\"fname\"  required>\n         </mat-form-field><br>\n         <mat-form-field class=\"full-width\">\n            <mat-label>Last Name</mat-label>\n            <input  matInput  placeholder=\"Last Name\" name=\"lname\"  required>\n         </mat-form-field><br>\n         <mat-form-field class=\"full-width\">\n            <mat-label>Address</mat-label>\n            <input  matInput  placeholder=\"Address\" name=\"address\"  required>\n         </mat-form-field><br>\n         <mat-form-field class=\"full-width\">\n            <mat-label>Email</mat-label>\n            <input  matInput  placeholder=\"Email\" name=\"email\">\n         </mat-form-field><br>\n         <mat-form-field class=\"full-width\">\n            <mat-label>Password</mat-label>\n            <input  matInput  placeholder=\"Password\"  name=\"password\">\n         </mat-form-field>\n         <section class=\"example-section\">\n          <label class=\"example-margin\">Gender:</label>\n          <mat-radio-group > <!--[(ngModel)]=\"gender\"-->\n            <mat-radio-button class=\"example-margin\" value=\"after\">Male</mat-radio-button>\n            <mat-radio-button class=\"example-margin\" value=\"before\">Female</mat-radio-button>\n            <mat-radio-button class=\"example-margin\" value=\"before\">Other</mat-radio-button>\n          </mat-radio-group>\n        </section>\n     \n        <mat-form-field>\n          <mat-label>Date of Birth</mat-label>\n      <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\">\n      <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n      <mat-datepicker #picker></mat-datepicker>\n    </mat-form-field>\n    <mat-card-content>\n      <form class=\"my-form\">\n         <!--FORM FIELDS-->\n      </form>\n    </mat-card-content>\n    <mat-card-actions>\n      <button mat-raised-button (click)=\"register()\" color=\"primary\">REGISTER</button>\n    </mat-card-actions>\n  </form>\n</mat-card-content>\n  \n  <mat-card-actions>\n    <!-- REGISTER BUTTON -->\n  </mat-card-actions>\n</mat-card>\n"
-
-/***/ }),
-
-/***/ "./src/app/sign-up/sign-up.component.ts":
-/*!**********************************************!*\
-  !*** ./src/app/sign-up/sign-up.component.ts ***!
-  \**********************************************/
-/*! exports provided: SignUpComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpComponent", function() { return SignUpComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var SignUpComponent = /** @class */ (function () {
-    function SignUpComponent() {
-    }
-    SignUpComponent.prototype.ngOnInit = function () {
-    };
-    SignUpComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-sign-up',
-            template: __webpack_require__(/*! ./sign-up.component.html */ "./src/app/sign-up/sign-up.component.html"),
-            styles: [__webpack_require__(/*! ./sign-up.component.css */ "./src/app/sign-up/sign-up.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], SignUpComponent);
-    return SignUpComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/token-interceptor.service.ts":
 /*!**********************************************!*\
   !*** ./src/app/token-interceptor.service.ts ***!
@@ -1032,7 +1094,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    apiURL: 'http://18.189.120.48:8081',
+    apiURL: 'https://auto-dialer-application.herokuapp.com',
 };
 /*
  * For easier debugging in development mode, you can import the following file

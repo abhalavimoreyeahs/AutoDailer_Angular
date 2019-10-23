@@ -102,10 +102,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../autoDialer.service */ "./src/app/autoDialer.service.ts");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var amazing_time_picker__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! amazing-time-picker */ "./node_modules/amazing-time-picker/amazing-time-picker.es5.js");
-/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! plivo-browser-sdk */ "./node_modules/plivo-browser-sdk/dist/plivo.js");
-/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! plivo-browser-sdk */ "./node_modules/plivo-browser-sdk/dist/plivo.js");
+/* harmony import */ var plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
@@ -126,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 //Dialog Box
 
 //Time Picker
-
+// import { AmazingTimePickerService } from 'amazing-time-picker';
 //Plivo
 
 //Routing
@@ -357,7 +356,7 @@ var ManualDialComponent = /** @class */ (function () {
             "audioConstraints": { "optional": [{ "googAutoGainControl": false }, { "googEchoCancellation": false }] },
             "enableTracking": true
         };
-        this.plivoWebSdk = new plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_16___default.a(options);
+        this.plivoWebSdk = new plivo_browser_sdk__WEBPACK_IMPORTED_MODULE_15___default.a(options);
         // this.plivoWebSdk.client.on('onWebrtcNotSupported', this.onWebrtcNotSupported);
         this.plivoWebSdk.client.on('onLogin', this.onLogin); // msg not showing //this function gets called when user successfully login/ login failed
         this.plivoWebSdk.client.on('onLogout', this.onLogout); // plivo method not working
@@ -600,7 +599,7 @@ var ManualDialComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./manualDial.component.html */ "./src/app/agent/status/manualDial/manualDial.component.html"),
             styles: [__webpack_require__(/*! ./manualDial.component.css */ "./src/app/agent/status/manualDial/manualDial.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_agent__WEBPACK_IMPORTED_MODULE_10__["AgentService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_11__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_17__["Router"], _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_13__["AutoDialService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_14__["MatDialog"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_agent__WEBPACK_IMPORTED_MODULE_10__["AgentService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_11__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_16__["Router"], _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_13__["AutoDialService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_14__["MatDialog"]])
     ], ManualDialComponent);
     return ManualDialComponent;
 }());
@@ -610,8 +609,7 @@ var ManualDialComponent = /** @class */ (function () {
 //dialog box 2
 var FeedBackComponent = /** @class */ (function () {
     // notes;
-    function FeedBackComponent(atp, dialogRef, data) {
-        this.atp = atp;
+    function FeedBackComponent(dialogRef, data) {
         this.dialogRef = dialogRef;
         this.data = data;
         this.select = false;
@@ -659,31 +657,13 @@ var FeedBackComponent = /** @class */ (function () {
         localStorage.removeItem('Number'),
             localStorage.removeItem('Name');
     };
-    //TimePicker function
-    FeedBackComponent.prototype.startTime = function () {
-        var _this = this;
-        var amazingTimePicker = this.atp.open();
-        amazingTimePicker.afterClose().subscribe(function (time) {
-            console.log('time:', time);
-            _this.callBackStartTime = time;
-        });
-    };
-    FeedBackComponent.prototype.endTime = function () {
-        var _this = this;
-        var amazingTimePicker = this.atp.open();
-        amazingTimePicker.afterClose().subscribe(function (time) {
-            console.log('time:', time);
-            _this.callBackEndTime = time;
-        });
-    };
     FeedBackComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'feedback',
             template: __webpack_require__(/*! ./feedback.html */ "./src/app/agent/status/manualDial/feedback.html"),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_14__["MAT_DIALOG_DATA"])),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [amazing_time_picker__WEBPACK_IMPORTED_MODULE_15__["AmazingTimePickerService"],
-            _angular_material_dialog__WEBPACK_IMPORTED_MODULE_14__["MatDialogRef"], Object])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_14__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_14__["MatDialogRef"], Object])
     ], FeedBackComponent);
     return FeedBackComponent;
 }());

@@ -25,7 +25,6 @@ var routes = [
         children: [
             { path: '', redirectTo: 'dialler', pathMatch: 'prefix' },
             { path: 'dialler', loadChildren: './Dialler/dialler.module#DiallerModule' },
-            { path: 'phoneBook', loadChildren: './PhoneBook/phoneBook.module#PhoneBookModule' },
         ]
     }
 ];
@@ -63,7 +62,7 @@ module.exports = "mat-list-item {\n    margin: 2% 2% 2% 2%;\n  }\n  \n  button{\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar >\n    <mat-toolbar-row>\n      <mat-list-item >\n      <button  mat-flat-button id=\"btn\" [routerLink]=\"['/agent/call/dialler']\"  routerLinkActive=\"active\" [ngStyle]=\"routerLink?{'background-color': 'mediumpurple'} : {'background-color': 'none'}\">\n        <mat-icon>group</mat-icon>\n        Dialler \n      </button>\n    </mat-list-item>\n  \n    <mat-list-item >\n      <button  mat-flat-button id=\"btn\" [routerLink]=\"['/agent/call/phoneBook']\"  routerLinkActive=\"active\" [ngStyle]=\"routerLink?{'background-color': 'mediumpurple'} : {'background-color': 'none'}\">\n        <mat-icon>group</mat-icon>\n        Caller\n      </button>\n    </mat-list-item>\n\n  \n    </mat-toolbar-row>\n  \n  </mat-toolbar>\n<router-outlet></router-outlet>"
+module.exports = "<!-- <mat-toolbar >\n    <mat-toolbar-row>\n      <mat-list-item >\n      <button  mat-flat-button id=\"btn\" [routerLink]=\"['/agent/call/dialler']\"  routerLinkActive=\"active\" [ngStyle]=\"routerLink?{'background-color': 'mediumpurple'} : {'background-color': 'none'}\">\n        <mat-icon>group</mat-icon>\n        Dialler \n      </button>\n    </mat-list-item>\n  \n    <mat-list-item >\n      <button  mat-flat-button id=\"btn\" [routerLink]=\"['/agent/call/phoneBook']\"  routerLinkActive=\"active\" [ngStyle]=\"routerLink?{'background-color': 'mediumpurple'} : {'background-color': 'none'}\">\n        <mat-icon>group</mat-icon>\n        Caller\n      </button>\n    </mat-list-item>\n\n  \n    </mat-toolbar-row>\n  \n  </mat-toolbar>\n<router-outlet></router-outlet> -->"
 
 /***/ }),
 
@@ -103,7 +102,7 @@ var CallComponent = /** @class */ (function () {
         this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_5__["SelectionModel"](true, []);
         this.title = 'calender';
         this.currentDate = new Date(2018, 10, 30);
-        this.newViewMode = 'Month';
+        //public newViewMode: View = 'Month';
         // dummyData = this.service.getDummyData();
         // displayDummyData = [  'Name', 'Age', 'DOB', 'Mobile', 'Domicile', 'City']
         // data = this.service.getUsers();
@@ -210,9 +209,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _call_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./call-routing.module */ "./src/app/agent/calls/call-routing.module.ts");
 /* harmony import */ var _call_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./call.component */ "./src/app/agent/calls/call.component.ts");
 /* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../material/material.module */ "./src/app/material/material.module.ts");
-/* harmony import */ var _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @syncfusion/ej2-angular-schedule */ "./node_modules/@syncfusion/ej2-angular-schedule/@syncfusion/ej2-angular-schedule.es5.js");
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -220,7 +218,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+//import {ScheduleModule, AgendaService, DayService, DragAndDropService, ResizeService, WeekService, WorkWeekService, MonthService } from '@syncfusion/ej2-angular-schedule';
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 var CallModule = /** @class */ (function () {
@@ -234,9 +232,10 @@ var CallModule = /** @class */ (function () {
                 //      BrowserAnimationsModule,
                 _material_material_module__WEBPACK_IMPORTED_MODULE_6__["MaterialModule"],
                 _call_routing_module__WEBPACK_IMPORTED_MODULE_4__["CallRoutingModule"],
-                _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["ScheduleModule"]
             ],
-            providers: [_syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["AgendaService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["DayService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["WeekService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["WorkWeekService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["MonthService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["DragAndDropService"], _syncfusion_ej2_angular_schedule__WEBPACK_IMPORTED_MODULE_7__["ResizeService"]],
+            providers: [
+            //AgendaService, DayService, WeekService, WorkWeekService, MonthService, DragAndDropService, ResizeService
+            ],
             declarations: [_call_component__WEBPACK_IMPORTED_MODULE_5__["CallComponent"]]
         })
     ], CallModule);
