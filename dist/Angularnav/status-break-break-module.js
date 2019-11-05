@@ -198,18 +198,18 @@ var BreakReasonComponent = /** @class */ (function () {
         ];
     }
     BreakReasonComponent.prototype.onNoClick = function () {
-        //alert('alert called noclick');
+        ////alert('alert called noclick');
         this.dialogRef.close();
     };
     BreakReasonComponent.prototype.cancel = function () {
-        //alert('alert called cancel');
+        ////alert('alert called cancel');
     };
     BreakReasonComponent.prototype.ok = function () {
         if (this.data['reason'] != null) {
             this.dialogRef.close(this.data);
         }
         else {
-            alert('Please select reaon');
+            //alert('Please select reaon');
         }
         //save the doc
     };
@@ -238,18 +238,18 @@ var BreakDialogComponent = /** @class */ (function () {
         ];
     }
     BreakDialogComponent.prototype.onNoClick = function () {
-        alert('alert called');
+        //alert('alert called');
         this.dialogRef.close();
     };
     BreakDialogComponent.prototype.cancel = function () {
-        alert('alert called');
+        //alert('alert called');
     };
     BreakDialogComponent.prototype.ok = function () {
         if (this.data['reason']) {
             this.dialogRef.close("can pass string");
         }
         else {
-            alert('Please select reaon');
+            //alert('Please select reaon');
         }
         //save the doc
     };
@@ -365,6 +365,12 @@ var AgentService = /** @class */ (function () {
     // Agent Dashboard 
     AgentService.prototype.getAgentCallStatus = function (data) {
         return this.http.post(this.apiURL + '/v0.1/getIndividualAgentCallDetails', data);
+    };
+    AgentService.prototype.addCustomerByAgent = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/addCustomer', data);
+    };
+    AgentService.prototype.getCallRelatedRecords = function (data) {
+        return this.http.get(this.apiURL + ("/v0.1/getParentAndChildScheduleCalls?recordid=" + data));
     };
     AgentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({

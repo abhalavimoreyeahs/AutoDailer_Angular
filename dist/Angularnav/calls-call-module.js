@@ -146,7 +146,7 @@ var CallComponent = /** @class */ (function () {
         return (this.selection.isSelected(row) ? 'deselect' : 'select') + " row " + (row.position + 1);
     };
     CallComponent.prototype.redirectToDetails = function (Name, Mobile) {
-        // alert(Id);
+        // //alert(Id);
         this.payload = {
             message: 'Login Error',
             error: 'error',

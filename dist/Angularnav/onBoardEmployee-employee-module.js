@@ -120,7 +120,7 @@ var EmployeeComponent = /** @class */ (function () {
         this.service.saveEmployee(this.Employee).subscribe(function (data) {
             console.log(data);
             if (data.success === true) {
-                alert('data successfully saved');
+                //alert('data successfully saved');
             }
         });
         //console.log(this.Employee);

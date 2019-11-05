@@ -159,17 +159,17 @@ var CampaignComponent = /** @class */ (function () {
     };
     CampaignComponent.prototype.hitAPI = function () {
         var _this = this;
-        var subscription = observable.subscribe(function (x) {
-            console.log('x:', x);
-            _this.service.getAllCampaign().subscribe(function (data) {
-                console.log(data);
-                _this.CampaignData = data['message'];
-                _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this.CampaignData);
-                // Assign the paginator *after* dataSource is set
-                _this.dataSource.paginator = _this.paginator;
-                _this.dataSource.sort = _this.sort;
-            });
+        // const subscription = observable.subscribe((x) => {
+        //   console.log('x:', x)
+        this.service.getAllCampaign().subscribe(function (data) {
+            console.log(data);
+            _this.CampaignData = data['message'];
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](_this.CampaignData);
+            // Assign the paginator *after* dataSource is set
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
         });
+        // });
     };
     CampaignComponent.prototype.addCampaign = function () {
         this.addCampaignBoolean = !this.addCampaignBoolean;
@@ -274,7 +274,7 @@ var CampaignComponent = /** @class */ (function () {
                 excelupload: false
             };
             this.service.editCampaign(this.Campaigns).subscribe(function (data) {
-                alert('Edit successfully');
+                //alert('Edit successfully');
                 console.log(data);
                 _this.ngOnInit();
             });
@@ -282,7 +282,7 @@ var CampaignComponent = /** @class */ (function () {
     };
     // dataSource = this.service.getAllCustomer();
     CampaignComponent.prototype.applyFilter = function (filterValue) {
-        alert('working');
+        //alert('working');
         this.dataSource.data.filter = filterValue.trim().toLowerCase();
     };
     /** Whether the number of selected elements matches the total number of rows. */

@@ -138,7 +138,7 @@ var CustomerComponent = /** @class */ (function () {
         this.ExcelFileObj = {
             CustomerData: excelFile
         };
-        alert('file sending');
+        //alert('file sending')
         console.log('Excel', this.ExcelFileObj);
         this.service.excelUploading(this.ExcelFileObj).subscribe(function (data) {
             if (data.sucess == true) {

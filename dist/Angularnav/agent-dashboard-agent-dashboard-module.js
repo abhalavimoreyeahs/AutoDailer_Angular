@@ -247,6 +247,12 @@ var AgentService = /** @class */ (function () {
     AgentService.prototype.getAgentCallStatus = function (data) {
         return this.http.post(this.apiURL + '/v0.1/getIndividualAgentCallDetails', data);
     };
+    AgentService.prototype.addCustomerByAgent = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/addCustomer', data);
+    };
+    AgentService.prototype.getCallRelatedRecords = function (data) {
+        return this.http.get(this.apiURL + ("/v0.1/getParentAndChildScheduleCalls?recordid=" + data));
+    };
     AgentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'

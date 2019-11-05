@@ -143,34 +143,34 @@ var SettingComponent = /** @class */ (function () {
         }
     };
     SettingComponent.prototype.onLogin = function () {
-        alert('successfully login');
+        //alert('successfully login');
     };
     SettingComponent.prototype.logOut = function () {
-        alert('LogOut');
+        //alert('LogOut');
         this.plivoWebSdk.client.logOut();
     };
     // onLogout(){
-    //   alert('successfully log Out');
+    //   //alert('successfully log Out');
     // }
     SettingComponent.prototype.makeCall = function () {
         //var dest = document.getElementById('number')
-        alert(this.Mobile['number']);
+        //alert(this.Mobile['number']);
         var dest = this.Mobile['number'];
         console.log(dest);
         var extraHeaders = { 'X-PH-Test1': 'test1', 'X-PH-Test2': 'test2' };
         this.plivoWebSdk.client.call(dest, extraHeaders);
     };
     SettingComponent.prototype.OnCallReceive = function () {
-        alert('receiving call');
+        //alert('receiving call');
         this.plivoWebSdk.client.answer();
     };
     SettingComponent.prototype.OnCallReject = function () {
-        alert(' call Reject');
+        //alert(' call Reject');
         this.plivoWebSdk.client.reject();
     };
     SettingComponent.prototype.onIncomingCall = function (callerName, extraHeaders) {
         // var data =  this.plivoWebSdk.client.onIncomingCall();
-        // alert('auto pickup call ');  
+        // //alert('auto pickup call ');  
         console.log(callerName, extraHeaders);
     };
     SettingComponent.prototype.HangUp = function () {
@@ -179,31 +179,31 @@ var SettingComponent = /** @class */ (function () {
         }
         else {
             // callOff();
-            alert('no call to HangUp');
+            //alert('no call to HangUp');
         }
     };
     SettingComponent.prototype.onIncomingCallCanceled = function () {
-        alert('call cancellec');
+        //alert('call cancellec');
         console.log('call cancelled ...');
     };
     // onCallFailed(){
-    //   alert('call Failed function');
+    //   //alert('call Failed function');
     //   console.log('call failed function');
     // }
     SettingComponent.prototype.onCallTerminated = function () {
-        alert('call terminated function ');
+        //alert('call terminated function ');
         console.log('call terminated function ');
     };
     SettingComponent.prototype.onCallAnswered = function () {
-        // alert('call req to server');
+        // //alert('call req to server');
         console.log('call req to server');
     };
     SettingComponent.prototype.onCalling = function () {
-        alert('on calling');
+        //alert('on calling');
         console.log('on calling func');
     };
     SettingComponent.prototype.onCallRemoteRinging = function () {
-        alert('remote ringing');
+        //alert('remote ringing');
         console.log('remote ringing');
     };
     SettingComponent.prototype.onMediaConnected = function () {

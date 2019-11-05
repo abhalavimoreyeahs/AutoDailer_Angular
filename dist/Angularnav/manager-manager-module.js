@@ -130,7 +130,7 @@ var ManagerComponent = /** @class */ (function () {
     };
     ManagerComponent.prototype.viewCampaign = function () {
         var _this = this;
-        alert('msg');
+        //alert('msg');
         this.service.campaignAssignedToManager().subscribe(function (data) {
             if (data['success'] === true) {
                 _this.ViewCompaignboolean = true;
@@ -146,7 +146,7 @@ var ManagerComponent = /** @class */ (function () {
         this._router.navigate(['/login']);
     };
     ManagerComponent.prototype.call = function () {
-        alert('working');
+        //alert('working');
         this._router.navigate(['/manager/managerDashboard']);
     };
     ManagerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

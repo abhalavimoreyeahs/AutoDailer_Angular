@@ -118,7 +118,7 @@ var NotFoundComponent = /** @class */ (function () {
     };
     NotFoundComponent.prototype.viewCampaign = function () {
         var _this = this;
-        alert('msg');
+        //alert('msg');
         this.service.campaignAssignedToManager().subscribe(function (data) {
             if (data['success'] === true) {
                 _this.ViewCompaignboolean = true;

@@ -131,7 +131,7 @@ var LoginComponent = /** @class */ (function () {
                     }
                 }
                 else if (data.success == false) {
-                    //  alert('sth went wrong');
+                    //  //alert('sth went wrong');
                     _this.payload = {
                         message: 'Login Error',
                         error: data.error.errors[0].message
@@ -145,7 +145,7 @@ var LoginComponent = /** @class */ (function () {
             });
         }
         else {
-            //  alert('else fill pass or email');
+            //  //alert('else fill pass or email');
             this.loginFalse = true;
         }
     };

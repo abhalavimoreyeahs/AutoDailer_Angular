@@ -138,7 +138,7 @@ var AssignedAgentComponent = /** @class */ (function () {
     };
     //-------------------------------------------------------------------
     AssignedAgentComponent.prototype.manager = function () {
-        alert('manager calling');
+        //alert('manager calling');
         this.router.navigate(['/admin/manager']);
     };
     //-------------------------------------------------------------------------------

@@ -150,7 +150,7 @@ var EditCampaignComponent = /** @class */ (function () {
             }
             else {
                 _this.ErrorSuccess();
-                //   alert('sth went wrong');
+                //   //alert('sth went wrong');
             }
         });
     };

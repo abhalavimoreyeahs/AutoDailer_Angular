@@ -99,7 +99,7 @@ var DiallerComponent = /** @class */ (function () {
         this.MobileNumber = this.MobileNumber.slice(0, -1);
     };
     DiallerComponent.prototype.call = function () {
-        alert(this.MobileNumber);
+        //alert(this.MobileNumber);
         console.log(this.MobileNumber);
     };
     DiallerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

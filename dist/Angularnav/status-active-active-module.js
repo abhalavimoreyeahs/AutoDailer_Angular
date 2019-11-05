@@ -220,7 +220,7 @@ var ActiveComponent = /** @class */ (function () {
         this.LogOut();
     };
     ActiveComponent.prototype.autoClick = function () {
-        alert('auto Click');
+        //alert('auto Click');
     };
     // on reloading logout agent from plivo // this also works if someone kill web application
     ActiveComponent.prototype.unloadHandler = function (event) {
@@ -317,7 +317,7 @@ var ActiveComponent = /** @class */ (function () {
         }
     };
     ActiveComponent.prototype.onLogin = function () {
-        // alert('successfully login');
+        // //alert('successfully login');
         console.log('login successfully');
         localStorage.setItem('PlivoLogin', 'true');
         //this.showLoginSuccess()
@@ -325,12 +325,12 @@ var ActiveComponent = /** @class */ (function () {
         //this.toastrService.success('plivo Login Successfully'); //toastrService
     };
     ActiveComponent.prototype.LogOut = function () {
-        //alert('LogOut');
+        ////alert('LogOut');
         this.plivoWebSdk.client.logout();
         console.log('logOut function called');
     };
     ActiveComponent.prototype.onLogout = function () {
-        //alert('successfully log Out');
+        ////alert('successfully log Out');
         console.log('successfully log Out');
         localStorage.removeItem('PlivoLogin');
         localStorage.removeItem('endpointID');
@@ -350,7 +350,7 @@ var ActiveComponent = /** @class */ (function () {
         });
     };
     ActiveComponent.prototype.OnCallReject = function () {
-        alert(' call Reject');
+        //alert(' call Reject');
         this.plivoWebSdk.client.reject();
     };
     ActiveComponent.prototype.onIncomingCall = function (callerName, extraHeaders) {
@@ -386,24 +386,24 @@ var ActiveComponent = /** @class */ (function () {
         }
         else {
             // callOff();
-            alert('no call to HangUp');
+            //alert('no call to HangUp');
         }
     };
     ActiveComponent.prototype.onIncomingCallCanceled = function () {
-        //alert('call cancellec');
+        ////alert('call cancellec');
         console.log('call cancelled ...');
         $('#endTime').click();
         this.callBoolean = false;
         //this.hours = this.minutes = this.seconds = 0;
     };
     // onCallFailed(){
-    //   alert('call Failed function');
+    //   //alert('call Failed function');
     //   console.log('call failed function');
     // }
     ActiveComponent.prototype.onCallTerminated = function (hangupInfo, callInfo) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                // alert('call terminated');
+                // //alert('call terminated');
                 $('#endTime').click();
                 console.log('call terminated function hangupInfo:', hangupInfo, 'callInfo:', callInfo);
                 //await delay(6000);
@@ -437,15 +437,15 @@ var ActiveComponent = /** @class */ (function () {
         //  localStorage.removeItem('uuid');
     };
     ActiveComponent.prototype.onCallAnswered = function () {
-        // alert('call req to server');
+        // //alert('call req to server');
         console.log('call req to server');
     };
     ActiveComponent.prototype.onCalling = function () {
-        //alert('on calling');
+        ////alert('on calling');
         console.log('on calling func');
     };
     ActiveComponent.prototype.onCallRemoteRinging = function () {
-        //alert('remote ringing');
+        ////alert('remote ringing');
         $('#startTime').click();
         this.callBoolean = true;
         console.log('remote ringing');
@@ -642,7 +642,7 @@ var FeedBackComponent = /** @class */ (function () {
     };
     //select feedback list
     FeedBackComponent.prototype.onChange = function () {
-        if (this.data['isCustomerInterseted'] === 3 || this.data['isCustomerInterseted'] === 2) {
+        if (this.data['isCustomerInterseted'] === 3 || this.data['isCustomerInterseted'] === 2 || this.data['isCustomerInterseted'] === 1 || this.data['isCustomerInterseted'] === 4) {
             this.select = true;
         }
         else {

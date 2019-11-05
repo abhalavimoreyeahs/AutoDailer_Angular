@@ -58,7 +58,7 @@ module.exports = "\r\n  \r\n  .example-form {\r\n    min-width: 250px;\r\n    ma
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"center\">\r\n\r\n<mat-card class=\"mat-card md-elevation-z5\">\r\n    <div class=\"form-division\">\r\n    <form [formGroup]=\"formGroup\" (ngSubmit)=\"onSubmit(formGroup.value)\" class=\"form\" >\r\n    <mat-card-header style=\"display: inline;padding:2%\">\r\n      <mat-card-title><h3 style=\"color:primary;text-align:center\">Feedback</h3></mat-card-title>\r\n      <!-- <mat-divider></mat-divider> -->\r\n    </mat-card-header>\r\n    <mat-card-content>\r\n       \r\n        <!-- <form class=\"example-form\"> -->\r\n  \r\n          <h4>Title</h4>\r\n            <mat-form-field class=\"example-full-width\" [color]=\"primary\" appearance=\"outline\">\r\n              <input matInput placeholder=\"Favorite food\" formControlName=\"title\" style=\"font-size: 1.2rem;\">\r\n            </mat-form-field>\r\n            <mat-error *ngIf=\"!formGroup.controls['title'].valid && formGroup.controls['title'].touched\">\r\n                {{ getErrorTitle() }}\r\n              </mat-error>\r\n            <h4>Comment</h4>\r\n            <mat-form-field class=\"example-full-width\"  [color]=\"primary\" appearance=\"outline\">\r\n              <textarea matInput placeholder=\"Leave a comment\"  formControlName=\"note\" style=\"height:200px;font-size: 1rem\" ></textarea>\r\n            </mat-form-field>\r\n            <mat-error *ngIf=\"!formGroup.controls['note'].valid && formGroup.controls['note'].touched\">\r\n                {{ getErrorNote() }}\r\n              </mat-error>\r\n         \r\n     \r\n   \r\n    </mat-card-content>\r\n    <mat-card-actions style=\"text-align:center\">\r\n      <!-- <button mat-raised-button  color=\"primary\" style=\"padding:0% 7%\">Submit</button> -->\r\n      <button mat-raised-button color=\"primary\" type=\"submit\" class=\"button\">Submit Form</button>\r\n    </mat-card-actions>\r\n  </form>\r\n</div>\r\n  </mat-card>\r\n</div>"
+module.exports = "\r\n<div class=\"center\">\r\n\r\n<mat-card class=\"mat-card md-elevation-z5\">\r\n    <div class=\"form-division\">\r\n    <form [formGroup]=\"formGroup\" (ngSubmit)=\"onSubmit(formGroup.value)\" class=\"form\" >\r\n    <mat-card-header style=\"display: inline;padding:2%\">\r\n      <mat-card-title><h3 style=\"color:primary;text-align:center\">Feedback</h3></mat-card-title>\r\n      <!-- <mat-divider></mat-divider> -->\r\n    </mat-card-header>\r\n    <mat-card-content>\r\n       \r\n        <!-- <form class=\"example-form\"> -->\r\n  \r\n          <h4>Title</h4>\r\n            <mat-form-field class=\"example-full-width\" [color]=\"primary\" appearance=\"outline\">\r\n              <input matInput placeholder=\"Favorite food\" formControlName=\"title\" style=\"font-size: 1.2rem;\">\r\n            </mat-form-field>\r\n            <mat-error *ngIf=\"!formGroup.controls['title'].valid && formGroup.controls['title'].touched\">\r\n                {{ getErrorTitle() }}\r\n              </mat-error>\r\n            <h4>Comment</h4>\r\n            <mat-form-field class=\"example-full-width\"  [color]=\"primary\" appearance=\"outline\">\r\n              <textarea matInput placeholder=\"Leave a comment\"  formControlName=\"note\" style=\"height:200px;font-size: 1rem\" ></textarea>\r\n            </mat-form-field>\r\n            <mat-error *ngIf=\"!formGroup.controls['note'].valid && formGroup.controls['note'].touched\">\r\n                {{ getErrorNote() }}\r\n              </mat-error>\r\n         \r\n    </mat-card-content>\r\n    <mat-card-actions style=\"text-align:center\">\r\n      <!-- <button mat-raised-button  color=\"primary\" style=\"padding:0% 7%\">Submit</button> -->\r\n      <button mat-raised-button color=\"primary\" type=\"submit\" class=\"button\">Submit Form</button>\r\n    </mat-card-actions>\r\n  </form>\r\n</div>\r\n  </mat-card>\r\n</div>"
 
 /***/ }),
 
@@ -144,7 +144,7 @@ var AgentFeedbackComponent = /** @class */ (function () {
             debugger;
             console.log(err);
         });
-        // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.formGroup.value))
+        // //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.formGroup.value))
     };
     AgentFeedbackComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -248,6 +248,12 @@ var AgentService = /** @class */ (function () {
     // Agent Dashboard 
     AgentService.prototype.getAgentCallStatus = function (data) {
         return this.http.post(this.apiURL + '/v0.1/getIndividualAgentCallDetails', data);
+    };
+    AgentService.prototype.addCustomerByAgent = function (data) {
+        return this.http.post(this.apiURL + '/v0.1/addCustomer', data);
+    };
+    AgentService.prototype.getCallRelatedRecords = function (data) {
+        return this.http.get(this.apiURL + ("/v0.1/getParentAndChildScheduleCalls?recordid=" + data));
     };
     AgentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
