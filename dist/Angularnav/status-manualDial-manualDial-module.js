@@ -435,6 +435,7 @@ var ManualDialComponent = /** @class */ (function () {
         });
     };
     ManualDialComponent.prototype.OnCallReject = function () {
+        debugger;
         ////alert(' call Reject');
         this.callStatus = "Not OnCall";
         this.plivoWebSdk.client.reject();
@@ -485,8 +486,10 @@ var ManualDialComponent = /** @class */ (function () {
         $('#endTime').click();
         this.callStatus = "Not OnCall";
         console.log('call failed function');
+        $('#feedBack').click();
     };
     ManualDialComponent.prototype.onCallTerminated = function (hangupInfo, callInfo) {
+        debugger;
         ////alert('call terminated');
         this.callStatus = "Idle";
         $('#endTime').click();
