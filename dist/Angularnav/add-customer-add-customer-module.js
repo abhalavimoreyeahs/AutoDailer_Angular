@@ -47,7 +47,7 @@ var AddCustomerRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".wide{\r\n    width: 65%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWdlbnQvYWRkLWN1c3RvbWVyL2FkZC1jdXN0b21lci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvYWdlbnQvYWRkLWN1c3RvbWVyL2FkZC1jdXN0b21lci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndpZGV7XHJcbiAgICB3aWR0aDogNjUlO1xyXG59Il19 */"
+module.exports = ".wide{\r\n    width: 65%;\r\n}\r\n\r\n/*----agnet status ring------*/\r\n\r\n::ng-deep .circle{\r\n    background-color:red;\r\n  }\r\n\r\n::ng-deep .ringing{\r\n    border: 3px solid red;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWdlbnQvYWRkLWN1c3RvbWVyL2FkZC1jdXN0b21lci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTtBQUNkOztBQUVBLDhCQUE4Qjs7QUFDNUI7SUFDRSxvQkFBb0I7RUFDdEI7O0FBQ0E7SUFDRSxxQkFBcUI7RUFDdkIiLCJmaWxlIjoic3JjL2FwcC9hZ2VudC9hZGQtY3VzdG9tZXIvYWRkLWN1c3RvbWVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud2lkZXtcclxuICAgIHdpZHRoOiA2NSU7XHJcbn1cclxuXHJcbi8qLS0tLWFnbmV0IHN0YXR1cyByaW5nLS0tLS0tKi9cclxuICA6Om5nLWRlZXAgLmNpcmNsZXtcclxuICAgIGJhY2tncm91bmQtY29sb3I6cmVkO1xyXG4gIH1cclxuICA6Om5nLWRlZXAgLnJpbmdpbmd7XHJcbiAgICBib3JkZXI6IDNweCBzb2xpZCByZWQ7XHJcbiAgfSJdfQ== */"
 
 /***/ }),
 
@@ -76,14 +76,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _shared_services_agent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/services/agent */ "./src/app/shared/services/agent.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
 
 var AddCustomerComponent = /** @class */ (function () {
-    function AddCustomerComponent(agentService, toastrService) {
+    function AddCustomerComponent(agentService, toastrService, router) {
         this.agentService = agentService;
         this.toastrService = toastrService;
+        this.router = router;
         this.addCustomer = {};
         this.Agent = [
             { value: 0, name: "Deal done" },
@@ -116,7 +119,8 @@ var AddCustomerComponent = /** @class */ (function () {
         console.log(this.addCustomer);
         this.agentService.addCustomerByAgent(this.addCustomer).subscribe(function (data) {
             console.log(data);
-            _this.showToaster();
+            _this.showToaster(); //myonboardCustomers
+            _this.router.navigate(["/agent/myonboardCustomers"]);
             _this.addCustomer = {};
         });
     };
@@ -139,7 +143,7 @@ var AddCustomerComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./add-customer.component.html */ "./src/app/agent/add-customer/add-customer.component.html"),
             styles: [__webpack_require__(/*! ./add-customer.component.css */ "./src/app/agent/add-customer/add-customer.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_agent__WEBPACK_IMPORTED_MODULE_2__["AgentService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_agent__WEBPACK_IMPORTED_MODULE_2__["AgentService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
     ], AddCustomerComponent);
     return AddCustomerComponent;
 }());
@@ -249,6 +253,9 @@ var AgentService = /** @class */ (function () {
     };
     AgentService.prototype.getCallRelatedRecords = function (data) {
         return this.http.get(this.apiURL + ("/v0.1/getParentAndChildScheduleCalls?recordid=" + data));
+    };
+    AgentService.prototype.getAllAgentCustomer = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAllAgentCustomer');
     };
     AgentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({

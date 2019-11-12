@@ -77,16 +77,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _autoDialer_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../autoDialer.service */ "./src/app/autoDialer.service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 //import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 //import { FarmService } from '../../farm.service';
 
 
+
+
 var EmployeeComponent = /** @class */ (function () {
-    function EmployeeComponent(formBuilder, service) {
+    function EmployeeComponent(formBuilder, service, toastrService, router) {
         this.formBuilder = formBuilder;
         this.service = service;
+        this.toastrService = toastrService;
+        this.router = router;
         this.Employee = {};
         this.AgentBoolean = false;
         this.roles = [
@@ -117,13 +123,33 @@ var EmployeeComponent = /** @class */ (function () {
         return pass === confirmPass ? null : { notSame: true };
     };
     EmployeeComponent.prototype.register = function () {
+        var _this = this;
         this.service.saveEmployee(this.Employee).subscribe(function (data) {
             console.log(data);
             if (data.success === true) {
                 //alert('data successfully saved');
+                _this.showToaster();
+                _this.router.navigate(["/admin/viewEmployee"]);
             }
+        }, function (err) {
+            debugger;
+            console.log(err);
+            _this.ErrorSuccess();
         });
         //console.log(this.Employee);
+    };
+    //notification
+    EmployeeComponent.prototype.showToaster = function () {
+        this.toastrService.success('Data saved successfully');
+    };
+    EmployeeComponent.prototype.ErrorSuccess = function () {
+        this.toastrService.error('Failed to save data');
+    };
+    EmployeeComponent.prototype.infoSuccess = function () {
+        this.toastrService.info('info of something');
+    };
+    EmployeeComponent.prototype.warningSuccess = function () {
+        this.toastrService.warning('sth has bad has happened');
     };
     EmployeeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -131,7 +157,7 @@ var EmployeeComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./employee.component.html */ "./src/app/layout/onBoardEmployee/employee.component.html"),
             styles: [__webpack_require__(/*! ./employee.component.css */ "./src/app/layout/onBoardEmployee/employee.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_2__["AutoDialService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], _autoDialer_service__WEBPACK_IMPORTED_MODULE_2__["AutoDialService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], EmployeeComponent);
     return EmployeeComponent;
 }());

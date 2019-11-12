@@ -8,14 +8,6 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./AllAgent/allagents.module": [
-		"./src/app/layout/Employee/AllAgent/allagents.module.ts",
-		"AllAgent-allagents-module"
-	],
-	"./AllManager/allmanager.module": [
-		"./src/app/layout/Employee/AllManager/allmanager.module.ts",
-		"AllManager-allmanager-module"
-	],
 	"./AssignedAgent/assignedAgent.module": [
 		"./src/app/layout/AssignedAgent/assignedAgent.module.ts",
 		"common",
@@ -23,21 +15,18 @@ var map = {
 	],
 	"./Dialler/dialler.module": [
 		"./src/app/agent/calls/Dialler/dialler.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"Dialler-dialler-module"
 	],
-	"./EditAssignedAgent/editAssignedAgent.module": [
-		"./src/app/layout/Employee/EditAssignedAgent/editAssignedAgent.module.ts",
-		"EditAssignedAgent-editAssignedAgent-module"
-	],
 	"./Employee/employee.module": [
 		"./src/app/layout/Employee/employee.module.ts",
+		"common",
 		"Employee-employee-module"
 	],
 	"./add-customer/add-customer.module": [
 		"./src/app/agent/add-customer/add-customer.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"add-customer-add-customer-module"
 	],
@@ -49,7 +38,7 @@ var map = {
 	],
 	"./agent-dashboard/agent-dashboard.module": [
 		"./src/app/agent/agent-dashboard/agent-dashboard.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"agent-dashboard-agent-dashboard-module"
 	],
@@ -60,7 +49,7 @@ var map = {
 	],
 	"./agent/agent.module": [
 		"./src/app/agent/agent.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"default~agent-agent-module~layout-layout-module~manager-manager-module~not-found-not-found-module",
 		"default~agent-agent-module~my-notes-my-notes-module",
 		"common",
@@ -77,7 +66,7 @@ var map = {
 	],
 	"./calls/call.module": [
 		"./src/app/agent/calls/call.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"calls-call-module"
 	],
@@ -108,7 +97,7 @@ var map = {
 	],
 	"./login/login.module": [
 		"./src/app/login/login.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"login-login-module"
 	],
@@ -131,7 +120,7 @@ var map = {
 	],
 	"./my-notes/my-notes.module": [
 		"./src/app/agent/my-notes/my-notes.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"default~agent-agent-module~my-notes-my-notes-module",
 		"common",
 		"my-notes-my-notes-module"
@@ -159,20 +148,20 @@ var map = {
 	],
 	"./scheduled-calls/scheduledCall.module": [
 		"./src/app/agent/scheduled-calls/scheduledCall.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"scheduled-calls-scheduledCall-module"
 	],
 	"./setting/setting.module": [
 		"./src/app/agent/setting/setting.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"default~setting-setting-module~status-active-active-module~status-manualDial-manualDial-module",
 		"common",
 		"setting-setting-module"
 	],
 	"./status/active/active.module": [
 		"./src/app/agent/status/active/active.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"default~setting-setting-module~status-active-active-module~status-manualDial-manualDial-module",
 		"default~status-active-active-module~status-manualDial-manualDial-module",
 		"common",
@@ -180,19 +169,19 @@ var map = {
 	],
 	"./status/break/break.module": [
 		"./src/app/agent/status/break/break.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"status-break-break-module"
 	],
 	"./status/callback/callback.module": [
 		"./src/app/agent/status/callback/callback.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"status-callback-callback-module"
 	],
 	"./status/manualDial/manualDial.module": [
 		"./src/app/agent/status/manualDial/manualDial.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"default~setting-setting-module~status-active-active-module~status-manualDial-manualDial-module",
 		"default~status-active-active-module~status-manualDial-manualDial-module",
 		"common",
@@ -200,15 +189,21 @@ var map = {
 	],
 	"./status/meetingWithCustomer/customerMeet.module": [
 		"./src/app/agent/status/meetingWithCustomer/customerMeet.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"status-meetingWithCustomer-customerMeet-module"
 	],
 	"./status/training/training.module": [
 		"./src/app/agent/status/training/training.module.ts",
-		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~aabef6f3",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
 		"common",
 		"status-training-training-module"
+	],
+	"./view-onboard-customer/view-customer.module": [
+		"./src/app/agent/view-onboard-customer/view-customer.module.ts",
+		"default~Dialler-dialler-module~add-customer-add-customer-module~agent-agent-module~agent-dashboard-a~bd0c5a0a",
+		"common",
+		"view-onboard-customer-view-customer-module"
 	],
 	"./viewCampaign/viewCampaign.module": [
 		"./src/app/manager/viewCampaign/viewCampaign.module.ts",
@@ -411,9 +406,7 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _loader_loader_component__WEBPACK_IMPORTED_MODULE_16__["LoaderComponent"]
-                // MyDialogComponent,
-                //TryDashboardComponent
+                _loader_loader_component__WEBPACK_IMPORTED_MODULE_16__["LoaderComponent"],
             ],
             imports: [
                 _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_15__["DragDropModule"],

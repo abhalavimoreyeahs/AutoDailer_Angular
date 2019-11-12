@@ -155,6 +155,9 @@ var AgentService = /** @class */ (function () {
     AgentService.prototype.getCallRelatedRecords = function (data) {
         return this.http.get(this.apiURL + ("/v0.1/getParentAndChildScheduleCalls?recordid=" + data));
     };
+    AgentService.prototype.getAllAgentCustomer = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAllAgentCustomer');
+    };
     AgentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'

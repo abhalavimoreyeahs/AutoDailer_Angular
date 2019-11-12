@@ -174,6 +174,9 @@ var AdminService = /** @class */ (function () {
     AdminService.prototype.getTodaysCallDetails = function () {
         return this.http.get(this.apiURL + '/v0.1/getTodayCallDetails');
     };
+    AdminService.prototype.getAllEmployees = function () {
+        return this.http.get(this.apiURL + '/v0.1/getAllEmployees');
+    };
     AdminService.prototype.getUsers = function () {
         return this.data = [
             { name: 'Avinash', email: "a@gmail.com", phone: '46415454' },
