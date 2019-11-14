@@ -123,6 +123,20 @@ var EmployeeComponent = /** @class */ (function () {
         return pass === confirmPass ? null : { notSame: true };
     };
     EmployeeComponent.prototype.register = function () {
+        if (this.Employee['role'] === 3) {
+            if (!this.Employee['plivoagentusername'] || !this.Employee['plivoagentPassword'] || !this.Employee['plivoagnetalias']) {
+                this.toastrService.error('Plivo username Plivo password or Plivo Alias cannot be blank');
+            }
+            else {
+                this.saveEmployee();
+            }
+        }
+        else {
+            this.saveEmployee();
+        }
+        //console.log(this.Employee);
+    };
+    EmployeeComponent.prototype.saveEmployee = function () {
         var _this = this;
         this.service.saveEmployee(this.Employee).subscribe(function (data) {
             console.log(data);
@@ -136,7 +150,6 @@ var EmployeeComponent = /** @class */ (function () {
             console.log(err);
             _this.ErrorSuccess();
         });
-        //console.log(this.Employee);
     };
     //notification
     EmployeeComponent.prototype.showToaster = function () {

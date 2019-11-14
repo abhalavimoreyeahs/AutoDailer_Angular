@@ -225,6 +225,17 @@ var ActiveComponent = /** @class */ (function () {
     };
     ActiveComponent.prototype.ngOnDestroy = function () {
         this.LogOut();
+        var agentId = localStorage.getItem('PlivoUserId');
+        agentId = agentId.concat('@phone.plivo.com');
+        var Ojb = {
+            status: "break",
+            currentstatus: "NotOnCall",
+            sipendpoint: agentId,
+            reason: null
+        };
+        this.service.sendAgentStatus(Ojb).subscribe(function (data) {
+            console.log('change status to break:', data);
+        });
     };
     ActiveComponent.prototype.autoClick = function () {
         //alert('auto Click');
