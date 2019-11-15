@@ -177,6 +177,9 @@ var AdminService = /** @class */ (function () {
     AdminService.prototype.getAllEmployees = function () {
         return this.http.get(this.apiURL + '/v0.1/getAllEmployees');
     };
+    AdminService.prototype.deleteEmployee = function (employeeId) {
+        return this.http.delete(this.apiURL + ("/v0.1/admin/deleteEmployee?employeeId=" + employeeId));
+    };
     AdminService.prototype.getUsers = function () {
         return this.data = [
             { name: 'Avinash', email: "a@gmail.com", phone: '46415454' },
