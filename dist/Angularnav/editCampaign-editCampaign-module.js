@@ -104,7 +104,7 @@ var EditCampaignComponent = /** @class */ (function () {
                 campingId: this.EditId
             };
             this.service.getSingleCampaign(this.data).subscribe(function (data) {
-                debugger;
+                //debugger
                 console.log('data:', data);
                 _this.startdate = new Date(data['message'][0]['startdate']);
                 _this.campingname = data['message'][0]['campingname'];
@@ -134,7 +134,7 @@ var EditCampaignComponent = /** @class */ (function () {
     };
     EditCampaignComponent.prototype.Edit = function () {
         var _this = this;
-        debugger;
+        //debugger
         this.Campaigns = {
             startdate: new Date(this.startdate).getTime(),
             campingname: this.campingname,

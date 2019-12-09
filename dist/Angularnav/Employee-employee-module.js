@@ -3111,7 +3111,7 @@ var EmployeeComponent = /** @class */ (function () {
         }).then(function (result) {
             if (result.value) {
                 _this.service.deleteEmployee(id).subscribe(function (data) {
-                    debugger;
+                    //debugger;
                     console.log(data);
                     if (data['success'] == true) {
                         sweetalert2__WEBPACK_IMPORTED_MODULE_6___default.a.fire('Deleted!', 'Emplyee has been deleted.', 'success');

@@ -109,7 +109,7 @@ var EmployeeComponent = /** @class */ (function () {
     EmployeeComponent.prototype.ngOnInit = function () {
     };
     EmployeeComponent.prototype.selectRole = function () {
-        debugger;
+        //debugger;
         if (this.Employee['role'] == 3) {
             this.AgentBoolean = true;
         }
@@ -146,7 +146,7 @@ var EmployeeComponent = /** @class */ (function () {
                 _this.router.navigate(["/admin/viewEmployee"]);
             }
         }, function (err) {
-            debugger;
+            //debugger
             console.log(err);
             _this.ErrorSuccess();
         });

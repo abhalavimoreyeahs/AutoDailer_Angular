@@ -75,7 +75,7 @@ var PopupParentCallsComponent = /** @class */ (function () {
             _this.dataSource2.paginator = _this.paginator;
             _this.dataSource2.sort = _this.sort;
         }, function (err) {
-            debugger;
+            //debugger
             console.log(err);
         });
     };
@@ -157,6 +157,14 @@ var AgentService = /** @class */ (function () {
     };
     AgentService.prototype.getAllAgentCustomer = function () {
         return this.http.get(this.apiURL + '/v0.1/getAllAgentCustomer');
+    };
+    AgentService.prototype.getAgentSingleCustomer = function (id) {
+        //debugger;
+        return this.http.get(this.apiURL + ("/v0.1/getAgentSingleCustomer?empId=" + id));
+    };
+    AgentService.prototype.updateAgentCustomer = function (id, data) {
+        //debugger;
+        return this.http.put(this.apiURL + ("/v0.1/updateAgentCustomer?id=" + id), data);
     };
     AgentService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({

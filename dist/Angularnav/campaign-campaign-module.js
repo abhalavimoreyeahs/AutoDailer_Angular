@@ -228,7 +228,7 @@ var CampaignComponent = /** @class */ (function () {
     };
     CampaignComponent.prototype.SaveAndEdit = function (data) {
         var _this = this;
-        debugger;
+        //debugger;
         this.addCampaignBoolean = !this.addCampaignBoolean; //hiding campaign reg box
         this.Campaigns = {}; //clearing data
         if (data == null || data == undefined || !data) {
@@ -267,7 +267,7 @@ var CampaignComponent = /** @class */ (function () {
             });
         }
         else if (data) {
-            debugger;
+            //debugger;
             this.Campaigns = {
                 startdate: new Date(this.startdate).getTime(),
                 campingname: this.campingname,
@@ -339,7 +339,7 @@ var CampaignComponent = /** @class */ (function () {
             if (result) {
                 _this.dataToDelete = { campingId: _this.DeleteCampaign };
                 _this.service.deleteCampaign(_this.dataToDelete).subscribe(function (data) {
-                    debugger;
+                    //debugger;
                     console.log(data);
                     _this.showSuccessfullyDeletedCampaign();
                     _this.ngOnInit();

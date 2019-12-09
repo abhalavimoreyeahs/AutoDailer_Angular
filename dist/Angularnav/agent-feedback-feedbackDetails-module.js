@@ -224,7 +224,7 @@ var ManagerService = /** @class */ (function () {
         return this.http.post(this.apiURL + '/v0.1/getAssignedAgent', data);
     };
     ManagerService.prototype.getCampaignDetails = function () {
-        debugger;
+        //debugger;
         return this.http.get(this.apiURL + '/v0.1/getCampingDetails');
     };
     ManagerService.prototype.getAgentStatus = function () {
