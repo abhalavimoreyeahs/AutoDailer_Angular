@@ -129,7 +129,7 @@ var MyNotesComponent = /** @class */ (function () {
             data: { documentId: id },
         });
         dialogRef.afterClosed().subscribe(function (result) {
-            debugger;
+            //debugger;
             console.log(result);
             if (result != undefined) {
             }

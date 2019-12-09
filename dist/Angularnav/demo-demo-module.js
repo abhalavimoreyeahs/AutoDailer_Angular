@@ -97,7 +97,7 @@ var DemoComponent = /** @class */ (function () {
     }
     DemoComponent.prototype.ngOnInit = function () {
         var _this = this;
-        debugger;
+        //debugger;
         this.service.getParentAndChildScheduleCall().subscribe(function (data) {
             console.log(data);
             _this.parent = data['message'];

@@ -146,7 +146,7 @@ var AdminDashboardComponent = /** @class */ (function () {
         //      for(let i= 0 ; i< data['ArrayData'].length ; i++){
         //       this.callInfoLabel.push(data['ArrayData'][i]['day']);
         //       this.callInfoData.push(data['ArrayData'][i]['count']);
-        //       //debugger;
+        //       ////debugger;
         //       }
         //      }
         //      console.log('Label:',this.callInfoLabel);
@@ -449,7 +449,7 @@ var AdminDashboardComponent = /** @class */ (function () {
             }
         });
         this.service.getAllAgnetStatus().subscribe(function (data) {
-            //debugger;
+            ////debugger;
             console.log('Agent status; ', data);
             if (data['success'] == true) {
                 if (data['statusObj']) {
@@ -473,7 +473,7 @@ var AdminDashboardComponent = /** @class */ (function () {
             }
         });
         this.service.getRunningCampaignDetails().subscribe(function (data) {
-            // debugger;
+            // //debugger;
             console.log('Running Campaing Details: ', data);
             if (data['success'] == true) {
                 if (data['campaignStatus']) {
@@ -485,7 +485,7 @@ var AdminDashboardComponent = /** @class */ (function () {
         });
         var data = { week: true };
         this.service.getAdminDashboardCallInfo(data).subscribe(function (data) {
-            // debugger;
+            // //debugger;
             console.log('Dashboard:', data);
             if (data['success'] == true) {
                 for (var i = 0, j = data['ArrayData'].length - 1; j >= 0; i++, j--) {
@@ -494,7 +494,7 @@ var AdminDashboardComponent = /** @class */ (function () {
                     _this.data2Unsuccess.push(data['ArrayData'][j]['unsuccssful']);
                     _this.callTimeOut.push(data['ArrayData'][j]['noAnswer']);
                     _this.callBusy.push(data['ArrayData'][j]['callBusy']);
-                    //debugger;
+                    ////debugger;
                     _this.ngOnInit();
                 }
             }
@@ -503,7 +503,7 @@ var AdminDashboardComponent = /** @class */ (function () {
             console.log('Data unsuccess:', _this.data2Unsuccess);
         });
         this.service.getTodaysCallDetails().subscribe(function (data) {
-            debugger;
+            //debugger;
             console.log('Todays call Detailes: ', data);
             if (data['success'] == true) {
                 if (data['message']) {

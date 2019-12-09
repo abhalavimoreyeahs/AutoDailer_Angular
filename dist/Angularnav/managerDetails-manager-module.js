@@ -147,7 +147,7 @@ var ManagerComponent = /** @class */ (function () {
                         managerId_1 = _this.ManagerDetails.getManager[0]._id;
                     }
                 }
-                debugger;
+                //debugger;
                 if (_this.ManagerDetails.campaignDetails.length > 0) {
                     for (var i = 0; i < _this.ManagerDetails.campaignDetails.length; i++) {
                         if (_this.ManagerDetails.campaignDetails[i].campingStatus != undefined) { //ManagerHistory

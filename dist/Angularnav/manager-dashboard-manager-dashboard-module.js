@@ -4971,7 +4971,7 @@ var ManagerDashboardComponent = /** @class */ (function () {
     };
     ManagerDashboardComponent.prototype.callApi = function () {
         var _this = this;
-        debugger;
+        //debugger;
         this.managerService.getCampaignDetails().subscribe(function (data) {
             console.log(data);
             if (data['success'] == true) {
